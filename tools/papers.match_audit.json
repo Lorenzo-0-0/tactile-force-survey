@@ -1,0 +1,1136 @@
+{
+  "1": {
+    "pdf_text": "Trevor Ablett, Oliver Limoyo, Adam Sigal, Affan Jilani, Jonathan Kelly, Kaleem Siddiqi, Francois Hogan, and Gregory Dudek. 2024. Multimodal and force-matched imitation learning with a see-through visu",
+    "key": "ablett2024multimodal",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "2": {
+    "pdf_text": "Malek Aburub, Cristian C Beltran-Hernandez, Tatsuya Kamijo, and Masashi Hamaya. 2026. Learning diffusion policies from demonstrations for compliant contact-rich manipulation. In 2026 IEEE/SICE Interna",
+    "key": "aburub2026learning",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "3": {
+    "pdf_text": "Michael Ahn, Anthony Brohan, Noah Brown, Yevgen Chebotar, Omar Cortes, Byron David, Chelsea Finn, Chuyuan Fu, Keerthana Gopalakrishnan, Karol Hausman, et al. 2022. Do as i can, not as i say: Grounding",
+    "key": "ahn2022can",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "4": {
+    "pdf_text": "Anurag Ajay, Seungwook Han, Yilun Du, Shuang Li, Abhi Gupta, Tommi Jaakkola, Josh Tenenbaum, Leslie Kaelbling, Akash Srivastava, and Pulkit Agrawal. 2023. Compositional foundation models for hierarchi",
+    "key": "ajay2023compositional",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "5": {
+    "pdf_text": "Shan An, Ziyu Meng, Chao Tang, Yuning Zhou, Tengyu Liu, Fangqiang Ding, Shufang Zhang, Yao Mu, Ran Song, Wei Zhang, et al. 2025. Dexterous manipulation through imitation learning: A survey. arXiv prep",
+    "key": "an2025dexterous",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "6": {
+    "pdf_text": "John Arevalo, Thamar Solorio, Manuel Montes-y Gómez, and Fabio A González. 2017. Gated multimodal units for information fusion. arXiv preprint arXiv:1702.01992 (2017).",
+    "key": "arevalo2017gated",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "7": {
+    "pdf_text": "Hangbo Bao, Li Dong, Songhao Piao, and Furu Wei. 2021. Beit: Bert pre-training of image transformers. arXiv preprint arXiv:2106.08254 (2021).",
+    "key": "bao2021beit",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "8": {
+    "pdf_text": "Jose A. Barreiros, Aykut Özgün Önol, Mengchao Zhang, Sam Creasey, Aimee Goncalves, Andrew Beaulieu, Aditya Bhat, Kate M. Tsui, and Alex Alspach. 2025. Learning contact-rich whole-body manipulation wit",
+    "key": "barreiros_learning_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "9": {
+    "pdf_text": "Jianxin Bi, Kevin Yuchen Ma, Ce Hao, Mike Zheng Shou, and Harold Soh. 2025. Vla-touch: Enhancing vision-language-action models with dual-level tactile feedback. arXiv preprint arXiv:2507.17294 (2025).",
+    "key": "bi2025vla",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "10": {
+    "pdf_text": "Johan Bjorck, Fernando Castañeda, Nikita Cherniadev, Xingye Da, Runyu Ding, Linxi Fan, Yu Fang, Dieter Fox, Fengyuan Hu, Spencer Huang, et al. 2025. Gr00t n1: An open foundation model for generalist h",
+    "key": "bjorck2025gr00t",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "11": {
+    "pdf_text": "Kevin Black, Noah Brown, Danny Driess, Adnan Esmail, Michael Equi, Chelsea Finn, Niccolo Fusai, Lachy Groom, Karol Hausman, Brian Ichter, et al. 2024. pi-0: A Vision-Language-Action Flow Model for Gen",
+    "key": "black2024pi",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "12": {
+    "pdf_text": "Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Joseph Dabis, Chelsea Finn, Keerthana Gopalakrishnan, Karol Hausman, Alex Herzog, Jasmine Hsu, et al. 2022. Rt-1: Robotics transformer fo",
+    "key": "brohan2022rt",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "13": {
+    "pdf_text": "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. 2020. Language models are few-shot lear",
+    "key": "brown2020language",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "14": {
+    "pdf_text": "Qingwen Bu, Hongyang Li, Li Chen, Jisong Cai, Jia Zeng, Heming Cui, Maoqing Yao, and Yu Qiao. 2024. Towards synergistic, generalized, and efficient dual-system for robotic manipulation. arXiv preprint",
+    "key": "bu2024towards",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "15": {
+    "pdf_text": "Thanpimon Buamanee, Masato Kobayashi, Yuki Uranishi, and Haruo Takemura. 2024. Bi-act: Bilateral control-based imitation learning via action chunking with transformer. In 2024 IEEE International Confe",
+    "key": "buamanee2024bi",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "16": {
+    "pdf_text": "Muzhen Cai, Xiubo Chen, Yining An, Jiaxin Zhang, Xuesong Wang, Wang Xu, Weinan Zhang, and Ting Liu. 2025. Cookbench: A long-horizon embodied planning benchmark for complex cooking scenarios. arXiv pre",
+    "key": "cai2025cookbench",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "17": {
+    "pdf_text": "Claire Chen, Zhongchun Yu, Hojung Choi, Mark Cutkosky, and Jeannette Bohg. 2025. Dexforce: Extracting force-informed actions from kinesthetic demonstrations for dexterous manipulation. IEEE Robotics a",
+    "key": "chen2025dexforce",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "18": {
+    "pdf_text": "Hao Chen, Jiaming Liu, Chenyang Gu, Zhuoyang Liu, Renrui Zhang, Xiaoqi Li, Xiao He, Yandong Guo, Chi-Wing Fu, Shanghang Zhang, et al. 2026. Fast-in-slow: A dual-system vla model unifying fast manipula",
+    "key": "chen2026fast",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "19": {
+    "pdf_text": "Haonan Chen, Jiaming Xu, Hongyu Chen, Kaiwen Hong, Binghao Huang, Chaoqi Liu, Jiayuan Mao, Yunzhu Li, Yilun Du, and Katherine DriggsCampbell. 2025. Multi-Modal Manipulation via Multi-Modal Policy Cons",
+    "key": "chen2025multi",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "20": {
+    "pdf_text": "Jingdong Chen and Paul I Ro. 2022. Human intention-oriented variable admittance control with power envelope regulation in physical human-robot interaction. Mechatronics 84 (2022), 102802.",
+    "key": "chen2022human",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "21": {
+    "pdf_text": "Lu Chen, Lipeng Chen, Xiangchi Chen, Haojian Lu, Yu Zheng, Jun Wu, Yue Wang, Zhengyou Zhang, and Rong Xiong. 2024. Compliance while resisting: A shear-thickening fluid controller for physical human-ro",
+    "key": "chen2024compliance",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "22": {
+    "pdf_text": "Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton. 2020. A simple framework for contrastive learning of visual representations. In International conference on machine learning. PmLR, 1",
+    "key": "chen2020simple",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "23": {
+    "pdf_text": "Wendi Chen, Han Xue, Yi Wang, Fangyuan Zhou, Jun Lv, Yang Jin, Shirun Tang, Chuan Wen, and Cewu Lu. 2025. ImplicitRDP: An End-to-End Visual-Force Diffusion Policy with Structural Slow-Fast Learning. a",
+    "key": "chen_implicitrdp_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "24": {
+    "pdf_text": "Yiming Chen, Yuhao Zhang, Xingwei Zhao, Qiang Xie, Kun Yang, Bo Tao, and Han Ding. 2024. Physical human–robot interaction based on adaptive impedance control for robotic-assisted total hip arthroplast",
+    "key": "chen2024physical",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "25": {
+    "pdf_text": "Zhengxue Cheng, Yiqian Zhang, Wenkang Zhang, Haoyu Li, Keyu Wang, Li Song, and Hengdi Zhang. 2025. Omnivtla: Vision-tactile-language-action model with semantic-aligned tactile sensing. arXiv preprint ",
+    "key": "cheng2025omnivtla",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "26": {
+    "pdf_text": "Cheng Chi, Zhenjia Xu, Siyuan Feng, Eric Cousineau, Yilun Du, Benjamin Burchfiel, Russ Tedrake, and Shuran Song. 2025. Diffusion policy: Visuomotor policy learning via action diffusion. The Internatio",
+    "key": "chi2025diffusion",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "27": {
+    "pdf_text": "Jeremy A Collins, Cody Houff, You Liang Tan, and Charles C Kemp. 2024. Forcesight: Text-guided mobile manipulation with visual-force goals. In 2024 IEEE International Conference on Robotics and Automa",
+    "key": "collins2024forcesight",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "28": {
+    "pdf_text": "John J Craig. 2005. Introduction to Robotics. (2005).",
+    "key": "craig2005introduction",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "29": {
+    "pdf_text": "An Dang, Jayjun Lee, Mustafa Mukadam, X. Alice Wu, Bernadette Bucher, Manikantan Nambi, and Nima Fazeli. 2026. HydroShear: Hydroelastic Shear Simulation for Tactile Sim-to-Real Reinforcement Learning.",
+    "key": "dang_hydroshear_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "30": {
+    "pdf_text": "Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. Bert: Pre-training of deep bidirectional transformers for language understanding. In Proceedings of the 2019 conference of the N",
+    "key": "devlin2019bert",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "31": {
+    "pdf_text": "Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et al. 2020. An image is w",
+    "key": "dosovitskiy2020image",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "32": {
+    "pdf_text": "Danny Driess, Fei Xia, Mehdi SM Sajjadi, Corey Lynch, Aakanksha Chowdhery, Brian Ichter, Ayzaan Wahid, Jonathan Tompson, Quan Vuong, Tianhe Yu, et al. 2023. Palm-e: An embodied multimodal language mod",
+    "key": "driess2023palm",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "33": {
+    "pdf_text": "Nan Du, Yanping Huang, Andrew M Dai, Simon Tong, Dmitry Lepikhin, Yuanzhong Xu, Maxim Krikun, Yanqi Zhou, Adams Wei Yu, Orhan Firat, et al. 2022. Glam: Efficient scaling of language models with mixtur",
+    "key": "du2022glam",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "34": {
+    "pdf_text": "Hongjie Fang, Shirun Tang, Mingyu Mei, Haoxiang Qin, Zihao He, Jingjing Chen, Ying Feng, Chenxi Wang, Wanxi Liu, Zaixing He, et al. 2026. Force Policy: Learning Hybrid Force-Position Control Policy un",
+    "key": "fang2026force",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "35": {
+    "pdf_text": "William Fedus, Barret Zoph, and Noam Shazeer. 2022. Switch transformers: Scaling to trillion parameter models with simple and efficient sparsity. Journal of Machine Learning Research 23, 120 (2022), 1",
+    "key": "fedus2022switch",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "36": {
+    "pdf_text": "Federica Ferraguti, Chiara Talignani Landi, Lorenzo Sabattini, Marcello Bonfe, Cesare Fantuzzi, and Cristian Secchi. 2019. A variable admittance control strategy for stable physical human–robot intera",
+    "key": "ferraguti2019variable",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "37": {
+    "pdf_text": "Fanny Ficuciello, Luigi Villani, and Bruno Siciliano. 2015. Variable impedance control of redundant manipulators for intuitive human–robot physical interaction. IEEE Transactions on Robotics 31, 4 (20",
+    "key": "ficuciello2015variable",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "38": {
+    "pdf_text": "Roya Firoozi, Johnathan Tucker, Stephen Tian, Anirudha Majumdar, Jiankai Sun, Weiyu Liu, Yuke Zhu, Shuran Song, Ashish Kapoor, Karol Hausman, et al. 2025. Foundation models in robotics: Applications, ",
+    "key": "firoozi2025foundation",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "39": {
+    "pdf_text": "William D Fisher and M Shahid Mujtaba. 1992. Hybrid position/force control: A correct formulation. The International journal of robotics research 11, 4 (1992), 299–311.",
+    "key": "fisher1992hybrid",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "40": {
+    "pdf_text": "Junling Fu, Ilaria Burzo, Elisa Iovene, Jianzhuang Zhao, Giancarlo Ferrigno, and Elena De Momi. 2024. Optimization-based variable impedance control of robotic manipulator for medical contact tasks. IE",
+    "key": "fu2024optimization",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "41": {
+    "pdf_text": "Haizhou Ge, Yufei Jia, Zheng Li, Yue Li, Zhixing Chen, Ruqi Huang, and Guyue Zhou. 2025. FILIC: Dual-Loop Force-Guided Imitation Learning with Impedance Torque Control for Contact-Rich Manipulation Ta",
+    "key": "ge2025filic",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "42": {
+    "pdf_text": "Noah Geiger, Tamim Asfour, Neville Hogan, and Johannes Lachner. 2026. Diffusion-Based Impedance Learning for Contact-Rich Manipulation Tasks. arXiv:2509.19696 [cs] doi:10.48550/arXiv.2509.19696",
+    "key": "geiger_diffusion-based_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "43": {
+    "pdf_text": "Abraham George, Selam Gano, Pranav Katragadda, and Amir Barati Farimani. 2024. VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies. arXiv:2403.11898 [cs] doi",
+    "key": "george_vital_2024",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "44": {
+    "pdf_text": "Chenwei Gong, Fei Zhao, Zhiwei Liao, Tao Tao, Xiao Wang, and Xuesong Mei. 2024. Simple-Rotation Angle/Axis Representations Based Second-Order Impedance Control. IEEE Robotics and Automation Letters 9,",
+    "key": "10517447",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "45": {
+    "pdf_text": "Konstantin Gubernatorov, Mikhail Sannikov, Ilya Mikhalchuk, Egor Kuznetsov, Makar Artemov, Ogunwoye Faith Ouwatobi, Marcelino Fernando, Artem Asanov, Ziang Guo, and Dzmitry Tsetserukou. 2026. HapticVL",
+    "key": "gubernatorov_hapticvla_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "46": {
+    "pdf_text": "Wenzhong Guo, Jianwen Wang, and Shiping Wang. 2019. Deep multimodal representation learning: A survey. Ieee Access 7 (2019), 63373–63394.",
+    "key": "guo2019deep",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "47": {
+    "pdf_text": "Sami Haddadin and Erfan Shahriari. 2024. Unified force-impedance control. The International Journal of Robotics Research 43, 13 (2024), 2112–2141.",
+    "key": "haddadin2024unified",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "48": {
+    "pdf_text": "Elham Hamid, Nicolas Herzig, Sara-Adela Abad, and Thrishantha Nanayakkara. 2021. A state-dependent damping method to reduce collision force and its variability. IEEE Robotics and Automation Letters 6,",
+    "key": "hamid2021state",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "49": {
+    "pdf_text": "Peng Hao, Chaofan Zhang, Dingzhe Li, Xiaoge Cao, Xiaoshuai Hao, Shaowei Cui, and Shuo Wang. 2025. Tla: Tactile-language-action model for contact-rich manipulation. arXiv preprint arXiv:2503.08548 (202",
+    "key": "hao2025tla",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "50": {
+    "pdf_text": "Kaiming He, Xinlei Chen, Saining Xie, Yanghao Li, Piotr Dollár, and Ross Girshick. 2022. Masked autoencoders are scalable vision learners. In Proceedings of the IEEE/CVF conference on computer vision ",
+    "key": "he2022masked",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "51": {
+    "pdf_text": "Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, and Ross Girshick. 2020. Momentum contrast for unsupervised visual representation learning. In Proceedings of the IEEE/CVF conference on computer vision a",
+    "key": "he2020momentum",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "52": {
+    "pdf_text": "Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2016. Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition. 770–778.",
+    "key": "he2016deep",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "53": {
+    "pdf_text": "Zihao He, Hongjie Fang, Jingjing Chen, Hao-Shu Fang, and Cewu Lu. 2025. Foar: Force-aware reactive policy for contact-rich robotic manipulation. IEEE Robotics and Automation Letters (2025).",
+    "key": "he2025foar",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "54": {
+    "pdf_text": "Erik Helmut, Niklas Funk, Tim Schneider, Cristiana de Farias, and Jan Peters. 2025. Tactile-Conditioned Diffusion Policy for Force-Aware Robotic Manipulation. arXiv preprint arXiv:2510.13324 (2025).",
+    "key": "helmut2025tactile",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "55": {
+    "pdf_text": "Liang Heng, Haoran Geng, Kaifeng Zhang, Pieter Abbeel, and Jitendra Malik. 2025. ViTacFormer: Learning cross-modal representation for visuo-tactile dexterous manipulation. arXiv preprint arXiv:2506.15",
+    "key": "heng2025vitacformer",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "56": {
+    "pdf_text": "Carolina Higuera, Sergio Arnaud, Byron Boots, Mustafa Mukadam, Francois Robert Hogan, and Franziska Meier. 2026. Visuo-Tactile World Models. arXiv:2602.06001 [cs] doi:10.48550/arXiv.2602.06001",
+    "key": "higuera_visuo-tactile_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "57": {
+    "pdf_text": "Neville Hogan. 1985. Impedance Control: An Approach to Manipulation: Part II—Implementation. Journal of Dynamic Systems, Measurement, and Control 107, 1 (March 1985), 8–16. doi:10.1115/1.3140713",
+    "key": "Hogan1985",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "58": {
+    "pdf_text": "Bohan Hou, Gen Li, Jindou Jia, Tuo An, Xinying Guo, Sicong Leng, Haoran Geng, Yanjie Ze, Tatsuya Harada, Philip Torr, et al. 2026. World Model for Robot Learning: A Comprehensive Survey. arXiv preprin",
+    "key": "hou2026world",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "59": {
+    "pdf_text": "Yifan Hou, Zeyi Liu, Cheng Chi, Eric Cousineau, Naveen Kuppuswamy, Siyuan Feng, Benjamin Burchfiel, and Shuran Song. 2025. Adaptive compliance policy: Learning approximate compliance for diffusion gui",
+    "key": "hou2025adaptive",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "60": {
+    "pdf_text": "Wenbin Hu, Bidan Huang, Wang Wei Lee, Sicheng Yang, Yu Zheng, and Zhibin Li. 2023. Dexterous In-Hand Manipulation of Slender Cylindrical Objects through Deep Reinforcement Learning with Tactile Sensin",
+    "key": "hu_dexterous_2023",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "61": {
+    "pdf_text": "Yafei Hu, Quanting Xie, Vidhi Jain, Jonathan Francis, Jay Patrikar, Nikhil Keetha, Seungchan Kim, Yaqi Xie, Tianyi Zhang, Hao-Shu Fang, et al. 2023. Toward general-purpose robots via foundation models",
+    "key": "hu2023toward",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "62": {
+    "pdf_text": "Binghao Huang, Yixuan Wang, Xinyi Yang, Yiyue Luo, and Yunzhu Li. 2024. 3d-vitac: Learning fine-grained manipulation with visuo-tactile sensing. arXiv preprint arXiv:2410.24091 (2024).",
+    "key": "huang20243d",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "63": {
+    "pdf_text": "Binghao Huang, Jie Xu, Iretiayo Akinola, Wei Yang, Balakumar Sundaralingam, Rowland O’Flaherty, Dieter Fox, Xiaolong Wang, Arsalan Mousavian, Yu-Wei Chao, and Yunzhu Li. 2025. VT-Refine: Learning Bima",
+    "key": "huang_vt-refine_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "64": {
+    "pdf_text": "Jialei Huang, Shuo Wang, Fanqi Lin, Yihang Hu, Chuan Wen, and Yang Gao. 2025. Tactile-VLA: unlocking vision-language-action model’s physical knowledge for tactile generalization. arXiv preprint arXiv:",
+    "key": "huang2025tactile",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "65": {
+    "pdf_text": "Wenlong Huang, Chen Wang, Yunzhu Li, Ruohan Zhang, and Li Fei-Fei. 2024. Rekep: Spatio-temporal reasoning of relational keypoint constraints for robotic manipulation. arXiv preprint arXiv:2409.01652 (",
+    "key": "huang2024rekep",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "66": {
+    "pdf_text": "Yuzhe Huang, Pei Lin, Wanlin Li, Daohan Li, Jiajun Li, Jiaming Jiang, Chenxi Xiao, and Ziyuan Jiao. 2026. Tactile-Force Alignment in VisionLanguage-Action Models for Force-aware Manipulation. arXiv pr",
+    "key": "huang2026tactile",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "67": {
+    "pdf_text": "Physical Intelligence, Kevin Black, Noah Brown, James Darpinian, Karan Dhabalia, Danny Driess, Adnan Esmail, Michael Equi, Chelsea Finn, Niccolo Fusai, et al. 2025. pi-0.5: a Vision-Language-Action Mo",
+    "key": "intelligence2025pi",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "68": {
+    "pdf_text": "Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, and Alexei A Efros. 2017. Image-to-image translation with conditional adversarial networks. In Proceedings of the IEEE conference on computer vision and patte",
+    "key": "isola2017image",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "69": {
+    "pdf_text": "Chao Jia, Yinfei Yang, Ye Xia, Yi-Ting Chen, Zarana Parekh, Hieu Pham, Quoc Le, Yun-Hsuan Sung, Zhen Li, and Tom Duerig. 2021. Scaling up visual and vision-language representation learning with noisy ",
+    "key": "jia2021scaling",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "70": {
+    "pdf_text": "Joshua Jones, Oier Mees, Carmelo Sferrazza, Kyle Stachowicz, Pieter Abbeel, and Sergey Levine. 2025. Beyond sight: Finetuning generalist robot policies with heterogeneous sensors via language groundin",
+    "key": "jones2025beyond",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "71": {
+    "pdf_text": "Tatsuya Kamijo, Cristian C Beltran-Hernandez, and Masashi Hamaya. 2024. Learning variable compliance control from a few demonstrations for bimanual robot with haptic feedback teleoperation system. In ",
+    "key": "kamijo2024learning",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "72": {
+    "pdf_text": "Gitae Kang, Hyun Seok Oh, Joon Kyue Seo, Uikyum Kim, and Hyouk Ryeol Choi. 2019. Variable admittance control of robot manipulators based on human intention. IEEE/ASME Transactions on Mechatronics 24, ",
+    "key": "kang2019variable",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "73": {
+    "pdf_text": "Haobo Kang, Hongjun Ma, and Weichang Li. 2025. CATCH-FORM-ACTer: Compliance-Aware Tactile Control and Hybrid Deformation RegulationBased Action Transformer for Viscoelastic Object Manipulation. IEEE A",
+    "key": "kang_catch-form-acter_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "74": {
+    "pdf_text": "Jeon Ho Kang, Sagar Joshi, Ruopeng Huang, and Satyandra K Gupta. 2025. Robotic compliant object prying using diffusion policy guided by vision and force observations. IEEE Robotics and Automation Lett",
+    "key": "kang2025robotic",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "75": {
+    "pdf_text": "Arvid QL Keemink, Herman Van der Kooij, and Arno HA Stienen. 2018. Admittance control for physical human–robot interaction. The International Journal of Robotics Research 37, 11 (2018), 1421–1444.",
+    "key": "keemink2018admittance",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "76": {
+    "pdf_text": "O. Khatib. 1987. A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation. IEEE Journal on Robotics and Automation 3, 1 (Feb. 1987), 43–53. doi:10.1109/",
+    "key": "Khatib1987",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "77": {
+    "pdf_text": "Diederik P Kingma and Max Welling. 2013. Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114 (2013).",
+    "key": "kingma2013auto",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "78": {
+    "pdf_text": "Masato Kobayashi, Thanpimon Buamanee, and Takumi Kobayashi. 2025. ALPHA- 𝛼 and Bi-ACT Are All You Need: Importance of Position and Force Information/ Control for Imitation Learning of Unimanual and Bi",
+    "key": "kobayashi_alpha-_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "79": {
+    "pdf_text": "Takumi Kobayashi, Masato Kobayashi, Thanpimon Buamanee, and Yuki Uranishi. 2025. Bi-LAT: Bilateral Control-Based Imitation Learning via Natural Language and Action Chunking with Transformers. In 2025 ",
+    "key": "kobayashi_bi-lat_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "80": {
+    "pdf_text": "Hyunseo Koh, Chang-Yong Song, Youngjae Choi, Misa Viveiros, David Hyde, and Heewon Kim. 2026. CulinaryCut-VLAP: A Vision-LanguageAction-Physics Framework for Food Cutting via a Force-Aware Material Po",
+    "key": "koh_culinarycut-vlap_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "81": {
+    "pdf_text": "Oliver Kroemer, Scott Niekum, and George Konidaris. 2021. A review of robot learning for manipulation: Challenges, representations, and algorithms. Journal of machine learning research 22, 30 (2021), ",
+    "key": "kroemer2021review",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "82": {
+    "pdf_text": "Rickmer Krohn, Vignesh Prasad, Gabriele Tiboni, and Georgia Chalvatzaki. 2026. Self-Supervised Multisensory Pretraining for Contact-Rich Robot Reinforcement Learning. IEEE Robotics and Automation Lett",
+    "key": "krohn_self-supervised_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "83": {
+    "pdf_text": "Marco Laghi, Arash Ajoudani, Manuel G Catalano, and Antonio Bicchi. 2020. Unifying bilateral teleoperation and tele-impedance for enhanced user experience. The International Journal of Robotics Resear",
+    "key": "laghi2020unifying",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "84": {
+    "pdf_text": "Geonhyup Lee, Yeongjin Lee, Kangmin Kim, Seongju Lee, Sangjun Noh, Seunghyeok Back, and Kyoobin Lee. 2025. ManipForce: Force-Guided Policy Learning with Frequency-Aware Representation for Contact-Rich",
+    "key": "lee2025manipforce",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "85": {
+    "pdf_text": "Jimin Lee, Huiwon Jang, Myungkyu Koo, Jungwoo Park, and Jinwoo Shin. 2026. Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models. arXiv:2604.23272 [cs] doi:10.48550",
+    "key": "lee_modular_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "86": {
+    "pdf_text": "Jiuzhou Lei, Chang Liu, Yu She, Xiao Liang, and Minghui Zheng. 2026. Learning When to See and When to Feel: Adaptive Vision-Torque Fusion for Contact-Aware Manipulation. arXiv:2604.01414 [cs] doi:10.4",
+    "key": "lei_learning_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "87": {
+    "pdf_text": "Gaofeng Li, Ruize Wang, Peisen Xu, Qi Ye, and Jiming Chen. 2026. The Developments and Challenges Toward Dexterous and Embodied Robotic Manipulation: A Survey. IEEE Robotics & Automation Magazine 33, 1",
+    "key": "11317793",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "88": {
+    "pdf_text": "Hsieh-Yu Li, Ishara Paranawithana, Liangjing Yang, Terence Sey Kiat Lim, Shaohui Foong, Foo Cheong Ng, and U-Xuan Tan. 2018. Stable and compliant motion of physical human–robot interaction coupled wit",
+    "key": "li2018stable",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "89": {
+    "pdf_text": "Qixiu Li, Yaobo Liang, Zeyu Wang, Lin Luo, Xi Chen, Mozheng Liao, Fangyun Wei, Yu Deng, Sicheng Xu, Yizhong Zhang, et al. 2024. Cogact: A foundational vision-language-action model for synergizing cogn",
+    "key": "li2024cogact",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "90": {
+    "pdf_text": "Tianyu Li, Yihan Li, Zizhe Zhang, and Nadia Figueroa. 2026. Flow with the Force Field: Learning 3D Compliant Flow Matching Policies from Force and Demonstration-Guided Simulation Data. arXiv:2510.0273",
+    "key": "li_flow_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "91": {
+    "pdf_text": "Yang Li, Hongru Jiang, Junjie Xia, Hongquan Zhang, Jinda Du, Yunsong Zhou, Jia Zeng, Ce Hao, Jieji Ren, Qiaojun Yu, et al. 2026. ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awarenes",
+    "key": "li2026forcevla2",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "92": {
+    "pdf_text": "Yunxin Li, Shenyuan Jiang, Baotian Hu, Longyue Wang, Wanqi Zhong, Wenhan Luo, Lin Ma, and Min Zhang. 2025. Uni-moe: Scaling unified multimodal llms with mixture of experts. IEEE Transactions on Patter",
+    "key": "li2025uni",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "93": {
+    "pdf_text": "Yuchao Li, Ziqi Jin, Jin Liu, and Daolin Ma. 2025. Visuo-tactile feedback policies for terminal assembly facilitated by reinforcement learning. Frontiers in Robotics and AI 12 (2025). doi:10.3389/frob",
+    "key": "li_visuo-tactile_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "94": {
+    "pdf_text": "Yao Li, Peiyuan Tang, Wuyang Zhang, Chengyang Zhu, Yifan Duan, Weikai Shi, Xiaodong Zhang, Zijiang Yang, Jianmin Ji, and Yanyong Zhang. 2026. FAVLA: A Force-Adaptive Fast-Slow VLA model for Contact-Ri",
+    "key": "li_favla_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "95": {
+    "pdf_text": "Zhiyi Li, Shenyuan Deng, Chao Zeng, and Chenguang Yang. 2026. A Control Framework With Tactile Diffusion Policy and Variable Impedance for Unknown Surface Tracking. IEEE Robotics and Automation Letter",
+    "key": "li_control_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "96": {
+    "pdf_text": "Haohong Lin, Radu Corcodel, and Ding Zhao. 2024. Generalize by Touching: Tactile Ensemble Skill Transfer for Robotic Furniture Assembly. arXiv:2404.17684 [cs] doi:10.48550/arXiv.2404.17684",
+    "key": "lin_generalize_2024",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "97": {
+    "pdf_text": "Toru Lin, Yu Zhang, Qiyang Li, Haozhi Qi, Brent Yi, Sergey Levine, and Jitendra Malik. 2025. Learning visuotactile skills with two multifingered hands. In 2025 IEEE International Conference on Robotic",
+    "key": "lin2025learning",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "98": {
+    "pdf_text": "Jason Jingzhou Liu, Yulong Li, Kenneth Shaw, Tony Tao, Ruslan Salakhutdinov, and Deepak Pathak. 2025. Factr: Force-attending curriculum training for contact-rich policy learning. arXiv preprint arXiv:",
+    "key": "liu2025factr",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "99": {
+    "pdf_text": "Qingtao Liu, Yu Cui, Zhengnan Sun, Gaofeng Li, Jiming Chen, and Qi Ye. 2024. VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning. ",
+    "key": "liu_vtdexmanip_2024",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "100": {
+    "pdf_text": "Wenhai Liu, Junbo Wang, Yiming Wang, Weiming Wang, and Cewu Lu. 2025. Forcemimic: Force-centric imitation learning with force-motion capture system for contact-rich manipulation. In 2025 IEEE Internat",
+    "key": "liu2025forcemimic",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "101": {
+    "pdf_text": "Zhuoyang Liu, Jiaming Liu, Jiadong Xu, Nuowei Han, Chenyang Gu, Hao Chen, Kaichen Zhou, Renrui Zhang, Kai Chin Hsieh, Kun Wu, Zhengping Che, Jian Tang, and Shanghang Zhang. 2026. MLA: A Multisensory L",
+    "key": "liu_mla_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "102": {
+    "pdf_text": "Jianlan Luo, Charles Xu, Jeffrey Wu, and Sergey Levine. 2025. Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning. Science Robotics 10, 105 (2025), eads5033.",
+    "key": "luo2025precise",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "103": {
+    "pdf_text": "Shan Luo, Nathan F Lepora, Wenzhen Yuan, Kaspar Althoefer, Gordon Cheng, and Ravinder Dahiya. 2025. Tactile robotics: An outlook. IEEE Transactions on Robotics (2025).",
+    "key": "luo2025tactile",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "104": {
+    "pdf_text": "Charlotte Morissette, Amin Abyaneh, Wei-Di Chang, Anas Houssaini, David Meger, Hsiu-Chin Lin, Jonathan Tremblay, and Gregory Dudek. 2026. Tactile Modality Fusion for Vision-Language-Action Models. arX",
+    "key": "morissette_tactile_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "105": {
+    "pdf_text": "Masaki Murooka, Takahiro Hoshi, Kensuke Fukumitsu, Shimpei Masuda, Marwan Hamze, Tomoya Sasaki, Mitsuharu Morisawa, and Eiichi Yoshida. 2025. TACT: Humanoid whole-body contact manipulation through dee",
+    "key": "murooka2025tact",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "106": {
+    "pdf_text": "Mehrzad Namvar and Farhad Aghili. 2005. Adaptive force-motion control of coordinated robots interacting with geometrically unknown environments. IEEE Transactions on Robotics 21, 4 (2005), 678–694.",
+    "key": "namvar2005adaptive",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "107": {
+    "pdf_text": "Michael Noseworthy, Bingjie Tang, Bowen Wen, Ankur Handa, Chad Kessens, Nicholas Roy, Dieter Fox, Fabio Ramos, Yashraj Narang, and Iretiayo Akinola. 2025. Forge: Force-guided exploration for robust co",
+    "key": "noseworthy2025forge",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "108": {
+    "pdf_text": "Aaron van den Oord, Yazhe Li, and Oriol Vinyals. 2018. Representation learning with contrastive predictive coding. arXiv preprint arXiv:1807.03748 (2018).",
+    "key": "oord2018representation",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "109": {
+    "pdf_text": "Christian Ott, Ranjan Mukherjee, and Yoshihiko Nakamura. 2010. Unified impedance and admittance control. In 2010 IEEE international conference on robotics and automation. IEEE, 554–561.",
+    "key": "ott2010unified",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "110": {
+    "pdf_text": "Xiaokang Peng, Yake Wei, Andong Deng, Dong Wang, and Di Hu. 2022. Balanced multimodal learning via on-the-fly gradient modulation. In Proceedings of the IEEE/CVF conference on computer vision and patt",
+    "key": "peng2022balanced",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "111": {
+    "pdf_text": "Ethan Perez, Florian Strub, Harm De Vries, Vincent Dumoulin, and Aaron Courville. 2018. Film: Visual reasoning with a general conditioning layer. In Proceedings of the AAAI conference on artificial in",
+    "key": "perez2018film",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "112": {
+    "pdf_text": "Tifanny Portela, Gabriel B Margolis, Yandong Ji, and Pulkit Agrawal. 2024. Learning force control for legged manipulation. In 2024 IEEE International Conference on Robotics and Automation (ICRA). IEEE",
+    "key": "portela2024learning",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "113": {
+    "pdf_text": "Ingmar Posner. 2020. Robots thinking fast and slow: on dual process theory and metacognition in embodied AI. In Robotics Retrospectives-Workshop at RSS 2020.",
+    "key": "posner2020robots",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "114": {
+    "pdf_text": "Tony J Prescott and Stuart P Wilson. 2023. Understanding brain functional architecture through robotics. Science Robotics 8, 78 (2023), eadg6014.",
+    "key": "prescott2023understanding",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "115": {
+    "pdf_text": "Charles Ruizhongtai Qi, Li Yi, Hao Su, and Leonidas J Guibas. 2017. Pointnet++: Deep hierarchical feature learning on point sets in a metric space. Advances in neural information processing systems 30",
+    "key": "qi2017pointnet++",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "116": {
+    "pdf_text": "Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. 2021. Learning transferable visual models fro",
+    "key": "radford2021learning",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "117": {
+    "pdf_text": "Marc H Raibert and John J Craig. 1981. Hybrid position/force control of manipulators. (1981).",
+    "key": "raibert1981hybrid",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "118": {
+    "pdf_text": "Harish Ravichandar, Athanasios S Polydoros, Sonia Chernova, and Aude Billard. 2020. Recent advances in robot learning from demonstration. Annual review of control, robotics, and autonomous systems 3, ",
+    "key": "ravichandar2020recent",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "119": {
+    "pdf_text": "Ali Razavi, Aaron Van den Oord, and Oriol Vinyals. 2019. Generating diverse high-fidelity images with vq-vae-2. Advances in neural information processing systems 32 (2019).",
+    "key": "razavi2019generating",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "120": {
+    "pdf_text": "Danilo Jimenez Rezende, Shakir Mohamed, and Daan Wierstra. 2014. Stochastic backpropagation and approximate inference in deep generative models. In International conference on machine learning. PMLR, ",
+    "key": "rezende2014stochastic",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "121": {
+    "pdf_text": "Minchi Ruan, LiangQing Zhou, Hongtong Li, Zongtao Wang, ZhaoMing Lu, Jianwei Zhang, and Bin Fang. 2026. ReTac-ACT: A State-Gated Vision-Tactile Fusion Transformer for Precision Assembly. arXiv preprin",
+    "key": "ruan2026retac",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "122": {
+    "pdf_text": "Stefan Scherzinger, Arne Roennau, and Rüdiger Dillmann. 2017. Forward Dynamics Compliance Control (FDCC): A new approach to cartesian compliance for robotic manipulators. In 2017 IEEE/RSJ Internationa",
+    "key": "8206325",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "123": {
+    "pdf_text": "Joohwan Seo, Arvind Kruthiventy, Soomi Lee, Megan Teng, Seoyeon Choi, Xiang Zhang, Jongeun Choi, and Roberto Horowitz. 2025. Equicontact: A hierarchical SE (3) vision-to-force equivariant policy for s",
+    "key": "seo2025equicontact",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "124": {
+    "pdf_text": "H. Seraji. 1994. Adaptive admittance control: an approach to explicit force control in compliant motion. In Proceedings of the 1994 IEEE International Conference on Robotics and Automation. 2705–2712 ",
+    "key": "350927",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "125": {
+    "pdf_text": "Carmelo Sferrazza, Younggyo Seo, Hao Liu, Youngwoon Lee, and Pieter Abbeel. 2024. The power of the senses: Generalizable manipulation from vision and touch through masked multimodal learning. In 2024 ",
+    "key": "sferrazza2024power",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "126": {
+    "pdf_text": "Yuki Shirai, Kei Ota, Devesh K Jha, and Diego Romeres. 2025. Sim-to-Real Contact-Rich Pivoting via Optimization-Guided RL with Vision and Touch. In NeurIPS 2025 Workshop on Embodied World Models for D",
+    "key": "shirai2025sim",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "127": {
+    "pdf_text": "Mohit Shridhar, Lucas Manuelli, and Dieter Fox. 2023. Perceiver-actor: A multi-task transformer for robotic manipulation. In Conference on Robot Learning. PMLR, 785–799.",
+    "key": "shridhar2023perceiver",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "128": {
+    "pdf_text": "Mark W Spong, Seth Hutchinson, and Mathukumalli Vidyasagar. 2020. Robot modeling and control. Vol. 2. Wiley New York.",
+    "key": "spong2020robot",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "129": {
+    "pdf_text": "Entong Su, Chengzhe Jia, Yuzhe Qin, Wenxuan Zhou, Annabella Macaluso, Binghao Huang, and Xiaolong Wang. 2024. Sim2Real Manipulation on Unknown Objects with Tactile-based Reinforcement Learning. In 202",
+    "key": "su_sim2real_2024",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "130": {
+    "pdf_text": "Jiankai Sun, Aidan Curtis, Yang You, Yan Xu, Michael Koehle, Qianzhong Chen, Suning Huang, Leonidas Guibas, Sachin Chitta, Mac Schwager, et al. 2024. ARCH: Hierarchical hybrid learning for long-horizo",
+    "key": "sun2024arch",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "131": {
+    "pdf_text": "Zhengnan Sun, Zhaotai Shi, Jiayin Chen, Qingtao Liu, Yu Cui, Jiming Chen, and Qi Ye. 2025. VTAO-BiManip: Masked Visual-Tactile-Action Pre-training with Object Understanding for Bimanual Dexterous Mani",
+    "key": "sun2025vtao",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "132": {
+    "pdf_text": "Markku Suomalainen, Yiannis Karayiannidis, and Ville Kyrki. 2022. A survey of robot manipulation in contact. Robotics and Autonomous Systems 156 (2022), 104224.",
+    "key": "suomalainen2022survey",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "133": {
+    "pdf_text": "Tutian Tang, Xingyu Ji, Wanli Xing, Ce Hao, Wenqiang Xu, Lin Shao, Cewu Lu, Qiaojun Yu, Jiangmiao Pang, and Kaifeng Zhang. 2026. Towards Human-Like Manipulation through RL-Augmented Teleoperation and ",
+    "key": "tang2026towards",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "134": {
+    "pdf_text": "Yufeng Tian, Shuiqi Cheng, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, Qianwei Han, Zhecheng Yuan, and Huazhe Xu. 2026. ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomot",
+    "key": "tian2026vitas",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "135": {
+    "pdf_text": "Chenrui Tie, Shengxiang Sun, Jinxuan Zhu, Yiwei Liu, Jingxiang Guo, Yue Hu, Haonan Chen, Junting Chen, Ruihai Wu, and Lin Shao. 2025. Manual2skill: Learning to read manuals and acquire robotic skills ",
+    "key": "tie2025manual2skill",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "136": {
+    "pdf_text": "Zhan Tong, Yibing Song, Jue Wang, and Limin Wang. 2022. Videomae: Masked autoencoders are data-efficient learners for self-supervised video pre-training. Advances in neural information processing syst",
+    "key": "tong2022videomae",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "137": {
+    "pdf_text": "Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. 2023. Llama: Open and efficient f",
+    "key": "touvron2023llama",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "138": {
+    "pdf_text": "Toshiaki Tsuji, Yasuhiro Kato, Gokhan Solak, Heng Zhang, Tadej Petrič, Francesco Nori, and Arash Ajoudani. 2025. A survey on imitation learning for contact-rich tasks in robotics. The International Jo",
+    "key": "tsuji2025survey",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "139": {
+    "pdf_text": "Julen Urain, Ajay Mandlekar, Yilun Du, Nur Muhammad, Danfei Xu, Katerina Fragkiadaki, Georgia Chalvatzaki, Jan Peters, et al. 2025. A Survey on Deep Generative Models for Robot Learning From Multimoda",
+    "key": "urain2025survey",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "140": {
+    "pdf_text": "Pedro Miguel Uriguen Eljuri, Hironobu Shibata, Maeyama Katsuyoshi, Yuanyuan Jia, and Tadahiro Taniguchi. 2025. Haptic-Informed ACT with a Soft Gripper and Recovery-Informed Training for Pseudo Oocyte ",
+    "key": "uriguen_eljuri_haptic-informed_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "141": {
+    "pdf_text": "Aaron Van Den Oord, Oriol Vinyals, et al. 2017. Neural discrete representation learning. Advances in neural information processing systems 30 (2017).",
+    "key": "van2017neural",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "142": {
+    "pdf_text": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. Advances in neural information processing ",
+    "key": "vaswani2017attention",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "143": {
+    "pdf_text": "Mingxin Wang, Zhirun Yue, Renhao Lu, Yizhe Li, Zihan Wang, Guoping Pan, Kangkang Dong, Jun Cheng, Yi Cheng, and Houde Liu. 2026. PhaForce: Phase-Scheduled Visual-Force Policy Learning with Slow Planni",
+    "key": "wang_phaforce_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "144": {
+    "pdf_text": "Ruize Wang, Peng Cheng, Qi Ye, Jiming Chen, and Gaofeng Li. 2025. A Two-Stage Dynamic Parameters Identification Approach Based on Kalman Filter for Haptic Rendering in Telerobotics. IEEE Robotics and ",
+    "key": "10994502",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "145": {
+    "pdf_text": "Xiao Wang, Lu Dong, Jingchen Sun, Ifeoma Nwogu, Srirangaraj Setlur, and Venu Govindaraju. 2026. Mistypilot: An agentic fast-slow thinking llm framework for misty social robots. arXiv preprint arXiv:26",
+    "key": "wang2026mistypilot",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "146": {
+    "pdf_text": "Ryo Watanabe, Maxime Alvarez, Pablo Ferreiro, Pavel Savkin, and Genki Sano. 2025. FTACT: Force Torque aware Action Chunking Transformer for Pick-and-Reorient Bottle Task. arXiv:2509.23112 [cs] doi:10.",
+    "key": "watanabe_ftact_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "147": {
+    "pdf_text": "Yake Wei, Di Hu, Henghui Du, and Ji-Rong Wen. 2024. On-the-fly modulation for balanced multimodal learning. IEEE Transactions on Pattern Analysis and Machine Intelligence 47, 1 (2024), 469–485.",
+    "key": "wei2024fly",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "148": {
+    "pdf_text": "Edgar Welte and Rania Rayyes. 2025. Interactive imitation learning for dexterous robotic manipulation: challenges and perspectives—a survey. Frontiers in Robotics and AI 12 (2025), 1682437.",
+    "key": "welte2025interactive",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "149": {
+    "pdf_text": "Bowen Wen, Shaurya Dewan, and Stan Birchfield. 2025. Fast-FoundationStereo: Real-Time Zero-Shot Stereo Matching. arXiv preprint arXiv:2512.11130 (2025).",
+    "key": "wen2025fast",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "150": {
+    "pdf_text": "Bowen Wen, Wei Yang, Jan Kautz, and Stan Birchfield. 2024. Foundationpose: Unified 6d pose estimation and tracking of novel objects. In Proceedings of the IEEE/CVF conference on computer vision and pa",
+    "key": "wen2024foundationpose",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "151": {
+    "pdf_text": "Longyan Wu, Checheng Yu, Jieji Ren, Li Chen, Yufei Jiang, Ran Huang, Guoying Gu, and Hongyang Li. 2026. FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation. arXiv",
+    "key": "wu_freetacman_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "152": {
+    "pdf_text": "Mike Wu and Noah Goodman. 2018. Multimodal generative models for scalable weakly-supervised learning. Advances in neural information processing systems 31 (2018).",
+    "key": "wu2018multimodal",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "153": {
+    "pdf_text": "Tianhao Wu, Jinzhou Li, Jiyao Zhang, Mingdong Wu, and Hao Dong. 2025. Canonical representation and force-based pretraining of 3d tactile for dexterous visuo-tactile policy learning. In 2025 IEEE Inter",
+    "key": "wu2025canonical",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "154": {
+    "pdf_text": "Yansong Wu, Zongxie Chen, Fan Wu, Lingyun Chen, Liding Zhang, Zhenshan Bing, Abdalla Swikir, Sami Haddadin, and Alois Knoll. 2025. Tacdiffusion: Force-domain diffusion policy for precise tactile manip",
+    "key": "wu2025tacdiffusion",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "155": {
+    "pdf_text": "William Xie and Nikolaus Correll. 2025. Towards forceful robotic foundation models: a literature survey. arXiv preprint arXiv:2504.11827 (2025).",
+    "key": "xie2025towards",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "156": {
+    "pdf_text": "Zhengtong Xu, Raghava Uppuluri, Xinwei Zhang, Cael Fitch, Philip Glen Crandall, Wan Shou, Dongyi Wang, and Yu She. 2025. UniT: Data efficient tactile representation with generalization to unseen objec",
+    "key": "xu2025unit",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "157": {
+    "pdf_text": "Han Xue, Jieji Ren, Wendi Chen, Gu Zhang, Yuan Fang, Guoying Gu, Huazhe Xu, and Cewu Lu. 2025. Reactive diffusion policy: Slow-fast visual-tactile policy learning for contact-rich manipulation. arXiv ",
+    "key": "xue2025reactive",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "158": {
+    "pdf_text": "Teng Xue, Alberto Rigo, Bingjian Huang, Jiayi Shen, Zhengtong Xu, Nick Colonnese, and Amirhossein H. Memar. 2026. Tube Diffusion Policy: Reactive Visual-Tactile Policy Learning for Contact-rich Manipu",
+    "key": "xue_tube_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "159": {
+    "pdf_text": "Zhengrong Xue, Han Zhang, Jingwen Cheng, Zhengmao He, Yuanchen Ju, Changyi Lin, Gu Zhang, and Huazhe Xu. 2025. ArrayBot: Reinforcement Learning for Generalizable Distributed Manipulation through Touch",
+    "key": "xue_arraybot_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "160": {
+    "pdf_text": "Yifei Yang, Anzhe Chen, Zhenjie Zhu, Kechun Xu, Yunxuan Mao, Yufei Wei, Lu Chen, Rong Xiong, and Yue Wang. 2026. Direction Matters: Learning Force Direction Enables Sim-to-Real Contact-Rich Manipulati",
+    "key": "yang_direction_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "161": {
+    "pdf_text": "Guo Ye, Zexi Zhang, Xu Zhao, Shang Wu, Haoran Lu, Shihan Lu, and Han Liu. 2026. Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation. arXiv:2512.23864 [cs] doi:10.48550/arXiv.2512.23",
+    "key": "ye_learning_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "162": {
+    "pdf_text": "Qi Ye, Qingtao Liu, Siyun Wang, Jiaying Chen, Yu Cui, Ke Jin, Huajin Chen, Xuan Cai, Gaofeng Li, and Jiming Chen. 2026. Visual-tactile pretraining and online multitask learning for humanlike manipulat",
+    "key": "ye2026visual",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "163": {
+    "pdf_text": "Tsuneo Yoshikawa. 2003. Dynamic hybrid position/force control of robot manipulators–description of hand constraints and calculation of joint driving force. IEEE Journal on Robotics and Automation 3, 5",
+    "key": "yoshikawa2003dynamic",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "164": {
+    "pdf_text": "Tsuneo Yoshikawa, Toshiharu Sugie, and Masaki Tanaka. 2002. Dynamic hybrid position/force control of robot manipulators-controller design and experiment. IEEE Journal on Robotics and Automation 4, 6 (",
+    "key": "yoshikawa2002dynamic",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "165": {
+    "pdf_text": "Jiahui Yu, Xin Li, Jing Yu Koh, Han Zhang, Ruoming Pang, James Qin, Alexander Ku, Yuanzhong Xu, Jason Baldridge, and Yonghui Wu. 2021. Vector-quantized image modeling with improved vqgan. arXiv prepri",
+    "key": "yu2021vector",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "166": {
+    "pdf_text": "Jiawen Yu, Hairuo Liu, Qiaojun Yu, Jieji Ren, Ce Hao, Haitong Ding, Guangyu Huang, Guofan Huang, Yan Song, Panpan Cai, et al. 2025. Forcevla: Enhancing vla models with a force-aware moe for contact-ri",
+    "key": "yu2025forcevla",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "167": {
+    "pdf_text": "Haoran Yuan, Weigang Yi, Zhenyu Zhang, Wendi Chen, Yuchen Mo, Jiashi Yin, Xinzhuo Li, Xiangyu Zeng, Chuan Wen, Cewu Lu, Katherine Driggs-Campbell, and Ismini Lourentzou. 2026. VTAM: Video-Tactile-Acti",
+    "key": "yuan_vtam_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "168": {
+    "pdf_text": "Zhaokun Yue, Ling Tong, and Kun Qian. 2026. PoCoDP3: Pose- and Contact-Aware Visual-Tactile Policy for Contact-Rich 3D Manipulation. IEEE Robotics and Automation Letters 11, 3 (2026), 2434–2441. doi:1",
+    "key": "yue_pocodp3_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "169": {
+    "pdf_text": "Maryam Zare, Parham M Kebria, Abbas Khosravi, and Saeid Nahavandi. 2024. A survey of imitation learning: Algorithms, recent developments, and challenges. IEEE Transactions on Cybernetics 54, 12 (2024)",
+    "key": "zare2024survey",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "170": {
+    "pdf_text": "Chaofan Zhang, Peng Hao, Xiaoge Cao, Xiaoshuai Hao, Shaowei Cui, and Shuo Wang. 2025. VTLA: Vision-Tactile-Language-Action Model with Preference Learning for Insertion Manipulation. arXiv:2505.09577 [",
+    "key": "zhang2025vtla",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "171": {
+    "pdf_text": "Chaoyi Zhang, Shiyang Liu, Chao Zeng, Yiming Jiang, and Jing Luo. 2024. A robot humanoid control framework through human arm active endpoint stiffness and direction adaptive compensation. IEEE Robotic",
+    "key": "zhang2024robot",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "172": {
+    "pdf_text": "Di Zhang, Chengbo Yuan, Chuan Wen, Hai Zhang, Junqiao Zhao, and Yang Gao. 2025. Kinedex: Learning tactile-informed visuomotor policies via kinesthetic teaching for dexterous manipulation. arXiv prepri",
+    "key": "zhang2025kinedex",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "173": {
+    "pdf_text": "Heng Zhang, Wei-Hsing Huang, Qiyi Tong, Gokhan Solak, Puze Liu, Kaidi Zhang, Sheng Liu, Jan Peters, Yu She, and Arash Ajoudani. 2026. CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Saf",
+    "key": "zhang_compliantvla-adaptor_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "174": {
+    "pdf_text": "Jianke Zhang, Yanjiang Guo, Xiaoyu Chen, Yen-Jen Wang, Yucheng Hu, Chengming Shi, and Jianyu Chen. 2024. Hirt: Enhancing robotic control with hierarchical robot transformers. arXiv preprint arXiv:2410",
+    "key": "zhang2024hirt",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "175": {
+    "pdf_text": "Kaidi Zhang, Heng Zhang, Zhengtong Xu, Zhiyuan Zhang, Md Rakibul Islam Prince, Xiang Li, Xiaojing Han, Yuhao Zhou, Arash Ajoudani, and Yu She. 2026. TacVLA: Contact-Aware Tactile Fusion for Robust Vis",
+    "key": "zhang2026tacvla",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "176": {
+    "pdf_text": "Yike Zhang, Yaonan Wang, Xinxin Sun, Kaizhen Huang, Zhiyuan Xu, Junjie Ji, Zhengping Che, Jian Tang, and Jingtao Sun. 2026. CRAFT: Adapting VLA Models to Contact-rich Manipulation via Force-aware Curr",
+    "key": "zhang2026craft",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "177": {
+    "pdf_text": "Zhemeng Zhang, Jiahua Ma, Xincheng Yang, Xin Wen, Yuzhi Zhang, Boyan Li, Yiran Qin, Jin Liu, Can Zhao, Li Kang, et al. 2026. TouchGuide: Inference-Time Steering of Visuomotor Policies via Touch Guidan",
+    "key": "zhang2026touchguide",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "178": {
+    "pdf_text": "Zongzheng Zhang, Haobo Xu, Zhuo Yang, Chenghao Yue, Zehao Lin, Huan-ang Gao, Ziwei Wang, and Hao Zhao. 2025. Ta-vla: Elucidating the design space of torque-aware vision-language-action models. arXiv p",
+    "key": "zhang2025ta",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "179": {
+    "pdf_text": "Hengshuang Zhao, Li Jiang, Jiaya Jia, Philip HS Torr, and Vladlen Koltun. 2021. Point transformer. In Proceedings of the IEEE/CVF international conference on computer vision. 16259–16268.",
+    "key": "zhao2021point",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "180": {
+    "pdf_text": "Jialiang Zhao, Naveen Kuppuswamy, Siyuan Feng, Benjamin Burchfiel, and Edward Adelson. 2025. PolyTouch: A Robust Multi-Modal Tactile Sensor for Contact-rich Manipulation Using Tactile-Diffusion Polici",
+    "key": "zhao_polytouch_2025",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "181": {
+    "pdf_text": "Ruiteng Zhao, Wenshuo Wang, Yicheng Ma, Xiaocong Li, Francis E. H. Tay, Marcelo H. Ang, and Haiyue Zhu. 2026. FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation. arXiv:",
+    "key": "zhao_fd-vla_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "182": {
+    "pdf_text": "Yongqiang Zhao, Xuyang Zhang, Zhuo Chen, Matteo Leonetti, Emmanouil Spyrakos-Papastavridis, and Shan Luo. 2026. Visual-Tactile Peg-in-Hole Assembly Learning From Peg-Out-of-Hole Disassembly. IEEE Robo",
+    "key": "zhao_visual-tactile_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "183": {
+    "pdf_text": "Zifan Zhao, Siddhant Haldar, Jinda Cui, Lerrel Pinto, and Raunaq Bhirangi. 2025. Touch begins where vision ends: Generalizable policies for contact-rich manipulation. arXiv preprint arXiv:2506.13762 (",
+    "key": "zhao2025touch",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "184": {
+    "pdf_text": "Yuhang Zheng, Songen Gu, Weize Li, Yupeng Zheng, Yujie Zang, Shuai Tian, Xiang Li, Ce Hao, Chen Gao, Si Liu, et al. 2026. OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation. a",
+    "key": "zheng2026omnivta",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "185": {
+    "pdf_text": "Peiyuan Zhi, Peiyang Li, Jianqin Yin, Baoxiong Jia, and Siyuan Huang. 2025. Learning a Unified Policy for Position and Force Control in Legged Loco-Manipulation. arXiv:2505.20829 [cs.RO] https://arxiv",
+    "key": "zhi2025learningunifiedpolicyposition",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "186": {
+    "pdf_text": "Bo Zhou, Ruixuan Jiao, Yi Li, Xiaogang Yuan, Fang Fang, and Shihua Li. 2025. Admittance visuomotor policy learning for general-purpose contact-rich manipulations. IEEE Transactions on Industrial Elect",
+    "key": "zhou2025admittance",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "187": {
+    "pdf_text": "Jiayu Zhou, Qiwei Wu, Jian Li, Zhe Chen, Xiaogang Xiong, and Renjing Xu. 2026. Gentle Manipulation Policy Learning via Demonstrations from VLM Planned Atomic Skills. Proceedings of the AAAI Conference",
+    "key": "zhou_gentle_2026",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "188": {
+    "pdf_text": "Minjie Zhu, Yichen Zhu, Jinming Li, Junjie Wen, Zhiyuan Xu, Zhengping Che, Chaomin Shen, Yaxin Peng, Dong Liu, Feifei Feng, et al. 2024. Language-conditioned robotic manipulation with fast and slow th",
+    "key": "zhu2024language",
+    "method": "containment",
+    "ratio": 1.0
+  },
+  "189": {
+    "pdf_text": "Yongshuo Zong, Oisin Mac Aodha, and Timothy M Hospedales. 2024. Self-supervised multimodal learning: A survey. IEEE Transactions on Pattern Analysis and Machine Intelligence 47, 7 (2024), 5299–5318.",
+    "key": "zong2024self",
+    "method": "containment",
+    "ratio": 1.0
+  }
+}

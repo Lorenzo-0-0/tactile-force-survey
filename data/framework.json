@@ -1,0 +1,952 @@
+{
+  "meta": {
+    "source": "draw main figure ver2.pptx",
+    "refTotal": 189
+  },
+  "components": [
+    {
+      "id": "perception",
+      "letter": "a",
+      "title": "Multi-modality Perception",
+      "kind": "main",
+      "panel": "fusion",
+      "boxes": [
+        {
+          "id": "perception.v",
+          "abbrev": "V",
+          "label": "Vision",
+          "refs": []
+        },
+        {
+          "id": "perception.l",
+          "abbrev": "L",
+          "label": "Language",
+          "refs": []
+        },
+        {
+          "id": "perception.f",
+          "abbrev": "F",
+          "label": "Force–Torque",
+          "refs": []
+        },
+        {
+          "id": "perception.t",
+          "abbrev": "T",
+          "label": "Tactile",
+          "refs": []
+        },
+        {
+          "id": "perception.s",
+          "abbrev": "S",
+          "label": "State",
+          "refs": []
+        },
+        {
+          "id": "perception.others",
+          "abbrev": "others",
+          "label": "Others",
+          "refs": []
+        }
+      ]
+    },
+    {
+      "id": "fusion",
+      "letter": "b",
+      "title": "Multi-modality Fusion & Encoding",
+      "kind": "main",
+      "panel": "fusion",
+      "boxes": [
+        {
+          "id": "fusion.vf",
+          "abbrev": "VF",
+          "label": "VF",
+          "refs": [
+            17,
+            84
+          ]
+        },
+        {
+          "id": "fusion.vt",
+          "abbrev": "VT",
+          "label": "VT",
+          "refs": [
+            125,
+            134
+          ]
+        },
+        {
+          "id": "fusion.lt",
+          "abbrev": "LT",
+          "label": "LT",
+          "refs": [
+            49
+          ]
+        },
+        {
+          "id": "fusion.fs",
+          "abbrev": "FS",
+          "label": "FS",
+          "refs": [
+            107,
+            154
+          ]
+        },
+        {
+          "id": "fusion.vlt",
+          "abbrev": "VLT",
+          "label": "VLT",
+          "refs": [
+            170,
+            183
+          ]
+        },
+        {
+          "id": "fusion.vfs",
+          "abbrev": "VFS",
+          "label": "VFS",
+          "refs": [
+            2,
+            15,
+            34,
+            41,
+            53,
+            59,
+            71,
+            74,
+            98,
+            100,
+            102,
+            126,
+            130,
+            185,
+            186
+          ]
+        },
+        {
+          "id": "fusion.vts",
+          "abbrev": "VTS",
+          "label": "VTS",
+          "refs": [
+            1,
+            55,
+            62,
+            97,
+            121,
+            131,
+            156,
+            162,
+            177,
+            184
+          ]
+        },
+        {
+          "id": "fusion.vlfs",
+          "abbrev": "VLFS",
+          "label": "VLFS",
+          "refs": [
+            27,
+            91,
+            123,
+            166,
+            176,
+            178
+          ]
+        },
+        {
+          "id": "fusion.vlts",
+          "abbrev": "VLTS",
+          "label": "VLTS",
+          "refs": [
+            25,
+            64,
+            70,
+            175
+          ]
+        },
+        {
+          "id": "fusion.vfts",
+          "abbrev": "VFTS",
+          "label": "VFTS",
+          "refs": [
+            54,
+            105,
+            153,
+            157,
+            172
+          ]
+        },
+        {
+          "id": "fusion.vlfts",
+          "abbrev": "VLFTS",
+          "label": "VLFTS",
+          "refs": [
+            9,
+            66,
+            133
+          ]
+        },
+        {
+          "id": "fusion.others",
+          "abbrev": "others",
+          "label": "Others",
+          "refs": [
+            70,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reconstruction",
+      "letter": "c",
+      "title": "Reconstruction",
+      "kind": "side",
+      "panel": "phase1",
+      "boxes": [
+        {
+          "id": "reconstruction.t",
+          "abbrev": "T",
+          "label": "Tactile",
+          "refs": [
+            121,
+            125,
+            131,
+            153,
+            156,
+            162,
+            184
+          ]
+        },
+        {
+          "id": "reconstruction.v",
+          "abbrev": "V",
+          "label": "Vision",
+          "refs": [
+            125,
+            131,
+            134,
+            162
+          ]
+        },
+        {
+          "id": "reconstruction.f",
+          "abbrev": "F",
+          "label": "Force–Torque",
+          "refs": [
+            66,
+            153
+          ]
+        },
+        {
+          "id": "reconstruction.l",
+          "abbrev": "L",
+          "label": "Language",
+          "refs": [
+            70
+          ]
+        },
+        {
+          "id": "reconstruction.s",
+          "abbrev": "S",
+          "label": "State",
+          "refs": [
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy1",
+      "letter": "d",
+      "title": "Primary Policy",
+      "kind": "main",
+      "panel": "phase1",
+      "phaseLabel": "Phase 1",
+      "boxes": [
+        {
+          "id": "policy1.vla",
+          "abbrev": "vla",
+          "label": "Vision-Language-Action (VLA)",
+          "refs": [
+            25,
+            49,
+            64,
+            66,
+            70,
+            91,
+            133,
+            166,
+            170,
+            175,
+            176,
+            178
+          ]
+        },
+        {
+          "id": "policy1.dp",
+          "abbrev": "dp",
+          "label": "Diffusion · Flow Matching",
+          "refs": [
+            2,
+            17,
+            34,
+            53,
+            54,
+            59,
+            62,
+            74,
+            84,
+            97,
+            100,
+            134,
+            153,
+            154,
+            156,
+            157,
+            172,
+            177,
+            184,
+            185,
+            186
+          ]
+        },
+        {
+          "id": "policy1.act",
+          "abbrev": "act",
+          "label": "Action Chunking Transformer (ACT)",
+          "refs": [
+            9,
+            15,
+            41,
+            55,
+            71,
+            98,
+            105,
+            121,
+            123,
+            183
+          ]
+        },
+        {
+          "id": "policy1.rl",
+          "abbrev": "rl",
+          "label": "Reinforcement Learning (RL)",
+          "refs": [
+            102,
+            107,
+            125,
+            126,
+            130,
+            131,
+            133,
+            134,
+            162
+          ]
+        },
+        {
+          "id": "policy1.reg",
+          "abbrev": "reg",
+          "label": "Regression (MLP)",
+          "refs": [
+            1,
+            27,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate",
+      "letter": "f",
+      "title": "Intermediate Modalities",
+      "kind": "main",
+      "panel": "phase1",
+      "boxes": [
+        {
+          "id": "intermediate.a",
+          "abbrev": "A",
+          "label": "Action Chunk (A)",
+          "refs": [
+            1,
+            2,
+            9,
+            15,
+            17,
+            25,
+            27,
+            34,
+            41,
+            49,
+            53,
+            54,
+            55,
+            59,
+            62,
+            64,
+            66,
+            70,
+            71,
+            74,
+            84,
+            91,
+            97,
+            98,
+            100,
+            102,
+            105,
+            107,
+            121,
+            123,
+            125,
+            126,
+            130,
+            131,
+            133,
+            134,
+            153,
+            156,
+            162,
+            166,
+            170,
+            172,
+            175,
+            176,
+            177,
+            178,
+            183,
+            184,
+            185,
+            186
+          ]
+        },
+        {
+          "id": "intermediate.k",
+          "abbrev": "K",
+          "label": "Control Stiffness (K)",
+          "refs": [
+            2,
+            59,
+            71,
+            123
+          ]
+        },
+        {
+          "id": "intermediate.fc",
+          "abbrev": "Fc",
+          "label": "Reference Force (Fc)",
+          "refs": [
+            15,
+            27,
+            54,
+            64,
+            91,
+            100,
+            102,
+            154,
+            172,
+            185,
+            186
+          ]
+        },
+        {
+          "id": "intermediate.others",
+          "abbrev": "others",
+          "label": "Others",
+          "refs": [
+            1,
+            27,
+            34,
+            91,
+            107,
+            157,
+            184
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsprediction",
+      "letter": "e",
+      "title": "Observation Prediction",
+      "kind": "side",
+      "panel": "phase2",
+      "boxes": [
+        {
+          "id": "obsprediction.f",
+          "abbrev": "F",
+          "label": "Force–Torque",
+          "refs": [
+            41,
+            112,
+            178,
+            185
+          ]
+        },
+        {
+          "id": "obsprediction.s",
+          "abbrev": "S",
+          "label": "State",
+          "refs": [
+            112,
+            126,
+            133
+          ]
+        },
+        {
+          "id": "obsprediction.t",
+          "abbrev": "T",
+          "label": "Tactile",
+          "refs": [
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy2",
+      "letter": "g",
+      "title": "Refinement Policy",
+      "kind": "main",
+      "panel": "phase2",
+      "phaseLabel": "Phase 2",
+      "boxes": [
+        {
+          "id": "policy2.dp",
+          "abbrev": "dp",
+          "label": "Diffusion · Flow Matching",
+          "refs": [
+            9,
+            34
+          ]
+        },
+        {
+          "id": "policy2.act",
+          "abbrev": "act",
+          "label": "ACT",
+          "refs": [
+            157
+          ]
+        },
+        {
+          "id": "policy2.rl",
+          "abbrev": "rl",
+          "label": "Reinforcement Learning (RL)",
+          "refs": [
+            112,
+            183,
+            185
+          ]
+        },
+        {
+          "id": "policy2.reg",
+          "abbrev": "reg",
+          "label": "Regression (MLP)",
+          "refs": [
+            184
+          ]
+        },
+        {
+          "id": "policy2.model",
+          "abbrev": "model",
+          "label": "Model-based Algorithms",
+          "refs": [
+            27,
+            53,
+            105,
+            154,
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "letter": "h",
+      "title": "Robot-end Control",
+      "kind": "main",
+      "panel": "phase3",
+      "phaseLabel": "Phase 3",
+      "boxes": [
+        {
+          "id": "control.impedance",
+          "abbrev": "impedance",
+          "label": "Impedance Control",
+          "refs": [
+            1,
+            9,
+            17,
+            41,
+            54,
+            102,
+            107,
+            126,
+            154,
+            176
+          ]
+        },
+        {
+          "id": "control.admittance",
+          "abbrev": "admittance",
+          "label": "Admittance Control",
+          "refs": [
+            59,
+            123,
+            186
+          ]
+        },
+        {
+          "id": "control.hybrid",
+          "abbrev": "hybrid",
+          "label": "Hybrid Force-Position Control",
+          "refs": [
+            34,
+            64,
+            91,
+            100
+          ]
+        },
+        {
+          "id": "control.pid",
+          "abbrev": "pid",
+          "label": "PID (PD) Control",
+          "refs": [
+            9,
+            53,
+            70,
+            97,
+            100,
+            105,
+            112,
+            131,
+            133,
+            153,
+            156,
+            162,
+            185
+          ]
+        },
+        {
+          "id": "control.robotdep",
+          "abbrev": "robotdep",
+          "label": "Robot-Dependent",
+          "refs": [
+            25,
+            27,
+            49,
+            55,
+            62,
+            66,
+            74,
+            84,
+            98,
+            121,
+            125,
+            130,
+            134,
+            157,
+            166,
+            170,
+            172,
+            175,
+            177,
+            178,
+            183,
+            184
+          ]
+        },
+        {
+          "id": "control.others",
+          "abbrev": "others",
+          "label": "Others (FDCC · Bilateral)",
+          "refs": [
+            2,
+            15,
+            71
+          ]
+        }
+      ]
+    }
+  ],
+  "bands": [
+    {
+      "id": "band.p2in",
+      "panel": "phase2",
+      "groups": [
+        {
+          "id": "band.p2in.fwd",
+          "title": "Fusion-phase Forwarded",
+          "boxes": [
+            {
+              "id": "band.p2in.fwd.v",
+              "abbrev": "V",
+              "label": "Vision",
+              "refs": [
+                9,
+                34,
+                183
+              ]
+            },
+            {
+              "id": "band.p2in.fwd.f",
+              "abbrev": "F",
+              "label": "Force–Torque",
+              "refs": [
+                9,
+                27,
+                34,
+                105,
+                157
+              ]
+            },
+            {
+              "id": "band.p2in.fwd.t",
+              "abbrev": "T",
+              "label": "Tactile",
+              "refs": [
+                157,
+                183,
+                184
+              ]
+            },
+            {
+              "id": "band.p2in.fwd.s",
+              "abbrev": "S",
+              "label": "State",
+              "refs": [
+                9,
+                27,
+                34,
+                53,
+                105,
+                112,
+                172,
+                184,
+                185
+              ]
+            },
+            {
+              "id": "band.p2in.fwd.other",
+              "abbrev": "Other",
+              "label": "Others",
+              "refs": [
+                53,
+                184
+              ]
+            }
+          ]
+        },
+        {
+          "id": "band.p2in.pred",
+          "title": "Phase 1 Predicted Modalities",
+          "boxes": [
+            {
+              "id": "band.p2in.pred.a",
+              "abbrev": "A",
+              "label": "Action Chunk",
+              "refs": [
+                9,
+                27,
+                53,
+                105,
+                112,
+                172,
+                183,
+                184,
+                185
+              ]
+            },
+            {
+              "id": "band.p2in.pred.fc",
+              "abbrev": "Fc",
+              "label": "Reference Force",
+              "refs": [
+                27,
+                112,
+                154,
+                172,
+                185
+              ]
+            },
+            {
+              "id": "band.p2in.pred.other",
+              "abbrev": "Other",
+              "label": "Others",
+              "refs": [
+                27,
+                34,
+                157
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "band.p3in",
+      "panel": "phase3",
+      "groups": [
+        {
+          "id": "band.p3in.fwd",
+          "title": "Fusion-phase Forwarded",
+          "boxes": [
+            {
+              "id": "band.p3in.fwd.f",
+              "abbrev": "F",
+              "label": "Force–Torque",
+              "refs": [
+                34,
+                59,
+                64,
+                91,
+                100,
+                123,
+                186
+              ]
+            },
+            {
+              "id": "band.p3in.fwd.s",
+              "abbrev": "S",
+              "label": "State",
+              "refs": [
+                1,
+                9,
+                17,
+                41,
+                54,
+                102,
+                107,
+                112,
+                123,
+                126,
+                154,
+                176
+              ]
+            }
+          ]
+        },
+        {
+          "id": "band.p3in.pred",
+          "title": "Phase 2 Predicted Modalities",
+          "boxes": [
+            {
+              "id": "band.p3in.pred.a",
+              "abbrev": "A",
+              "label": "Action Chunk",
+              "refs": [
+                9,
+                27,
+                34,
+                53,
+                105,
+                112,
+                157,
+                172,
+                183,
+                184,
+                185
+              ]
+            },
+            {
+              "id": "band.p3in.pred.fc",
+              "abbrev": "Fc",
+              "label": "Reference Force",
+              "refs": [
+                34,
+                154
+              ]
+            },
+            {
+              "id": "band.p3in.pred.other",
+              "abbrev": "Other",
+              "label": "Others",
+              "refs": [
+                34
+              ]
+            }
+          ]
+        },
+        {
+          "id": "band.p3in.p1fwd",
+          "title": "Phase 1 Forwarded",
+          "boxes": [
+            {
+              "id": "band.p3in.p1fwd.a",
+              "abbrev": "A",
+              "label": "Action Chunk",
+              "refs": [
+                1,
+                2,
+                15,
+                17,
+                25,
+                34,
+                41,
+                49,
+                54,
+                55,
+                59,
+                62,
+                64,
+                66,
+                70,
+                71,
+                74,
+                84,
+                91,
+                97,
+                98,
+                100,
+                102,
+                107,
+                121,
+                123,
+                125,
+                126,
+                130,
+                131,
+                133,
+                134,
+                153,
+                156,
+                162,
+                166,
+                170,
+                175,
+                176,
+                177,
+                178,
+                186
+              ]
+            },
+            {
+              "id": "band.p3in.p1fwd.fc",
+              "abbrev": "Fc",
+              "label": "Reference Force",
+              "refs": [
+                15,
+                54,
+                64,
+                91,
+                100,
+                102,
+                186
+              ]
+            },
+            {
+              "id": "band.p3in.p1fwd.k",
+              "abbrev": "K",
+              "label": "Control Stiffness",
+              "refs": [
+                2,
+                59,
+                71,
+                123
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": []
+}

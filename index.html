@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0A0C10" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <title>TF-M3PF — Tactile/Force-grounded Robot Intelligence</title>
+  <meta name="description" content="A survey of multi-modal learning and multi-phase policy architectures for tactile/force-grounded robot intelligence. 189 papers mapped through one unified framework — explore it interactively." />
+
+  <meta property="og:title" content="Tactile/Force-grounded Robot Intelligence — A Survey" />
+  <meta property="og:description" content="TF-M3PF: a unified multi-modal multi-phase framework mapping 189 papers on force- and tactile-aware robot learning. Explore the framework interactively." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="styles/tokens.css?v=1" />
+  <link rel="stylesheet" href="styles/reset.css?v=1" />
+  <link rel="stylesheet" href="styles/layout.css?v=1" />
+  <link rel="stylesheet" href="styles/components.css?v=1" />
+  <link rel="stylesheet" href="styles/framework.css?v=1" />
+</head>
+<body>
+
+<!-- =========================================================
+     NAV
+     ========================================================= -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand"><span class="nav__brand-icon" aria-hidden="true"></span>TF-M3PF</a>
+    <div class="nav__links">
+      <a class="nav__link" href="#abstract">Abstract</a>
+      <a class="nav__link" href="#explorer">Explorer</a>
+      <a class="nav__link" href="#highlights">Highlights</a>
+      <a class="nav__link" href="#bibtex">Cite</a>
+      <a class="nav__cta" href="#" data-placeholder="paper-pdf" title="Preprint link coming soon">Paper ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<header class="section section--hero hero hero--survey" id="top">
+  <div class="hero__topo" aria-hidden="true">
+    <svg id="hero-topo" preserveAspectRatio="xMidYMid slice"></svg>
+  </div>
+
+  <div class="container hero__inner">
+    <p class="hero__eyebrow" data-reveal>
+      TF-M3PF&ensp;·&ensp;A unified multi-modal · multi-phase framework
+    </p>
+
+    <h1 class="hero__title hero__title--survey" data-reveal style="--reveal-delay: 80ms">
+      <span class="hero__title-line">Tactile/Force-grounded</span>
+      <span class="hero__title-line">Robot Intelligence</span>
+    </h1>
+
+    <p class="hero__sub hero__sub--survey" data-reveal style="--reveal-delay: 200ms">
+      A Survey of Multi-modal Learning and Multi-phase Policy Architectures
+    </p>
+
+    <p class="hero__authors" data-reveal style="--reveal-delay: 400ms">
+      Shilin Shan<sup>*&#8225;</sup>,
+      Chuhao Zhou<sup>*</sup>,
+      Ruize Wang<sup>*</sup>,
+      Xinyan Chen<sup>*</sup>,
+      Xiangyu Chen<sup>*</sup>,
+      Xinyu Zhou<sup>*</sup>,
+      Boyu Ma<sup>*</sup>,<br />
+      Yuxuan Hu,
+      <a href="https://lorenzo-0-0.github.io/" target="_blank" rel="noopener">Jingliang Li</a>,
+      Yuxuan Hu,
+      Geng Li,
+      Guohao Chen,
+      Tianrui Zhu,
+      <a href="https://marsyang.site/" target="_blank" rel="noopener">Jianfei Yang</a><sup>&#8224;</sup>
+    </p>
+
+    <p class="hero__affil" data-reveal style="--reveal-delay: 440ms">
+      Nanyang Technological University, Singapore
+    </p>
+
+    <p class="hero__marks" data-reveal style="--reveal-delay: 470ms">
+      <span><sup>*</sup>Equal contribution</span>
+      <span><sup>&#8225;</sup>Project lead</span>
+      <span><sup>&#8224;</sup>Corresponding author</span>
+    </p>
+
+    <div class="hero__cta-row" data-reveal style="--reveal-delay: 510ms">
+      <a class="btn btn--primary" href="#explorer">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h6v6H4zM14 11h6v6h-6zM10 10l4 2"/></svg>
+        Explore the Framework
+      </a>
+      <a class="btn" href="#" data-placeholder="paper-pdf" title="Preprint link coming soon">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v5h5M6 3h8l5 5v13H6V3z"/></svg>
+        Paper
+      </a>
+      <a class="btn" href="#" data-placeholder="arxiv" title="arXiv link coming soon">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l8 16M20 4l-8 16M3 12h18"/></svg>
+        arXiv
+      </a>
+      <a class="btn" href="#bibtex">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h12a4 4 0 014 4v12H4z M8 8h6M8 12h8M8 16h5"/></svg>
+        BibTeX
+      </a>
+    </div>
+
+    <ul class="stats stats--hero" role="list" data-reveal style="--reveal-delay: 560ms">
+      <li class="stat">
+        <div class="stat__value">
+          <span class="stat__num" data-count-to="189" data-count-decimals="0">0</span><span class="unit">papers</span>
+        </div>
+        <p class="stat__label">mapped through one unified architecture</p>
+      </li>
+      <li class="stat">
+        <div class="stat__value">
+          <span class="stat__num" data-count-to="8" data-count-decimals="0">0</span><span class="unit">components</span>
+        </div>
+        <p class="stat__label">perception · fusion · policies · control</p>
+      </li>
+      <li class="stat">
+        <div class="stat__value">
+          <span class="stat__num" data-count-to="3" data-count-decimals="0">0</span><span class="unit">phases</span>
+        </div>
+        <p class="stat__label">from learned policy to reactive robot-end control</p>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- =========================================================
+     ABSTRACT (§ 01)
+     ========================================================= -->
+<section class="section tldr" id="abstract">
+  <div class="container">
+    <p class="chapter-num" data-reveal>§ 01 — Abstract</p>
+
+    <h2 class="section-title" data-reveal>
+      Contact-rich manipulation demands more than seeing and moving — it demands feeling and regulating.
+    </h2>
+
+    <div class="dilemma">
+      <div class="dilemma__col" data-reveal>
+        <h3>Learning-based</h3>
+        <p>
+          Learned policies extract task-relevant representations from multimodal
+          data and generate actions from demonstrations — strong at perception,
+          semantics, and generalization, but with no built-in guarantee of
+          stable physical interaction.
+        </p>
+      </div>
+      <div class="dilemma__rule" aria-hidden="true"></div>
+      <div class="dilemma__col dilemma__col--right" data-reveal style="--reveal-delay: 160ms">
+        <h3>Control-oriented</h3>
+        <p>
+          Explicit force-control mechanisms — impedance, admittance, hybrid
+          force–position — provide stability and responsiveness under contact,
+          yet lack the semantic understanding to decide <em>what</em> to do.
+        </p>
+      </div>
+    </div>
+
+    <p class="tldr__line" data-reveal style="margin-block: var(--s-8) var(--s-7)">
+      <span style="color: var(--accent)">TF-M3PF:</span> one framework that maps how modern systems combine <em>both.</em>
+    </p>
+
+    <div class="abstract-body" data-reveal>
+      <p>
+        Physically grounded robot intelligence requires robots to perceive, reason about, and
+        regulate their interactions with the physical world. This capability is particularly
+        critical in contact-rich robot manipulation, where successful task execution demands
+        not only visual perception and motion generation, but also force regulation and
+        adaptive control. In this context, recent robot learning methods have made substantial
+        progress by integrating force, tactile, vision, language, and proprioceptive sensing
+        into learned manipulation policies. In parallel, many systems adopt multi-phase
+        architectures that combine high-level policies, semantic modules, and low-level
+        controllers to bridge semantic task understanding with reactive physical execution.
+      </p>
+      <p>
+        Existing surveys have not explicitly reviewed force- and tactile-aware robot learning
+        from a unified perspective that jointly captures multimodal sensing and multi-phase
+        system design. This survey addresses this gap by proposing the
+        <strong>Tactile/Force-aware Multi-Modal Multi-Phase Framework (TF-M3PF)</strong>,
+        which maps individual methods into a unified hierarchical architecture. The framework
+        characterizes how recent works organize observation modalities, encode and fuse
+        heterogeneous sensory inputs, generate and refine actions across multiple phases, and
+        connect learned policies to reactive robot-end control. Building on this methodological
+        view, we further examine the task settings and infrastructure requirements of physical
+        interaction, thereby integrating both algorithmic and practical perspectives on force-
+        and tactile-aware robot learning.
+      </p>
+    </div>
+
+    <figure class="media-block" data-reveal style="margin-top: var(--s-9)">
+      <div class="media-block__chrome">
+        <picture>
+          <source srcset="assets/images/teaser.webp" type="image/webp" />
+          <img src="assets/images/teaser.png" alt="Overview of the unified multi-modal multi-phase framework: multimodal perception, encoding and fusion, primary action generation, action refinement, and low-level robot-end control." loading="lazy" />
+        </picture>
+      </div>
+      <div class="media-block__meta">
+        <span class="media-block__label">FIG. 01 · Framework Overview</span>
+        <span class="media-block__rule"></span>
+        <p class="media-block__caption">
+          The unified multi-modal multi-phase framework. The main hierarchical architecture
+          spans multimodal perception, encoding and fusion, primary action generation, action
+          refinement, and low-level robot-end control — with branching modules for input
+          reconstruction, missing-modality prediction, and explicit force-control algorithms.
+        </p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- =========================================================
+     FRAMEWORK EXPLORER (§ 02 — the centerpiece)
+     ========================================================= -->
+<section class="section section--bordered explorer-section" id="explorer">
+  <div class="container">
+    <p class="chapter-num" data-reveal>§ 02 — Framework Explorer</p>
+    <h2 class="section-title" data-reveal>One architecture. Every method, mapped.</h2>
+    <p class="section-lead explorer-lead" data-reveal>
+      TF-M3PF places each of the 189 surveyed papers inside a single hierarchical
+      architecture — from raw sensing to reactive control.
+      <span class="explorer-hint"><kbd>Hover</kbd> any module to surface its papers
+      &ensp;·&ensp; <kbd>Select</kbd> a paper to trace its full pipeline
+      &ensp;·&ensp; <kbd>Esc</kbd> to clear</span>
+    </p>
+  </div>
+
+  <div class="explorer" id="explorer-app">
+    <aside class="explorer__sidebar" aria-label="Paper directory">
+      <div class="sidebar__head">
+        <input id="paper-search" class="sidebar__search" type="search"
+               placeholder="Filter 189 papers — title, author, venue…" autocomplete="off" spellcheck="false" />
+        <div class="sidebar__row">
+          <div class="sidebar__scope" id="sidebar-scope" role="tablist" aria-label="Paper scope">
+            <button type="button" class="is-active" data-scope="all" role="tab" aria-selected="true">All</button>
+            <button type="button" data-scope="mapped" role="tab" aria-selected="false">In framework</button>
+          </div>
+          <p class="sidebar__status" id="sidebar-status" role="status" aria-live="polite">189 papers</p>
+        </div>
+      </div>
+      <ol class="sidebar__list" id="paper-list">
+        <!-- rendered by scripts/framework/sidebar.js -->
+      </ol>
+    </aside>
+
+    <div class="explorer__main">
+      <div class="pipeline-strip" id="pipeline-strip" hidden>
+        <!-- rendered by scripts/framework/pipeline-strip.js -->
+      </div>
+      <div class="framework" id="framework-root" aria-label="TF-M3PF framework diagram">
+        <noscript><p style="padding: 2rem">The interactive framework requires JavaScript. See Fig. 2 of the paper for the static version.</p></noscript>
+        <!-- rendered by scripts/framework/render.js -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     HIGHLIGHTS (§ 03)
+     ========================================================= -->
+<section class="section section--bordered" id="highlights">
+  <div class="container">
+    <p class="chapter-num" data-reveal>§ 03 — Inside the Survey</p>
+    <h2 class="section-title" data-reveal>Each phase, dissected.</h2>
+
+    <figure class="media-block" data-reveal>
+      <div class="media-block__chrome">
+        <picture>
+          <source srcset="assets/images/framework_fusion.webp" type="image/webp" />
+          <img src="assets/images/framework_fusion.png" alt="Multimodal fusion and encoding framework: physical interpretation of modalities and model structures of representation-learning and fusion methods." loading="lazy" />
+        </picture>
+      </div>
+      <div class="media-block__meta">
+        <span class="media-block__label">FIG. 03 · Phase 0 — Fusion &amp; Encoding</span>
+        <span class="media-block__rule"></span>
+        <h4 class="media-block__title">How heterogeneous senses become one representation.</h4>
+        <p class="media-block__caption">
+          The physical interpretation of each modality and its sub-classes, alongside the
+          model structures of the major representation-learning and modality-fusion methods —
+          auxiliary reconstruction, masked autoencoding, VQ-based reconstruction, contrastive
+          alignment, FiLM injection, attention conditioning, and mixture-of-experts.
+        </p>
+      </div>
+    </figure>
+
+    <figure class="media-block" data-reveal>
+      <div class="media-block__chrome">
+        <picture>
+          <source srcset="assets/images/framework_phase1.webp" type="image/webp" />
+          <img src="assets/images/framework_phase1.png" alt="Phase 1 primary action policies: VLA, diffusion and flow matching, action chunking transformers, reinforcement learning, and regression." loading="lazy" />
+        </picture>
+      </div>
+      <div class="media-block__meta">
+        <span class="media-block__label">FIG. 04 · Phase 1 — Primary Action Policy</span>
+        <span class="media-block__rule"></span>
+        <h4 class="media-block__title">Generating actions from fused observations.</h4>
+        <p class="media-block__caption">
+          Architectures of the primary action-generation phase: vision-language-action models,
+          diffusion / flow-matching policies, action chunking transformers, reinforcement
+          learning, and direct regression — together with the auxiliary representation
+          learning that shapes their encoders.
+        </p>
+      </div>
+    </figure>
+
+    <figure class="media-block" data-reveal>
+      <div class="media-block__chrome">
+        <picture>
+          <source srcset="assets/images/framework_phase2.webp" type="image/webp" />
+          <img src="assets/images/framework_phase2.png" alt="Phase 2 refinement policies refining primary actions with forwarded and predicted modalities." loading="lazy" />
+        </picture>
+      </div>
+      <div class="media-block__meta">
+        <span class="media-block__label">FIG. 05 · Phase 2 — Refinement Policy</span>
+        <span class="media-block__rule"></span>
+        <h4 class="media-block__title">Refining actions before they touch the world.</h4>
+        <p class="media-block__caption">
+          The action-refinement phase consumes Phase-1 outputs and forwarded sensing to
+          produce corrected actions — via residual diffusion, reinforcement learning,
+          regression, or model-based algorithms — and predicts observations that cannot be
+          directly measured.
+        </p>
+      </div>
+    </figure>
+
+    <figure class="media-block" data-reveal>
+      <div class="media-block__chrome">
+        <picture>
+          <source srcset="assets/images/framework_control.webp" type="image/webp" />
+          <img src="assets/images/framework_control.png" alt="Phase 3 robot-end control: impedance, admittance, hybrid force-position, and PID control closing the loop at the robot end." loading="lazy" />
+        </picture>
+      </div>
+      <div class="media-block__meta">
+        <span class="media-block__label">FIG. 06 · Phase 3 — Robot-end Control</span>
+        <span class="media-block__rule"></span>
+        <h4 class="media-block__title">Where learned intent meets physical contact.</h4>
+        <p class="media-block__caption">
+          Reactive robot-end controllers — impedance, admittance, hybrid force–position, and
+          PID — regulate the final interaction, translating refined actions and reference
+          forces into stable, compliant contact.
+        </p>
+      </div>
+    </figure>
+
+    <figure class="media-block media-block--xs" data-reveal>
+      <div class="media-block__chrome">
+        <picture>
+          <source srcset="assets/images/task_histogram.webp" type="image/webp" />
+          <img src="assets/images/task_histogram.png" alt="Histogram of surveyed papers by contact-rich manipulation task category." loading="lazy" />
+        </picture>
+      </div>
+      <div class="media-block__meta">
+        <span class="media-block__label">FIG. 07 · Task Landscape</span>
+        <span class="media-block__rule"></span>
+        <h4 class="media-block__title">What the field actually manipulates.</h4>
+        <p class="media-block__caption">
+          The distribution of surveyed methods across contact-rich task families — precision
+          assembly, deformable and surface-contact manipulation, dynamic and multi-contact
+          interaction, and household manipulation.
+        </p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- =========================================================
+     BIBTEX (§ 04)
+     ========================================================= -->
+<section class="section section--bordered" id="bibtex">
+  <div class="container">
+    <p class="chapter-num" data-reveal>§ 04 — Cite</p>
+    <h2 class="section-title" data-reveal>BibTeX</h2>
+
+    <div class="bib" data-reveal>
+      <button class="bib__copy" type="button" aria-label="Copy BibTeX to clipboard">Copy</button>
+<pre id="bibtex-source">@article{shan2026tactileforce,
+  title   = {Tactile/Force-grounded Robot Intelligence: A Survey of
+             Multi-modal Learning and Multi-phase Policy Architectures},
+  author  = {Shilin Shan and Chuhao Zhou and Ruize Wang and Xinyan Chen and
+             Xiangyu Chen and Xinyu Zhou and Boyu Ma and Yuxuan Hu and
+             Jingliang Li and Yuxuan Hu and Geng Li and Guohao Chen and
+             Tianrui Zhu and Jianfei Yang},
+  year    = {2026},
+  note    = {Manuscript submitted to ACM}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__row">
+      <div class="footer__brand">TF-M3PF · Tactile/Force-grounded Robot Intelligence</div>
+      <ul class="footer__links" role="list">
+        <li><a href="#" data-placeholder="paper-pdf" title="Preprint link coming soon">Paper</a></li>
+        <li><a href="mailto:shilin.shan@ntu.edu.sg">Contact</a></li>
+        <li><a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">NTU Singapore</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+<script src="scripts/reveal.js"          defer></script>
+<script src="scripts/scroll-progress.js" defer></script>
+<script src="scripts/copy-bibtex.js"     defer></script>
+<script src="scripts/main.js"            defer></script>
+<script src="scripts/hero-topo.js"       defer></script>
+<script type="module" src="scripts/framework/index.js"></script>
+
+</body>
+</html>

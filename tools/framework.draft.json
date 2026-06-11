@@ -1,0 +1,2203 @@
+{
+  "geometry": {
+    "a": 879607,
+    "b": 1849113,
+    "c": 4350993,
+    "d": 4255549,
+    "e": 7819456,
+    "f": 6516598,
+    "g": 11184155,
+    "h": 15762621,
+    "p2band": 9173415,
+    "p3band": 13568953
+  },
+  "labels": [
+    {
+      "text": "Language (L)",
+      "x": 5486400,
+      "y": 1178853,
+      "w": 1019316,
+      "h": 261610,
+      "bucket": "perception",
+      "canonical": "perception.l",
+      "refs": []
+    },
+    {
+      "text": "Vision (V)",
+      "x": 4374514,
+      "y": 1178853,
+      "w": 922430,
+      "h": 261610,
+      "bucket": "perception",
+      "canonical": "perception.v",
+      "refs": []
+    },
+    {
+      "text": "Force/Torque (F)",
+      "x": 6588191,
+      "y": 1179185,
+      "w": 1365912,
+      "h": 261610,
+      "bucket": "perception",
+      "canonical": "perception.f",
+      "refs": []
+    },
+    {
+      "text": "Tactile (T)",
+      "x": 8026479,
+      "y": 1176528,
+      "w": 1018233,
+      "h": 261610,
+      "bucket": "perception",
+      "canonical": "perception.t",
+      "refs": []
+    },
+    {
+      "text": "State (S)",
+      "x": 8943812,
+      "y": 1178853,
+      "w": 1134028,
+      "h": 261610,
+      "bucket": "perception",
+      "canonical": "perception.s",
+      "refs": []
+    },
+    {
+      "text": "(Others)",
+      "x": 10287343,
+      "y": 1178853,
+      "w": 721529,
+      "h": 261610,
+      "bucket": "perception",
+      "canonical": "perception.others",
+      "refs": []
+    },
+    {
+      "text": "Skipping Phase 2",
+      "x": 11848659,
+      "y": 10921557,
+      "w": 785338,
+      "h": 400110,
+      "bucket": "obsprediction",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Estimation",
+      "x": 13805813,
+      "y": 918454,
+      "w": 832500,
+      "h": 246221,
+      "bucket": "perception",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Measurements",
+      "x": 6144491,
+      "y": 198835,
+      "w": 1062888,
+      "h": 246221,
+      "bucket": "perception",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "V",
+      "x": 1305713,
+      "y": 9595481,
+      "w": 455500,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.fwd.v",
+      "refs": [
+        9,
+        34,
+        183
+      ]
+    },
+    {
+      "text": "F",
+      "x": 2288270,
+      "y": 9592323,
+      "w": 455500,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.fwd.f",
+      "refs": [
+        9,
+        27,
+        34,
+        105,
+        157
+      ]
+    },
+    {
+      "text": "T",
+      "x": 3301584,
+      "y": 9592305,
+      "w": 455500,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.fwd.t",
+      "refs": [
+        157,
+        183,
+        184
+      ]
+    },
+    {
+      "text": "S",
+      "x": 4299405,
+      "y": 9597598,
+      "w": 455500,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.fwd.s",
+      "refs": [
+        9,
+        27,
+        34,
+        53,
+        105,
+        112,
+        172,
+        184,
+        185
+      ]
+    },
+    {
+      "text": "Other",
+      "x": 5206340,
+      "y": 9588072,
+      "w": 655020,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.fwd.other",
+      "refs": [
+        53,
+        184
+      ]
+    },
+    {
+      "text": "Forward Data",
+      "x": 19197,
+      "y": 2811007,
+      "w": 677252,
+      "h": 415242,
+      "bucket": "fusion",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "VTS",
+      "x": 8392661,
+      "y": 2243307,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vts",
+      "refs": [
+        1,
+        55,
+        62,
+        97,
+        121,
+        131,
+        156,
+        162,
+        177,
+        184
+      ]
+    },
+    {
+      "text": "(Others)",
+      "x": 10400685,
+      "y": 6936834,
+      "w": 580474,
+      "h": 246221,
+      "bucket": "intermediate",
+      "canonical": "intermediate.others",
+      "refs": [
+        1,
+        27,
+        34,
+        91,
+        107,
+        157,
+        184
+      ]
+    },
+    {
+      "text": "Action Chunk (A)",
+      "x": 5320763,
+      "y": 6951610,
+      "w": 1114122,
+      "h": 246221,
+      "bucket": "intermediate",
+      "canonical": "intermediate.a",
+      "refs": [
+        1,
+        2,
+        9,
+        15,
+        17,
+        25,
+        27,
+        34,
+        41,
+        49,
+        53,
+        54,
+        55,
+        59,
+        62,
+        64,
+        66,
+        70,
+        71,
+        74,
+        84,
+        91,
+        97,
+        98,
+        100,
+        102,
+        105,
+        107,
+        121,
+        123,
+        125,
+        126,
+        130,
+        131,
+        133,
+        134,
+        153,
+        156,
+        162,
+        166,
+        170,
+        172,
+        175,
+        176,
+        177,
+        178,
+        183,
+        184,
+        185,
+        186
+      ]
+    },
+    {
+      "text": "S",
+      "x": 5321792,
+      "y": 13984911,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.fwd.s",
+      "refs": [
+        1,
+        9,
+        17,
+        41,
+        54,
+        102,
+        107,
+        112,
+        123,
+        126,
+        154,
+        176
+      ]
+    },
+    {
+      "text": "Impedance Control",
+      "x": 3920584,
+      "y": 16183536,
+      "w": 866520,
+      "h": 369332,
+      "bucket": "control",
+      "canonical": "control.impedance",
+      "refs": [
+        1,
+        9,
+        17,
+        41,
+        54,
+        102,
+        107,
+        126,
+        154,
+        176
+      ]
+    },
+    {
+      "text": "VFS",
+      "x": 7232200,
+      "y": 2238893,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vfs",
+      "refs": [
+        2,
+        15,
+        34,
+        41,
+        53,
+        59,
+        71,
+        74,
+        98,
+        100,
+        102,
+        126,
+        130,
+        185,
+        186
+      ]
+    },
+    {
+      "text": "Control Stiffness (K)",
+      "x": 7275541,
+      "y": 6924178,
+      "w": 1302640,
+      "h": 246221,
+      "bucket": "intermediate",
+      "canonical": "intermediate.k",
+      "refs": [
+        2,
+        59,
+        71,
+        123
+      ]
+    },
+    {
+      "text": "VLFTS",
+      "x": 12501656,
+      "y": 2238892,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vlfts",
+      "refs": [
+        9,
+        66,
+        133
+      ]
+    },
+    {
+      "text": "A",
+      "x": 6662009,
+      "y": 9588072,
+      "w": 447952,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.pred.a",
+      "refs": [
+        9,
+        27,
+        53,
+        105,
+        112,
+        172,
+        183,
+        184,
+        185
+      ]
+    },
+    {
+      "text": "PID (PD) Control",
+      "x": 7849958,
+      "y": 16237746,
+      "w": 1135200,
+      "h": 230832,
+      "bucket": "control",
+      "canonical": "control.pid",
+      "refs": [
+        9,
+        53,
+        70,
+        97,
+        100,
+        105,
+        112,
+        131,
+        133,
+        153,
+        156,
+        162,
+        185
+      ]
+    },
+    {
+      "text": "Reference Force (Fc)",
+      "x": 8727938,
+      "y": 6920974,
+      "w": 1294974,
+      "h": 246221,
+      "bucket": "intermediate",
+      "canonical": "intermediate.fc",
+      "refs": [
+        15,
+        27,
+        54,
+        64,
+        91,
+        100,
+        102,
+        154,
+        172,
+        185,
+        186
+      ]
+    },
+    {
+      "text": "Others",
+      "x": 11144401,
+      "y": 16255325,
+      "w": 705880,
+      "h": 230832,
+      "bucket": "control",
+      "canonical": "control.others",
+      "refs": []
+    },
+    {
+      "text": "FDCC",
+      "x": 11153198,
+      "y": 16537628,
+      "w": 705880,
+      "h": 230832,
+      "bucket": "control",
+      "canonical": "control.others",
+      "refs": [
+        2,
+        71
+      ]
+    },
+    {
+      "text": "Bilateral",
+      "x": 11169128,
+      "y": 16872298,
+      "w": 705880,
+      "h": 230832,
+      "bucket": "control",
+      "canonical": "control.others",
+      "refs": [
+        15
+      ]
+    },
+    {
+      "text": "VF",
+      "x": 1982671,
+      "y": 2240255,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vf",
+      "refs": [
+        17,
+        84
+      ]
+    },
+    {
+      "text": "VLTS",
+      "x": 10475311,
+      "y": 2238892,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vlts",
+      "refs": [
+        25,
+        64,
+        70,
+        175
+      ]
+    },
+    {
+      "text": "Robot-Dependent",
+      "x": 9377960,
+      "y": 16259680,
+      "w": 1142756,
+      "h": 230832,
+      "bucket": "control",
+      "canonical": "control.robotdep",
+      "refs": [
+        25,
+        27,
+        49,
+        55,
+        62,
+        66,
+        74,
+        84,
+        98,
+        121,
+        125,
+        130,
+        134,
+        157,
+        166,
+        170,
+        172,
+        175,
+        177,
+        178,
+        183,
+        184
+      ]
+    },
+    {
+      "text": "VLFS",
+      "x": 9442161,
+      "y": 2238893,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vlfs",
+      "refs": [
+        27,
+        91,
+        123,
+        166,
+        176,
+        178
+      ]
+    },
+    {
+      "text": "Fc",
+      "x": 7675259,
+      "y": 9588072,
+      "w": 447952,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.pred.fc",
+      "refs": [
+        27,
+        112,
+        154,
+        172,
+        185
+      ]
+    },
+    {
+      "text": "Other",
+      "x": 8588559,
+      "y": 9595481,
+      "w": 644166,
+      "h": 246221,
+      "bucket": "band.p2in",
+      "canonical": "band.p2in.pred.other",
+      "refs": [
+        27,
+        34,
+        157
+      ]
+    },
+    {
+      "text": "Model-based Algorithms",
+      "x": 9974197,
+      "y": 11576117,
+      "w": 1207378,
+      "h": 369332,
+      "bucket": "policy2",
+      "canonical": "policy2.model",
+      "refs": [
+        27,
+        53,
+        105,
+        154,
+        172
+      ]
+    },
+    {
+      "text": "F",
+      "x": 4282203,
+      "y": 13987774,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.fwd.f",
+      "refs": [
+        34,
+        59,
+        64,
+        91,
+        100,
+        123,
+        186
+      ]
+    },
+    {
+      "text": "Hybrid Force-Position Control",
+      "x": 6434886,
+      "y": 16168496,
+      "w": 1229502,
+      "h": 369332,
+      "bucket": "control",
+      "canonical": "control.hybrid",
+      "refs": [
+        34,
+        64,
+        91,
+        100
+      ]
+    },
+    {
+      "text": "F",
+      "x": 12798916,
+      "y": 8241448,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "obsprediction",
+      "canonical": "obsprediction.f",
+      "refs": [
+        41,
+        112,
+        178,
+        185
+      ]
+    },
+    {
+      "text": "VFTS",
+      "x": 11504892,
+      "y": 2238892,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vfts",
+      "refs": [
+        54,
+        105,
+        153,
+        157,
+        172
+      ]
+    },
+    {
+      "text": "T",
+      "x": 13342769,
+      "y": 9247794,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "obsprediction",
+      "canonical": "obsprediction.t",
+      "refs": [
+        55
+      ]
+    },
+    {
+      "text": "Admittance Control",
+      "x": 5260394,
+      "y": 16196235,
+      "w": 866520,
+      "h": 369332,
+      "bucket": "control",
+      "canonical": "control.admittance",
+      "refs": [
+        59,
+        123,
+        186
+      ]
+    },
+    {
+      "text": "F",
+      "x": 1399362,
+      "y": 5701482,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "reconstruction",
+      "canonical": "reconstruction.f",
+      "refs": [
+        66,
+        153
+      ]
+    },
+    {
+      "text": "Others",
+      "x": 13467453,
+      "y": 2238892,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.others",
+      "refs": [
+        70,
+        162
+      ]
+    },
+    {
+      "text": "L",
+      "x": 2425572,
+      "y": 5701482,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "reconstruction",
+      "canonical": "reconstruction.l",
+      "refs": [
+        70
+      ]
+    },
+    {
+      "text": "S",
+      "x": 13874050,
+      "y": 8235468,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "obsprediction",
+      "canonical": "obsprediction.s",
+      "refs": [
+        112,
+        126,
+        133
+      ]
+    },
+    {
+      "text": "T",
+      "x": 1386152,
+      "y": 4744432,
+      "w": 333594,
+      "h": 253916,
+      "bucket": "reconstruction",
+      "canonical": "reconstruction.t",
+      "refs": [
+        121,
+        125,
+        131,
+        153,
+        156,
+        162,
+        184
+      ]
+    },
+    {
+      "text": "V",
+      "x": 2418401,
+      "y": 4758191,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "reconstruction",
+      "canonical": "reconstruction.v",
+      "refs": [
+        125,
+        131,
+        134,
+        162
+      ]
+    },
+    {
+      "text": "S",
+      "x": 1895173,
+      "y": 6663361,
+      "w": 333594,
+      "h": 246221,
+      "bucket": "reconstruction",
+      "canonical": "reconstruction.s",
+      "refs": [
+        131
+      ]
+    },
+    {
+      "text": "VLT",
+      "x": 6114384,
+      "y": 2238892,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vlt",
+      "refs": [
+        170,
+        183
+      ]
+    },
+    {
+      "text": "FS",
+      "x": 5070843,
+      "y": 2238892,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.fs",
+      "refs": [
+        107,
+        154
+      ]
+    },
+    {
+      "text": "LT",
+      "x": 4037198,
+      "y": 2243308,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.lt",
+      "refs": [
+        49
+      ]
+    },
+    {
+      "text": "VT",
+      "x": 3013893,
+      "y": 2240255,
+      "w": 570558,
+      "h": 246221,
+      "bucket": "fusion",
+      "canonical": "fusion.vt",
+      "refs": [
+        125,
+        134
+      ]
+    },
+    {
+      "text": "Diffusion / Flow Matching (DP)",
+      "x": 4683764,
+      "y": 11590982,
+      "w": 1177912,
+      "h": 369332,
+      "bucket": "policy2",
+      "canonical": "policy2.dp",
+      "refs": [
+        9,
+        34
+      ]
+    },
+    {
+      "text": "Action Chunking Transformer (ACT)",
+      "x": 6099757,
+      "y": 11605406,
+      "w": 1152356,
+      "h": 369332,
+      "bucket": "policy2",
+      "canonical": "policy2.act",
+      "refs": [
+        157
+      ]
+    },
+    {
+      "text": "Reinforcement Learning (RL)",
+      "x": 7393237,
+      "y": 11604029,
+      "w": 1067248,
+      "h": 369332,
+      "bucket": "policy2",
+      "canonical": "policy2.rl",
+      "refs": [
+        112,
+        183,
+        185
+      ]
+    },
+    {
+      "text": "Regression (MLP)",
+      "x": 8783293,
+      "y": 11579418,
+      "w": 1003354,
+      "h": 369332,
+      "bucket": "policy2",
+      "canonical": "policy2.reg",
+      "refs": [
+        184
+      ]
+    },
+    {
+      "text": "A",
+      "x": 6662009,
+      "y": 13978619,
+      "w": 447952,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.pred.a",
+      "refs": [
+        9,
+        27,
+        34,
+        53,
+        105,
+        112,
+        157,
+        172,
+        183,
+        184,
+        185
+      ]
+    },
+    {
+      "text": "Fc",
+      "x": 7692191,
+      "y": 13978619,
+      "w": 447952,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.pred.fc",
+      "refs": [
+        34,
+        154
+      ]
+    },
+    {
+      "text": "Other",
+      "x": 8588559,
+      "y": 13986028,
+      "w": 644166,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.pred.other",
+      "refs": [
+        34
+      ]
+    },
+    {
+      "text": "A",
+      "x": 10801391,
+      "y": 13978619,
+      "w": 447952,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.p1fwd.a",
+      "refs": [
+        1,
+        2,
+        15,
+        17,
+        25,
+        34,
+        41,
+        49,
+        54,
+        55,
+        59,
+        62,
+        64,
+        66,
+        70,
+        71,
+        74,
+        84,
+        91,
+        97,
+        98,
+        100,
+        102,
+        107,
+        121,
+        123,
+        125,
+        126,
+        130,
+        131,
+        133,
+        134,
+        153,
+        156,
+        162,
+        166,
+        170,
+        175,
+        176,
+        177,
+        178,
+        186
+      ]
+    },
+    {
+      "text": "Fc",
+      "x": 12470154,
+      "y": 13979376,
+      "w": 447952,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.p1fwd.fc",
+      "refs": [
+        15,
+        54,
+        64,
+        91,
+        100,
+        102,
+        186
+      ]
+    },
+    {
+      "text": "K",
+      "x": 13502351,
+      "y": 13986786,
+      "w": 406372,
+      "h": 246221,
+      "bucket": "band.p3in",
+      "canonical": "band.p3in.p1fwd.k",
+      "refs": [
+        2,
+        59,
+        71,
+        123
+      ]
+    },
+    {
+      "text": "[1] MFMIL [2] DIPCOM [9] VLA-Touch [15] Bi-ACT [17] DexForce [25] OmniVTLA [27] ForceSight [34] Force-Policy [41] FILIC [49] TLA [53] FoAR [54] FARM [55] ViTacFormer [59] ACP [62] 3D-ViTac [64] Tactile-VLA [66] TaF-VLA [70] FuSe [71] Comp-ACT [74] DWF [84] ManipForce [91] ForceVLA2 [97] HATO [98] FACTR [100] ForceMimic [102] HIL-SERL [105] TACT [107] FORGE [112] FCLM [121] ReTac-ACT [123] EquiContact [125] M3L [126] OGRL-VT [130] ARCH [131] VTAO-BiManip [133] MoDE-VLA [134] ViTaS [153] 3DTacDex [154] TacDiffusion [156] UniT [157] RDP [162] VT-HMD [166] ForceVLA [170] VTLA [172] KineDex [175] TacVLA [176] CRAFT [177] TouchGuide [178] TA-VLA [183] ViTaL [184] OmniVTA [185] UPPFC [186] AdmitDiff",
+      "x": 45542,
+      "y": 13152672,
+      "w": 1620217,
+      "h": 4985980,
+      "bucket": "band.p3in",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Regression (MLP)",
+      "x": 10003158,
+      "y": 4672999,
+      "w": 1003354,
+      "h": 369332,
+      "bucket": "policy1",
+      "canonical": "policy1.reg",
+      "refs": [
+        1,
+        27,
+        162
+      ]
+    },
+    {
+      "text": "Diffusion / Flow Matching (DP)",
+      "x": 5924855,
+      "y": 4688618,
+      "w": 1177912,
+      "h": 369332,
+      "bucket": "policy1",
+      "canonical": "policy1.dp",
+      "refs": [
+        2,
+        17,
+        34,
+        53,
+        54,
+        59,
+        62,
+        74,
+        84,
+        97,
+        100,
+        134,
+        153,
+        154,
+        156,
+        157,
+        172,
+        177,
+        184,
+        185,
+        186
+      ]
+    },
+    {
+      "text": "Action Chunking Transformer (ACT)",
+      "x": 7247209,
+      "y": 4664804,
+      "w": 1152356,
+      "h": 369332,
+      "bucket": "policy1",
+      "canonical": "policy1.act",
+      "refs": [
+        9,
+        15,
+        41,
+        55,
+        71,
+        98,
+        105,
+        121,
+        123,
+        183
+      ]
+    },
+    {
+      "text": "Vision-Language- Action (VLA)",
+      "x": 4595478,
+      "y": 4672999,
+      "w": 1139048,
+      "h": 369332,
+      "bucket": "policy1",
+      "canonical": "policy1.vla",
+      "refs": [
+        25,
+        49,
+        64,
+        66,
+        70,
+        91,
+        133,
+        166,
+        170,
+        175,
+        176,
+        178
+      ]
+    },
+    {
+      "text": "Reinforcement Learning (RL)",
+      "x": 8701882,
+      "y": 4669454,
+      "w": 999930,
+      "h": 369332,
+      "bucket": "policy1",
+      "canonical": "policy1.rl",
+      "refs": [
+        102,
+        107,
+        125,
+        126,
+        130,
+        131,
+        133,
+        134,
+        162
+      ]
+    },
+    {
+      "text": "Multi-modality Fusion & Encoding",
+      "x": 1323711,
+      "y": 682559,
+      "w": 2758081,
+      "h": 908134,
+      "bucket": "perception",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Phase 1 Primary Action Policy",
+      "x": 11560573,
+      "y": 4224184,
+      "w": 2758081,
+      "h": 881010,
+      "bucket": "policy1",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Phase 2 Refinement Policy",
+      "x": 1851961,
+      "y": 11381812,
+      "w": 2758081,
+      "h": 754053,
+      "bucket": "policy2",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Phase 3 Robot-end Controllers",
+      "x": 12383899,
+      "y": 16052379,
+      "w": 1991986,
+      "h": 1031051,
+      "bucket": "control",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Auxiliary Representation Learning",
+      "x": 564321,
+      "y": 7763179,
+      "w": 3017080,
+      "h": 646331,
+      "bucket": "reconstruction",
+      "canonical": null,
+      "refs": []
+    },
+    {
+      "text": "Auxiliary Observation Prediction",
+      "x": 12284328,
+      "y": 7037377,
+      "w": 2495940,
+      "h": 646331,
+      "bucket": "intermediate",
+      "canonical": null,
+      "refs": []
+    }
+  ],
+  "refboxes": [
+    {
+      "text": "[1][55][62][97] [121][131][156][162][177][184]",
+      "refs": [
+        1,
+        55,
+        62,
+        97,
+        121,
+        131,
+        156,
+        162,
+        177,
+        184
+      ],
+      "x": 8199763,
+      "y": 2518642,
+      "assigned_label": "VTS",
+      "canonical": "fusion.vts"
+    },
+    {
+      "text": "[1][27][34][91] [107][157][184]",
+      "refs": [
+        1,
+        27,
+        34,
+        91,
+        107,
+        157,
+        184
+      ],
+      "x": 10171929,
+      "y": 7455595,
+      "assigned_label": "(Others)",
+      "canonical": "intermediate.others"
+    },
+    {
+      "text": "[1][2][9][15][17][25][27][34][41][49][53][54] [55][59][62][64][66][70][71][74][84][91][97][98] [100][102][105][107][121][123][125][126][130] [131][133][134][153][156][162][166][170][172] [175][176][177][178][183][184][185][186]",
+      "refs": [
+        1,
+        2,
+        9,
+        15,
+        17,
+        25,
+        27,
+        34,
+        41,
+        49,
+        53,
+        54,
+        55,
+        59,
+        62,
+        64,
+        66,
+        70,
+        71,
+        74,
+        84,
+        91,
+        97,
+        98,
+        100,
+        102,
+        105,
+        107,
+        121,
+        123,
+        125,
+        126,
+        130,
+        131,
+        133,
+        134,
+        153,
+        156,
+        162,
+        166,
+        170,
+        172,
+        175,
+        176,
+        177,
+        178,
+        183,
+        184,
+        185,
+        186
+      ],
+      "x": 4655918,
+      "y": 7278988,
+      "assigned_label": "Action Chunk (A)",
+      "canonical": "intermediate.a"
+    },
+    {
+      "text": "[1][9][17] [41][54][102] [107][112][123] [126][154][176]",
+      "refs": [
+        1,
+        9,
+        17,
+        41,
+        54,
+        102,
+        107,
+        112,
+        123,
+        126,
+        154,
+        176
+      ],
+      "x": 5030610,
+      "y": 14306017,
+      "assigned_label": "S",
+      "canonical": "band.p3in.fwd.s"
+    },
+    {
+      "text": "[1][9][17][41] [54][102][107] [126][154][176]",
+      "refs": [
+        1,
+        9,
+        17,
+        41,
+        54,
+        102,
+        107,
+        126,
+        154,
+        176
+      ],
+      "x": 3838796,
+      "y": 16640474,
+      "assigned_label": "Impedance Control",
+      "canonical": "control.impedance"
+    },
+    {
+      "text": "[2][15][34][41][53][59][71][74][98] [100][102][126] [130][185][186]",
+      "refs": [
+        2,
+        15,
+        34,
+        41,
+        53,
+        59,
+        71,
+        74,
+        98,
+        100,
+        102,
+        126,
+        130,
+        185,
+        186
+      ],
+      "x": 6965478,
+      "y": 2446156,
+      "assigned_label": "VFS",
+      "canonical": "fusion.vfs"
+    },
+    {
+      "text": "[2][59][71][123]",
+      "refs": [
+        2,
+        59,
+        71,
+        123
+      ],
+      "x": 7469131,
+      "y": 7515498,
+      "assigned_label": "Control Stiffness (K)",
+      "canonical": "intermediate.k"
+    },
+    {
+      "text": "[9][66][133]",
+      "refs": [
+        9,
+        66,
+        133
+      ],
+      "x": 12394952,
+      "y": 2636780,
+      "assigned_label": "VLFTS",
+      "canonical": "fusion.vlfts"
+    },
+    {
+      "text": "[9][34][183]",
+      "refs": [
+        9,
+        34,
+        183
+      ],
+      "x": 1154238,
+      "y": 10048808,
+      "assigned_label": "V",
+      "canonical": "band.p2in.fwd.v"
+    },
+    {
+      "text": "[9][27][34] [105][157]",
+      "refs": [
+        9,
+        27,
+        34,
+        105,
+        157
+      ],
+      "x": 2135342,
+      "y": 9991757,
+      "assigned_label": "F",
+      "canonical": "band.p2in.fwd.f"
+    },
+    {
+      "text": "[9][27][34] [53][105][112] [172][184][185]",
+      "refs": [
+        9,
+        27,
+        34,
+        53,
+        105,
+        112,
+        172,
+        184,
+        185
+      ],
+      "x": 4081793,
+      "y": 9933416,
+      "assigned_label": "S",
+      "canonical": "band.p2in.fwd.s"
+    },
+    {
+      "text": "[9][27][53] [105][112][172] [183][184][185]",
+      "refs": [
+        9,
+        27,
+        53,
+        105,
+        112,
+        172,
+        183,
+        184,
+        185
+      ],
+      "x": 6412686,
+      "y": 9914926,
+      "assigned_label": "A",
+      "canonical": "band.p2in.pred.a"
+    },
+    {
+      "text": "[9][53][70][97][100] [105][112][131][133] [153][156][162][185]",
+      "refs": [
+        9,
+        53,
+        70,
+        97,
+        100,
+        105,
+        112,
+        131,
+        133,
+        153,
+        156,
+        162,
+        185
+      ],
+      "x": 7766914,
+      "y": 16626309,
+      "assigned_label": "PID (PD) Control",
+      "canonical": "control.pid"
+    },
+    {
+      "text": "[15][27][54][64] [91][100][102][154] [172][185][186]",
+      "refs": [
+        15,
+        27,
+        54,
+        64,
+        91,
+        100,
+        102,
+        154,
+        172,
+        185,
+        186
+      ],
+      "x": 8793765,
+      "y": 7376586,
+      "assigned_label": "Reference Force (Fc)",
+      "canonical": "intermediate.fc"
+    },
+    {
+      "text": "[2][71]",
+      "refs": [
+        2,
+        71
+      ],
+      "x": 11230990,
+      "y": 16689880,
+      "assigned_label": "FDCC",
+      "canonical": "control.others"
+    },
+    {
+      "text": "[15]",
+      "refs": [
+        15
+      ],
+      "x": 11233910,
+      "y": 17002954,
+      "assigned_label": "Bilateral",
+      "canonical": "control.others"
+    },
+    {
+      "text": "[17][84]",
+      "refs": [
+        17,
+        84
+      ],
+      "x": 1977591,
+      "y": 2644984,
+      "assigned_label": "VF",
+      "canonical": "fusion.vf"
+    },
+    {
+      "text": "[25][64][70][175]",
+      "refs": [
+        25,
+        64,
+        70,
+        175
+      ],
+      "x": 10373264,
+      "y": 2583012,
+      "assigned_label": "VLTS",
+      "canonical": "fusion.vlts"
+    },
+    {
+      "text": "[25][27][49][55][62][66] [74][84][98][121][125][130] [134][157][166][170][172] [175][177][178][183][184]",
+      "refs": [
+        25,
+        27,
+        49,
+        55,
+        62,
+        66,
+        74,
+        84,
+        98,
+        121,
+        125,
+        130,
+        134,
+        157,
+        166,
+        170,
+        172,
+        175,
+        177,
+        178,
+        183,
+        184
+      ],
+      "x": 9118576,
+      "y": 16577125,
+      "assigned_label": "Robot-Dependent",
+      "canonical": "control.robotdep"
+    },
+    {
+      "text": "[27][91][123] [166][176][178]",
+      "refs": [
+        27,
+        91,
+        123,
+        166,
+        176,
+        178
+      ],
+      "x": 9265170,
+      "y": 2574733,
+      "assigned_label": "VLFS",
+      "canonical": "fusion.vlfs"
+    },
+    {
+      "text": "[27][112][154] [172][185]",
+      "refs": [
+        27,
+        112,
+        154,
+        172,
+        185
+      ],
+      "x": 7462394,
+      "y": 9979894,
+      "assigned_label": "Fc",
+      "canonical": "band.p2in.pred.fc"
+    },
+    {
+      "text": "[27][34][157]",
+      "refs": [
+        27,
+        34,
+        157
+      ],
+      "x": 8478854,
+      "y": 10031769,
+      "assigned_label": "Other",
+      "canonical": "band.p2in.pred.other"
+    },
+    {
+      "text": "[27][53][105] [154][172]",
+      "refs": [
+        27,
+        53,
+        105,
+        154,
+        172
+      ],
+      "x": 10087520,
+      "y": 11998315,
+      "assigned_label": "Model-based Algorithms",
+      "canonical": "policy2.model"
+    },
+    {
+      "text": "[34][59][64] [91][100][123] [186]",
+      "refs": [
+        34,
+        59,
+        64,
+        91,
+        100,
+        123,
+        186
+      ],
+      "x": 4005307,
+      "y": 14368893,
+      "assigned_label": "F",
+      "canonical": "band.p3in.fwd.f"
+    },
+    {
+      "text": "[34][64][91][100]",
+      "refs": [
+        34,
+        64,
+        91,
+        100
+      ],
+      "x": 6521075,
+      "y": 16774741,
+      "assigned_label": "Hybrid Force-Position Control",
+      "canonical": "control.hybrid"
+    },
+    {
+      "text": "[41][112][178] [185]",
+      "refs": [
+        41,
+        112,
+        178,
+        185
+      ],
+      "x": 12465429,
+      "y": 8596912,
+      "assigned_label": "F",
+      "canonical": "obsprediction.f"
+    },
+    {
+      "text": "[53][184]",
+      "refs": [
+        53,
+        184
+      ],
+      "x": 5230999,
+      "y": 10070461,
+      "assigned_label": "Other",
+      "canonical": "band.p2in.fwd.other"
+    },
+    {
+      "text": "[54][105][153][157][172]",
+      "refs": [
+        54,
+        105,
+        153,
+        157,
+        172
+      ],
+      "x": 11342649,
+      "y": 2567115,
+      "assigned_label": "VFTS",
+      "canonical": "fusion.vfts"
+    },
+    {
+      "text": "[55]",
+      "refs": [
+        55
+      ],
+      "x": 13219207,
+      "y": 9641619,
+      "assigned_label": "T",
+      "canonical": "obsprediction.t"
+    },
+    {
+      "text": "[59][123][186]",
+      "refs": [
+        59,
+        123,
+        186
+      ],
+      "x": 5189586,
+      "y": 16774741,
+      "assigned_label": "Admittance Control",
+      "canonical": "control.admittance"
+    },
+    {
+      "text": "[66][153]",
+      "refs": [
+        66,
+        153
+      ],
+      "x": 1201055,
+      "y": 6111804,
+      "assigned_label": "F",
+      "canonical": "reconstruction.f"
+    },
+    {
+      "text": "[70][162]",
+      "refs": [
+        70,
+        162
+      ],
+      "x": 13408235,
+      "y": 2636528,
+      "assigned_label": "Others",
+      "canonical": "fusion.others"
+    },
+    {
+      "text": "[70]",
+      "refs": [
+        70
+      ],
+      "x": 2299918,
+      "y": 6106993,
+      "assigned_label": "L",
+      "canonical": "reconstruction.l"
+    },
+    {
+      "text": "[112][126][133]",
+      "refs": [
+        112,
+        126,
+        133
+      ],
+      "x": 13575608,
+      "y": 8636782,
+      "assigned_label": "S",
+      "canonical": "obsprediction.s"
+    },
+    {
+      "text": "[121][125][131] [153][156][162] [184]",
+      "refs": [
+        121,
+        125,
+        131,
+        153,
+        156,
+        162,
+        184
+      ],
+      "x": 1083201,
+      "y": 5028825,
+      "assigned_label": "T",
+      "canonical": "reconstruction.t"
+    },
+    {
+      "text": "[125][131][134] [162]",
+      "refs": [
+        125,
+        131,
+        134,
+        162
+      ],
+      "x": 2141470,
+      "y": 5108655,
+      "assigned_label": "V",
+      "canonical": "reconstruction.v"
+    },
+    {
+      "text": "[131]",
+      "refs": [
+        131
+      ],
+      "x": 1772821,
+      "y": 7073398,
+      "assigned_label": "S",
+      "canonical": "reconstruction.s"
+    },
+    {
+      "text": "[157][183] [184]",
+      "refs": [
+        157,
+        183,
+        184
+      ],
+      "x": 3162756,
+      "y": 10001796,
+      "assigned_label": "T",
+      "canonical": "band.p2in.fwd.t"
+    },
+    {
+      "text": "[170][183]",
+      "refs": [
+        170,
+        183
+      ],
+      "x": 6041984,
+      "y": 2633766,
+      "assigned_label": "VLT",
+      "canonical": "fusion.vlt"
+    },
+    {
+      "text": "[107][154]",
+      "refs": [
+        107,
+        154
+      ],
+      "x": 5003378,
+      "y": 2645723,
+      "assigned_label": "FS",
+      "canonical": "fusion.fs"
+    },
+    {
+      "text": "[49]",
+      "refs": [
+        49
+      ],
+      "x": 4042278,
+      "y": 2650145,
+      "assigned_label": "LT",
+      "canonical": "fusion.lt"
+    },
+    {
+      "text": "[125][134]",
+      "refs": [
+        125,
+        134
+      ],
+      "x": 2941972,
+      "y": 2644664,
+      "assigned_label": "VT",
+      "canonical": "fusion.vt"
+    },
+    {
+      "text": "[9][34]",
+      "refs": [
+        9,
+        34
+      ],
+      "x": 5017049,
+      "y": 12068127,
+      "assigned_label": "Diffusion / Flow Matching (DP)",
+      "canonical": "policy2.dp"
+    },
+    {
+      "text": "[157]",
+      "refs": [
+        157
+      ],
+      "x": 6340032,
+      "y": 12080126,
+      "assigned_label": "Action Chunking Transformer (ACT)",
+      "canonical": "policy2.act"
+    },
+    {
+      "text": "[112][183][185]",
+      "refs": [
+        112,
+        183,
+        185
+      ],
+      "x": 7449962,
+      "y": 12071974,
+      "assigned_label": "Reinforcement Learning (RL)",
+      "canonical": "policy2.rl"
+    },
+    {
+      "text": "[184]",
+      "refs": [
+        184
+      ],
+      "x": 8994206,
+      "y": 12071527,
+      "assigned_label": "Regression (MLP)",
+      "canonical": "policy2.reg"
+    },
+    {
+      "text": "[9][27][34][53] [105][112][157] [172][183][184] [185]",
+      "refs": [
+        9,
+        27,
+        34,
+        53,
+        105,
+        112,
+        157,
+        172,
+        183,
+        184,
+        185
+      ],
+      "x": 6436810,
+      "y": 14313218,
+      "assigned_label": "A",
+      "canonical": "band.p3in.pred.a"
+    },
+    {
+      "text": "[34][154]",
+      "refs": [
+        34,
+        154
+      ],
+      "x": 7575330,
+      "y": 14492323,
+      "assigned_label": "Fc",
+      "canonical": "band.p3in.pred.fc"
+    },
+    {
+      "text": "[34]",
+      "refs": [
+        34
+      ],
+      "x": 8625363,
+      "y": 14492323,
+      "assigned_label": "Other",
+      "canonical": "band.p3in.pred.other"
+    },
+    {
+      "text": "[1][2][15][17][25][34][41][49][54][55][59] [62][64][66][70][71][74][84][91][97][98] [100][102][107][121][123][125][126][130] [131][133][134][153][156][162][166][170] [175][176][177][178][186]",
+      "refs": [
+        1,
+        2,
+        15,
+        17,
+        25,
+        34,
+        41,
+        49,
+        54,
+        55,
+        59,
+        62,
+        64,
+        66,
+        70,
+        71,
+        74,
+        84,
+        91,
+        97,
+        98,
+        100,
+        102,
+        107,
+        121,
+        123,
+        125,
+        126,
+        130,
+        131,
+        133,
+        134,
+        153,
+        156,
+        162,
+        166,
+        170,
+        175,
+        176,
+        177,
+        178,
+        186
+      ],
+      "x": 9901285,
+      "y": 14263960,
+      "assigned_label": "A",
+      "canonical": "band.p3in.p1fwd.a"
+    },
+    {
+      "text": "[15][54][64] [91][100][102] [186]",
+      "refs": [
+        15,
+        54,
+        64,
+        91,
+        100,
+        102,
+        186
+      ],
+      "x": 12227350,
+      "y": 14397469,
+      "assigned_label": "Fc",
+      "canonical": "band.p3in.p1fwd.fc"
+    },
+    {
+      "text": "[2][59][71][123]",
+      "refs": [
+        2,
+        59,
+        71,
+        123
+      ],
+      "x": 13343569,
+      "y": 14463459,
+      "assigned_label": "K",
+      "canonical": "band.p3in.p1fwd.k"
+    },
+    {
+      "text": "[1][27][162]",
+      "refs": [
+        1,
+        27,
+        162
+      ],
+      "x": 10117326,
+      "y": 5383841,
+      "assigned_label": "Regression (MLP)",
+      "canonical": "policy1.reg"
+    },
+    {
+      "text": "[2][17][34][53][54] [59][62][74][84][97] [100][134][153][154] [156][157][172][177] [184][185][186]",
+      "refs": [
+        2,
+        17,
+        34,
+        53,
+        54,
+        59,
+        62,
+        74,
+        84,
+        97,
+        100,
+        134,
+        153,
+        154,
+        156,
+        157,
+        172,
+        177,
+        184,
+        185,
+        186
+      ],
+      "x": 5906271,
+      "y": 5110476,
+      "assigned_label": "Diffusion / Flow Matching (DP)",
+      "canonical": "policy1.dp"
+    },
+    {
+      "text": "[9][15][41][55][71] [98][105][121][123] [183]",
+      "refs": [
+        9,
+        15,
+        41,
+        55,
+        71,
+        98,
+        105,
+        121,
+        123,
+        183
+      ],
+      "x": 7257011,
+      "y": 5263496,
+      "assigned_label": "Action Chunking Transformer (ACT)",
+      "canonical": "policy1.act"
+    },
+    {
+      "text": "[25][49][64][66][70] [91][133][166][170] [175][176][178]",
+      "refs": [
+        25,
+        49,
+        64,
+        66,
+        70,
+        91,
+        133,
+        166,
+        170,
+        175,
+        176,
+        178
+      ],
+      "x": 4606772,
+      "y": 5238468,
+      "assigned_label": "Vision-Language- Action (VLA)",
+      "canonical": "policy1.vla"
+    },
+    {
+      "text": "[102][107][125] [126][130][131] [133][134][162]",
+      "refs": [
+        102,
+        107,
+        125,
+        126,
+        130,
+        131,
+        133,
+        134,
+        162
+      ],
+      "x": 8715244,
+      "y": 5262257,
+      "assigned_label": "Reinforcement Learning (RL)",
+      "canonical": "policy1.rl"
+    }
+  ],
+  "ignored_labels": [
+    {
+      "text": "Skipping Phase 2",
+      "x": 11848659,
+      "y": 10921557,
+      "bucket": "obsprediction"
+    },
+    {
+      "text": "Estimation",
+      "x": 13805813,
+      "y": 918454,
+      "bucket": "perception"
+    },
+    {
+      "text": "Measurements",
+      "x": 6144491,
+      "y": 198835,
+      "bucket": "perception"
+    },
+    {
+      "text": "Forward Data",
+      "x": 19197,
+      "y": 2811007,
+      "bucket": "fusion"
+    },
+    {
+      "text": "[1] MFMIL [2] DIPCOM [9] VLA-Touch [15] Bi-ACT [17] DexForce [25] OmniVTLA [27] ForceSight [34] Force-Policy [41] FILIC ",
+      "x": 45542,
+      "y": 13152672,
+      "bucket": "band.p3in"
+    },
+    {
+      "text": "Multi-modality Fusion & Encoding",
+      "x": 1323711,
+      "y": 682559,
+      "bucket": "perception"
+    },
+    {
+      "text": "Phase 1 Primary Action Policy",
+      "x": 11560573,
+      "y": 4224184,
+      "bucket": "policy1"
+    },
+    {
+      "text": "Phase 2 Refinement Policy",
+      "x": 1851961,
+      "y": 11381812,
+      "bucket": "policy2"
+    },
+    {
+      "text": "Phase 3 Robot-end Controllers",
+      "x": 12383899,
+      "y": 16052379,
+      "bucket": "control"
+    },
+    {
+      "text": "Auxiliary Representation Learning",
+      "x": 564321,
+      "y": 7763179,
+      "bucket": "reconstruction"
+    },
+    {
+      "text": "Auxiliary Observation Prediction",
+      "x": 12284328,
+      "y": 7037377,
+      "bucket": "intermediate"
+    }
+  ],
+  "totals": {
+    "ref_occurrences": 396,
+    "labels": 75,
+    "refboxes": 57
+  }
+}

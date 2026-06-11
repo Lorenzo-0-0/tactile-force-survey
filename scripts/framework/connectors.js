@@ -1,0 +1,191 @@
+/* SVG connector overlay. Edges are authored here (they are presentation,
+   not survey data): endpoints reference rendered component/band elements,
+   geometry is recomputed from live rects on resize. Highlighting follows
+   'explorer:change' — an edge lights up when the active selection has hit
+   boxes at BOTH endpoints (ref trace) or touches an endpoint (box/comp). */
+
+const NS = 'http://www.w3.org/2000/svg';
+
+/* from/to: element ids (without '#'); comps: data-comp ids each endpoint covers */
+const EDGES = [
+  { from: 'comp-perception', to: 'comp-fusion', kind: 'main',
+    a: ['perception'], b: ['fusion'] },
+  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'aux', side: 'left',
+    a: ['fusion'], b: ['reconstruction'] },
+  { from: 'comp-fusion', to: 'comp-policy1', kind: 'main',
+    a: ['fusion'], b: ['policy1'] },
+  { from: 'comp-policy1', to: 'comp-intermediate', kind: 'main',
+    a: ['policy1'], b: ['intermediate'] },
+  { from: 'comp-intermediate', to: 'band-band-p2in', kind: 'main',
+    a: ['intermediate'], b: ['band.p2in.fwd', 'band.p2in.pred'] },
+  { from: 'band-band-p2in', to: 'comp-policy2', kind: 'main',
+    a: ['band.p2in.fwd', 'band.p2in.pred'], b: ['policy2'] },
+  { from: 'comp-policy2', to: 'comp-obsprediction', kind: 'aux', side: 'right',
+    a: ['policy2'], b: ['obsprediction'] },
+  { from: 'comp-policy2', to: 'band-band-p3in', kind: 'main',
+    a: ['policy2'], b: ['band.p3in.pred'] },
+  { from: 'comp-intermediate', to: 'band-band-p3in', kind: 'skip', side: 'right',
+    label: 'Phase 1 forwarded', rail: 26,
+    a: ['intermediate'], b: ['band.p3in.p1fwd', 'band.p3in.fwd'] },
+  { from: 'comp-policy1', to: 'comp-control', kind: 'skip', side: 'right',
+    label: 'Skipping phase 2', rail: 54,
+    a: ['policy1'], b: ['control'] },
+  { from: 'band-band-p3in', to: 'comp-control', kind: 'main',
+    a: ['band.p3in.fwd', 'band.p3in.pred', 'band.p3in.p1fwd'], b: ['control'] },
+];
+
+export function initConnectors(data, stateApi) {
+  const root = document.getElementById('framework-root');
+  const svg = root?.querySelector('.fw-wires');
+  if (!root || !svg) return;
+
+  svg.innerHTML = `
+    <defs>
+      <marker id="fw-arrow" viewBox="0 0 8 8" refX="7" refY="4"
+              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="#2B3648"/>
+      </marker>
+      <marker id="fw-arrow-hit" viewBox="0 0 8 8" refX="7" refY="4"
+              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="#3FB6FF"/>
+      </marker>
+    </defs>`;
+
+  const layer = document.createElementNS(NS, 'g');
+  svg.appendChild(layer);
+
+  const edgeEls = [];
+
+  function rectOf(id) {
+    const el = document.getElementById(id);
+    if (!el || !el.offsetParent) return null;
+    const r = el.getBoundingClientRect();
+    const base = root.getBoundingClientRect();
+    return {
+      x: r.left - base.left, y: r.top - base.top,
+      w: r.width, h: r.height,
+      cx: r.left - base.left + r.width / 2,
+      cy: r.top - base.top + r.height / 2,
+    };
+  }
+
+  function pathFor(edge) {
+    const a = rectOf(edge.from);
+    const b = rectOf(edge.to);
+    if (!a || !b) return null;
+
+    if (edge.kind === 'skip') {
+      // route along the right rail
+      const base = root.getBoundingClientRect();
+      const railX = base.width - (edge.rail || 30);
+      const y0 = a.cy;
+      const y1 = b.cy;
+      return {
+        d: `M ${a.x + a.w} ${y0}
+            C ${a.x + a.w + 36} ${y0}, ${railX} ${y0 + 24}, ${railX} ${y0 + 60}
+            L ${railX} ${y1 - 60}
+            C ${railX} ${y1 - 24}, ${b.x + b.w + 36} ${y1}, ${b.x + b.w + 4} ${y1}`,
+        labelAt: { x: railX, y: (y0 + y1) / 2 },
+      };
+    }
+
+    if (edge.kind === 'aux') {
+      // horizontal side hop between neighbouring columns
+      const leftFirst = a.cx < b.cx;
+      const x0 = leftFirst ? a.x + a.w : a.x;
+      const x1 = leftFirst ? b.x - 4 : b.x + b.w + 4;
+      const dir = leftFirst ? 1 : -1;
+      // if vertically distant, drop a curve
+      if (Math.abs(a.cy - b.cy) > 60) {
+        const y0 = a.cy, y1 = b.cy;
+        const mx = (x0 + x1) / 2;
+        return { d: `M ${x0} ${y0} C ${mx + 30 * dir} ${y0}, ${mx - 30 * dir} ${y1}, ${x1} ${y1}` };
+      }
+      return { d: `M ${x0} ${a.cy} L ${x1} ${b.cy}` };
+    }
+
+    // main: bottom-center → top-center through the gap
+    const x0 = a.cx, y0 = a.y + a.h;
+    const x1 = b.cx, y1 = b.y - 4;
+    const my = (y0 + y1) / 2;
+    return { d: `M ${x0} ${y0} C ${x0} ${my}, ${x1} ${my}, ${x1} ${y1}` };
+  }
+
+  function build() {
+    // clear previous paths/labels
+    edgeEls.length = 0;
+    layer.innerHTML = '';
+
+    const base = root.getBoundingClientRect();
+    svg.setAttribute('viewBox', `0 0 ${base.width} ${base.height}`);
+
+    for (const edge of EDGES) {
+      const geo = pathFor(edge);
+      if (!geo) continue;
+
+      const p = document.createElementNS(NS, 'path');
+      p.setAttribute('d', geo.d);
+      p.classList.add('is-ambient');
+      if (edge.kind === 'aux') p.setAttribute('stroke-dasharray', '3 5');
+      p.setAttribute('marker-end', 'url(#fw-arrow)');
+      layer.appendChild(p);
+
+      let labelEl = null;
+      if (edge.label && geo.labelAt) {
+        labelEl = document.createElementNS(NS, 'text');
+        labelEl.textContent = edge.label.toUpperCase();
+        labelEl.setAttribute('x', geo.labelAt.x);
+        labelEl.setAttribute('y', geo.labelAt.y);
+        labelEl.setAttribute('transform', `rotate(90 ${geo.labelAt.x} ${geo.labelAt.y})`);
+        labelEl.setAttribute('text-anchor', 'middle');
+        labelEl.setAttribute('dy', '-6');
+        labelEl.setAttribute('fill', '#8794A8');
+        labelEl.setAttribute('font-size', '9');
+        labelEl.setAttribute('letter-spacing', '2');
+        labelEl.setAttribute('font-family', "'JetBrains Mono', monospace");
+        layer.appendChild(labelEl);
+      }
+
+      edgeEls.push({ edge, p, labelEl });
+    }
+  }
+
+  /* highlight sync */
+  function compHasHit(compIds, boxes) {
+    for (const box of data.boxesFlat) {
+      if (boxes.has(box.id) && compIds.includes(box.compId)) return true;
+    }
+    return false;
+  }
+
+  document.addEventListener('explorer:change', (e) => {
+    const { effective, boxes } = e.detail;
+    for (const { edge, p } of edgeEls) {
+      let hit = false;
+      if (effective) {
+        if (effective.type === 'ref') {
+          hit = compHasHit(edge.a, boxes) && compHasHit(edge.b, boxes);
+        } else {
+          const selComp = effective.type === 'comp'
+            ? effective.id
+            : data.boxById.get(effective.id)?.compId;
+          hit = !!selComp && (edge.a.includes(selComp) || edge.b.includes(selComp));
+        }
+      }
+      p.classList.toggle('is-hit', hit);
+      p.classList.toggle('is-ambient', !hit);
+      p.setAttribute('marker-end', hit ? 'url(#fw-arrow-hit)' : 'url(#fw-arrow)');
+    }
+  });
+
+  /* geometry sync */
+  let raf = 0;
+  const schedule = () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(build);
+  };
+  new ResizeObserver(schedule).observe(root);
+  window.addEventListener('resize', schedule);
+  if (document.fonts?.ready) document.fonts.ready.then(schedule);
+  build();
+}

@@ -1,0 +1,100 @@
+/* TF-M3PF Survey — design tokens (v1)
+   Cold-steel dark palette + Space Grotesk display + Inter Tight body.
+   Precision-instrument aesthetic: one cyan accent family, no warm color.
+   Single source of truth for color, type, spacing, motion. */
+
+:root {
+  /* --- color (cold steel, 3-level text hierarchy) --- */
+  --bg:             #0A0C10;
+  --bg-elev:        #10141B;
+  --bg-elev-2:      #151B26;
+  --border:         #1E2633;
+  --border-strong:  #2B3648;
+  --text-display:   #E9EEF6;
+  --text:           #C3CCDA;
+  --text-soft:      #B7C1D1;
+  --text-muted:     #8794A8;
+  --accent:         #3FB6FF;
+  --accent-hot:     #7FE0FF;
+  --accent-soft:    rgba(63, 182, 255, 0.14);
+  --accent-line:    rgba(63, 182, 255, 0.5);
+  --accent-warm:    #9FB4CC; /* steel — used by mono labels / chapter numbers */
+
+  /* --- type (Space Grotesk display · Inter Tight body · JetBrains Mono data) ---
+     Serif var names are kept from the skeleton but re-pointed to sans so the
+     whole forked component layer resolves to the cold theme. */
+  --display:        'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --display-serif:  'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --serif-display:  'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --serif-body:     'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif;
+  --sans:           'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont,
+                    'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif;
+  --mono:           'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Legacy alias — kept so any unmigrated rule still resolves */
+  --serif: var(--serif-body);
+
+  --text-xs:   13px;
+  --text-sm:   14.5px;
+  --text-base: 17px;
+  --text-lg:   18px;
+  --text-xl:   21px;
+  --text-2xl:  26px;
+  --text-3xl:  36px;
+  --text-4xl:  50px;
+  --hero:      clamp(32px, 4.6vw, 76px);
+  --section-h: clamp(26px, 3.6vw, 48px);
+
+  --leading-tight:  1.06;
+  --leading-snug:   1.25;
+  --leading-normal: 1.66;
+  --leading-loose:  1.8;
+
+  --tracking-tight:  -0.035em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;
+  --tracking-wider:  0.22em;
+
+  /* --- spacing (4px base) --- */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  24px;
+  --s-6:  32px;
+  --s-7:  48px;
+  --s-8:  64px;
+  --s-9:  96px;
+  --s-10: 128px;
+  --s-11: 160px;
+  --section-gap: min(9vw, 128px);
+  --container-w: 1240px;
+  --container-pad: clamp(20px, 4vw, 56px);
+  --nav-height: 64px;
+
+  /* --- radii --- */
+  --r-sm:   4px;
+  --r-md:   8px;
+  --r-lg:   12px;
+  --r-xl:   20px;
+  --r-full: 9999px;
+
+  /* --- motion --- */
+  --ease:       cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-out:   cubic-bezier(0.25, 1, 0.5, 1);
+  --d-fast:     140ms;
+  --d-base:     220ms;
+  --d-slow:     360ms;
+
+  /* --- depth --- */
+  --shadow-card: 0 0 0 1px var(--border), 0 24px 60px -30px rgba(0, 0, 0, 0.85);
+  --shadow-elev: 0 0 0 1px var(--border-strong), 0 32px 80px -32px rgba(0, 0, 0, 0.95);
+  --glow-accent: 0 0 0 1px var(--accent-line), 0 0 24px rgba(63, 182, 255, 0.18);
+
+  /* --- grain (SVG noise inline, cool-tinted) --- */
+  --grain-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.78  0 0 0 0 0.84  0 0 0 0 0.93  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+
+  /* --- blueprint grid (framework explorer backdrop) --- */
+  --blueprint-line: rgba(63, 182, 255, 0.045);
+  --blueprint-dot:  rgba(63, 182, 255, 0.07);
+}

@@ -1,0 +1,1710 @@
+{
+  "meta": {
+    "count": 189,
+    "generated": "2026-06-11",
+    "bibSource": "reference.bib"
+  },
+  "papers": [
+    {
+      "id": 1,
+      "key": "ablett2024multimodal",
+      "title": "Multimodal and force-matched imitation learning with a see-through visuotactile sensor",
+      "authors": "Ablett et al.",
+      "venue": "T-RO",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 2,
+      "key": "aburub2026learning",
+      "title": "Learning diffusion policies from demonstrations for compliant contact-rich manipulation",
+      "authors": "Aburub et al.",
+      "venue": "SII",
+      "year": 2026,
+      "url": null
+    },
+    {
+      "id": 3,
+      "key": "ahn2022can",
+      "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+      "authors": "Ahn et al.",
+      "venue": "arXiv",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2204.01691"
+    },
+    {
+      "id": 4,
+      "key": "ajay2023compositional",
+      "title": "Compositional foundation models for hierarchical planning",
+      "authors": "Ajay et al.",
+      "venue": "NeurIPS",
+      "year": 2023,
+      "url": null
+    },
+    {
+      "id": 5,
+      "key": "an2025dexterous",
+      "title": "Dexterous manipulation through imitation learning: A survey",
+      "authors": "An et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2504.03515"
+    },
+    {
+      "id": 6,
+      "key": "arevalo2017gated",
+      "title": "Gated multimodal units for information fusion",
+      "authors": "Arevalo et al.",
+      "venue": "arXiv",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1702.01992"
+    },
+    {
+      "id": 7,
+      "key": "bao2021beit",
+      "title": "Beit: Bert pre-training of image transformers",
+      "authors": "Bao et al.",
+      "venue": "arXiv",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2106.08254"
+    },
+    {
+      "id": 8,
+      "key": "barreiros_learning_2025",
+      "title": "Learning contact-rich whole-body manipulation with example-guided reinforcement learning",
+      "authors": "Barreiros et al.",
+      "venue": "Science Robotics",
+      "year": 2025,
+      "url": "https://doi.org/10.1126/scirobotics.ads6790"
+    },
+    {
+      "id": 9,
+      "key": "bi2025vla",
+      "title": "Vla-touch: Enhancing vision-language-action models with dual-level tactile feedback",
+      "authors": "Bi et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2507.17294"
+    },
+    {
+      "id": 10,
+      "key": "bjorck2025gr00t",
+      "title": "Gr00t n1: An open foundation model for generalist humanoid robots",
+      "authors": "Bjorck et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2503.14734"
+    },
+    {
+      "id": 11,
+      "key": "black2024pi",
+      "title": "pi-0: A Vision-Language-Action Flow Model for General Robot Control",
+      "authors": "Black et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2410.24164"
+    },
+    {
+      "id": 12,
+      "key": "brohan2022rt",
+      "title": "Rt-1: Robotics transformer for real-world control at scale",
+      "authors": "Brohan et al.",
+      "venue": "arXiv",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2212.06817"
+    },
+    {
+      "id": 13,
+      "key": "brown2020language",
+      "title": "Language models are few-shot learners",
+      "authors": "Brown et al.",
+      "venue": "NeurIPS",
+      "year": 2020,
+      "url": null
+    },
+    {
+      "id": 14,
+      "key": "bu2024towards",
+      "title": "Towards synergistic, generalized, and efficient dual-system for robotic manipulation",
+      "authors": "Bu et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2410.08001"
+    },
+    {
+      "id": 15,
+      "key": "buamanee2024bi",
+      "title": "Bi-act: Bilateral control-based imitation learning via action chunking with transformer",
+      "authors": "Buamanee et al.",
+      "venue": "AIM",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 16,
+      "key": "cai2025cookbench",
+      "title": "Cookbench: A long-horizon embodied planning benchmark for complex cooking scenarios",
+      "authors": "Cai et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2508.03232"
+    },
+    {
+      "id": 17,
+      "key": "chen2025dexforce",
+      "title": "Dexforce: Extracting force-informed actions from kinesthetic demonstrations for dexterous manipulation",
+      "authors": "Chen et al.",
+      "venue": "RA-L",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 18,
+      "key": "chen2026fast",
+      "title": "Fast-in-slow: A dual-system vla model unifying fast manipulation within slow reasoning",
+      "authors": "Chen et al.",
+      "venue": "NeurIPS",
+      "year": 2026,
+      "url": null
+    },
+    {
+      "id": 19,
+      "key": "chen2025multi",
+      "title": "Multi-Modal Manipulation via Multi-Modal Policy Consensus",
+      "authors": "Chen et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2509.23468"
+    },
+    {
+      "id": 20,
+      "key": "chen2022human",
+      "title": "Human intention-oriented variable admittance control with power envelope regulation in physical human-robot interaction",
+      "authors": "Chen & Ro",
+      "venue": "Mechatronics",
+      "year": 2022,
+      "url": null
+    },
+    {
+      "id": 21,
+      "key": "chen2024compliance",
+      "title": "Compliance while resisting: A shear-thickening fluid controller for physical human-robot interaction",
+      "authors": "Chen et al.",
+      "venue": "IJRR",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 22,
+      "key": "chen2020simple",
+      "title": "A simple framework for contrastive learning of visual representations",
+      "authors": "Chen et al.",
+      "venue": "ICML",
+      "year": 2020,
+      "url": null
+    },
+    {
+      "id": 23,
+      "key": "chen_implicitrdp_2025",
+      "title": "ImplicitRDP: An End-to-End Visual-Force Diffusion Policy with Structural Slow-Fast Learning",
+      "authors": "Chen et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2512.10946 [cs]"
+    },
+    {
+      "id": 24,
+      "key": "chen2024physical",
+      "title": "Physical human–robot interaction based on adaptive impedance control for robotic-assisted total hip arthroplasty",
+      "authors": "Chen et al.",
+      "venue": "T-Mech",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 25,
+      "key": "cheng2025omnivtla",
+      "title": "Omnivtla: Vision-tactile-language-action model with semantic-aligned tactile sensing",
+      "authors": "Cheng et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2508.08706"
+    },
+    {
+      "id": 26,
+      "key": "chi2025diffusion",
+      "title": "Diffusion policy: Visuomotor policy learning via action diffusion",
+      "authors": "Chi et al.",
+      "venue": "IJRR",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 27,
+      "key": "collins2024forcesight",
+      "title": "Forcesight: Text-guided mobile manipulation with visual-force goals",
+      "authors": "Collins et al.",
+      "venue": "ICRA",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 28,
+      "key": "craig2005introduction",
+      "title": "Introduction to Robotics.",
+      "authors": "Craig",
+      "venue": "",
+      "year": 2005,
+      "url": null
+    },
+    {
+      "id": 29,
+      "key": "dang_hydroshear_2026",
+      "title": "HydroShear: Hydroelastic Shear Simulation for Tactile Sim-to-Real Reinforcement Learning",
+      "authors": "Dang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.00446 [cs]"
+    },
+    {
+      "id": 30,
+      "key": "devlin2019bert",
+      "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+      "authors": "Devlin et al.",
+      "venue": "ACL",
+      "year": 2019,
+      "url": null
+    },
+    {
+      "id": 31,
+      "key": "dosovitskiy2020image",
+      "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+      "authors": "Dosovitskiy et al.",
+      "venue": "arXiv",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2010.11929"
+    },
+    {
+      "id": 32,
+      "key": "driess2023palm",
+      "title": "Palm-e: An embodied multimodal language model",
+      "authors": "Driess et al.",
+      "venue": "arXiv",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2303.03378"
+    },
+    {
+      "id": 33,
+      "key": "du2022glam",
+      "title": "Glam: Efficient scaling of language models with mixture-of-experts",
+      "authors": "Du et al.",
+      "venue": "ICML",
+      "year": 2022,
+      "url": null
+    },
+    {
+      "id": 34,
+      "key": "fang2026force",
+      "title": "Force Policy: Learning Hybrid Force-Position Control Policy under Interaction Frame for Contact-Rich Manipulation",
+      "authors": "Fang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2602.22088"
+    },
+    {
+      "id": 35,
+      "key": "fedus2022switch",
+      "title": "Switch transformers: Scaling to trillion parameter models with simple and efficient sparsity",
+      "authors": "Fedus et al.",
+      "venue": "JMLR",
+      "year": 2022,
+      "url": null
+    },
+    {
+      "id": 36,
+      "key": "ferraguti2019variable",
+      "title": "A variable admittance control strategy for stable physical human–robot interaction",
+      "authors": "Ferraguti et al.",
+      "venue": "IJRR",
+      "year": 2019,
+      "url": null
+    },
+    {
+      "id": 37,
+      "key": "ficuciello2015variable",
+      "title": "Variable impedance control of redundant manipulators for intuitive human–robot physical interaction",
+      "authors": "Ficuciello et al.",
+      "venue": "T-RO",
+      "year": 2015,
+      "url": null
+    },
+    {
+      "id": 38,
+      "key": "firoozi2025foundation",
+      "title": "Foundation models in robotics: Applications, challenges, and the future",
+      "authors": "Firoozi et al.",
+      "venue": "IJRR",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 39,
+      "key": "fisher1992hybrid",
+      "title": "Hybrid position/force control: A correct formulation",
+      "authors": "Fisher & Mujtaba",
+      "venue": "IJRR",
+      "year": 1992,
+      "url": null
+    },
+    {
+      "id": 40,
+      "key": "fu2024optimization",
+      "title": "Optimization-based variable impedance control of robotic manipulator for medical contact tasks",
+      "authors": "Fu et al.",
+      "venue": "TIM",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 41,
+      "key": "ge2025filic",
+      "title": "FILIC: Dual-Loop Force-Guided Imitation Learning with Impedance Torque Control for Contact-Rich Manipulation Tasks",
+      "authors": "Ge et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2509.17053"
+    },
+    {
+      "id": 42,
+      "key": "geiger_diffusion-based_2026",
+      "title": "Diffusion-Based Impedance Learning for Contact-Rich Manipulation Tasks",
+      "authors": "Geiger et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2509.19696 [cs]"
+    },
+    {
+      "id": 43,
+      "key": "george_vital_2024",
+      "title": "VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies",
+      "authors": "George et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2403.11898 [cs]"
+    },
+    {
+      "id": 44,
+      "key": "10517447",
+      "title": "Simple-Rotation Angle/Axis Representations Based Second-Order Impedance Control",
+      "authors": "Gong et al.",
+      "venue": "RA-L",
+      "year": 2024,
+      "url": "https://doi.org/10.1109/LRA.2024.3396090"
+    },
+    {
+      "id": 45,
+      "key": "gubernatorov_hapticvla_2026",
+      "title": "HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing",
+      "authors": "Gubernatorov et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.15257 [cs]"
+    },
+    {
+      "id": 46,
+      "key": "guo2019deep",
+      "title": "Deep multimodal representation learning: A survey",
+      "authors": "Guo et al.",
+      "venue": "IEEE Access",
+      "year": 2019,
+      "url": null
+    },
+    {
+      "id": 47,
+      "key": "haddadin2024unified",
+      "title": "Unified force-impedance control",
+      "authors": "Haddadin & Shahriari",
+      "venue": "IJRR",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 48,
+      "key": "hamid2021state",
+      "title": "A state-dependent damping method to reduce collision force and its variability",
+      "authors": "Hamid et al.",
+      "venue": "RA-L",
+      "year": 2021,
+      "url": null
+    },
+    {
+      "id": 49,
+      "key": "hao2025tla",
+      "title": "Tla: Tactile-language-action model for contact-rich manipulation",
+      "authors": "Hao et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2503.08548"
+    },
+    {
+      "id": 50,
+      "key": "he2022masked",
+      "title": "Masked autoencoders are scalable vision learners",
+      "authors": "He et al.",
+      "venue": "CVPR",
+      "year": 2022,
+      "url": null
+    },
+    {
+      "id": 51,
+      "key": "he2020momentum",
+      "title": "Momentum contrast for unsupervised visual representation learning",
+      "authors": "He et al.",
+      "venue": "CVPR",
+      "year": 2020,
+      "url": null
+    },
+    {
+      "id": 52,
+      "key": "he2016deep",
+      "title": "Deep residual learning for image recognition",
+      "authors": "He et al.",
+      "venue": "CVPR",
+      "year": 2016,
+      "url": null
+    },
+    {
+      "id": 53,
+      "key": "he2025foar",
+      "title": "Foar: Force-aware reactive policy for contact-rich robotic manipulation",
+      "authors": "He et al.",
+      "venue": "RA-L",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 54,
+      "key": "helmut2025tactile",
+      "title": "Tactile-Conditioned Diffusion Policy for Force-Aware Robotic Manipulation",
+      "authors": "Helmut et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2510.13324"
+    },
+    {
+      "id": 55,
+      "key": "heng2025vitacformer",
+      "title": "ViTacFormer: Learning cross-modal representation for visuo-tactile dexterous manipulation",
+      "authors": "Heng et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2506.15953"
+    },
+    {
+      "id": 56,
+      "key": "higuera_visuo-tactile_2026",
+      "title": "Visuo-Tactile World Models",
+      "authors": "Higuera et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2602.06001 [cs]"
+    },
+    {
+      "id": 57,
+      "key": "Hogan1985",
+      "title": "Impedance Control: An Approach to Manipulation: Part II— Implementation",
+      "authors": "Hogan",
+      "venue": "J. Dyn. Syst. Meas. Control",
+      "year": 1985,
+      "url": "https://doi.org/10.1115/1.3140713"
+    },
+    {
+      "id": 58,
+      "key": "hou2026world",
+      "title": "World Model for Robot Learning: A Comprehensive Survey",
+      "authors": "Hou et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2605.00080"
+    },
+    {
+      "id": 59,
+      "key": "hou2025adaptive",
+      "title": "Adaptive compliance policy: Learning approximate compliance for diffusion guided control",
+      "authors": "Hou et al.",
+      "venue": "ICRA",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 60,
+      "key": "hu_dexterous_2023",
+      "title": "Dexterous In-Hand Manipulation of Slender Cylindrical Objects through Deep Reinforcement Learning with Tactile Sensing",
+      "authors": "Hu et al.",
+      "venue": "arXiv",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2304.05141 [cs]"
+    },
+    {
+      "id": 61,
+      "key": "hu2023toward",
+      "title": "Toward general-purpose robots via foundation models: A survey and meta-analysis",
+      "authors": "Hu et al.",
+      "venue": "arXiv",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2312.08782"
+    },
+    {
+      "id": 62,
+      "key": "huang20243d",
+      "title": "3d-vitac: Learning fine-grained manipulation with visuo-tactile sensing",
+      "authors": "Huang et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2410.24091"
+    },
+    {
+      "id": 63,
+      "key": "huang_vt-refine_2025",
+      "title": "VT-Refine: Learning Bimanual Assembly with Visuo-Tactile Feedback via Simulation Fine-Tuning",
+      "authors": "Huang et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2510.14930 [cs]"
+    },
+    {
+      "id": 64,
+      "key": "huang2025tactile",
+      "title": "Tactile-VLA: unlocking vision-language-action model's physical knowledge for tactile generalization",
+      "authors": "Huang et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2507.09160"
+    },
+    {
+      "id": 65,
+      "key": "huang2024rekep",
+      "title": "Rekep: Spatio-temporal reasoning of relational keypoint constraints for robotic manipulation",
+      "authors": "Huang et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2409.01652"
+    },
+    {
+      "id": 66,
+      "key": "huang2026tactile",
+      "title": "Tactile-Force Alignment in Vision-Language-Action Models for Force-aware Manipulation",
+      "authors": "Huang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2601.20321"
+    },
+    {
+      "id": 67,
+      "key": "intelligence2025pi",
+      "title": "pi-0.5: a Vision-Language-Action Model with Open-World Generalization",
+      "authors": "Intelligence et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2504.16054"
+    },
+    {
+      "id": 68,
+      "key": "isola2017image",
+      "title": "Image-to-image translation with conditional adversarial networks",
+      "authors": "Isola et al.",
+      "venue": "CVPR",
+      "year": 2017,
+      "url": null
+    },
+    {
+      "id": 69,
+      "key": "jia2021scaling",
+      "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+      "authors": "Jia et al.",
+      "venue": "ICML",
+      "year": 2021,
+      "url": null
+    },
+    {
+      "id": 70,
+      "key": "jones2025beyond",
+      "title": "Beyond sight: Finetuning generalist robot policies with heterogeneous sensors via language grounding",
+      "authors": "Jones et al.",
+      "venue": "ICRA",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 71,
+      "key": "kamijo2024learning",
+      "title": "Learning variable compliance control from a few demonstrations for bimanual robot with haptic feedback teleoperation system",
+      "authors": "Kamijo et al.",
+      "venue": "IROS",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 72,
+      "key": "kang2019variable",
+      "title": "Variable admittance control of robot manipulators based on human intention",
+      "authors": "Kang et al.",
+      "venue": "T-Mech",
+      "year": 2019,
+      "url": null
+    },
+    {
+      "id": 73,
+      "key": "kang_catch-form-acter_2025",
+      "title": "CATCH-FORM-ACTer: Compliance-Aware Tactile Control and Hybrid Deformation Regulation-Based Action Transformer for Viscoelastic Object Manipulation",
+      "authors": "Kang et al.",
+      "venue": "IEEE Access",
+      "year": 2025,
+      "url": "https://doi.org/10.1109/ACCESS.2025.3591499"
+    },
+    {
+      "id": 74,
+      "key": "kang2025robotic",
+      "title": "Robotic compliant object prying using diffusion policy guided by vision and force observations",
+      "authors": "Kang et al.",
+      "venue": "RA-L",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 75,
+      "key": "keemink2018admittance",
+      "title": "Admittance control for physical human–robot interaction",
+      "authors": "Keemink et al.",
+      "venue": "IJRR",
+      "year": 2018,
+      "url": null
+    },
+    {
+      "id": 76,
+      "key": "Khatib1987",
+      "title": "A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation",
+      "authors": "Khatib",
+      "venue": "IEEE J. Robot. Autom.",
+      "year": 1987,
+      "url": "https://doi.org/10.1109/JRA.1987.1087068"
+    },
+    {
+      "id": 77,
+      "key": "kingma2013auto",
+      "title": "Auto-encoding variational bayes",
+      "authors": "Kingma & Welling",
+      "venue": "arXiv",
+      "year": 2013,
+      "url": "https://arxiv.org/abs/1312.6114"
+    },
+    {
+      "id": 78,
+      "key": "kobayashi_alpha-_2025",
+      "title": "ALPHA- α and Bi-ACT Are All You Need: Importance of Position and Force Information/ Control for Imitation Learning of Unimanual and Bimanual Robotic Manipulation With Low-Cost System",
+      "authors": "Kobayashi et al.",
+      "venue": "IEEE Access",
+      "year": 2025,
+      "url": "https://doi.org/10.1109/ACCESS.2025.3541200"
+    },
+    {
+      "id": 79,
+      "key": "kobayashi_bi-lat_2025",
+      "title": "Bi-LAT: Bilateral Control-Based Imitation Learning via Natural Language and Action Chunking with Transformers",
+      "authors": "Kobayashi et al.",
+      "venue": "RO-MAN",
+      "year": 2025,
+      "url": "https://doi.org/10.1109/RO-MAN63969.2025.11217852"
+    },
+    {
+      "id": 80,
+      "key": "koh_culinarycut-vlap_2026",
+      "title": "CulinaryCut-VLAP: A Vision-Language-Action-Physics Framework for Food Cutting via a Force-Aware Material Point Method",
+      "authors": "Koh et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2601.06451 [cs]"
+    },
+    {
+      "id": 81,
+      "key": "kroemer2021review",
+      "title": "A review of robot learning for manipulation: Challenges, representations, and algorithms",
+      "authors": "Kroemer et al.",
+      "venue": "JMLR",
+      "year": 2021,
+      "url": null
+    },
+    {
+      "id": 82,
+      "key": "krohn_self-supervised_2026",
+      "title": "Self-Supervised Multisensory Pretraining for Contact-Rich Robot Reinforcement Learning",
+      "authors": "Krohn et al.",
+      "venue": "RA-L",
+      "year": 2026,
+      "url": "https://doi.org/10.1109/LRA.2026.3681156"
+    },
+    {
+      "id": 83,
+      "key": "laghi2020unifying",
+      "title": "Unifying bilateral teleoperation and tele-impedance for enhanced user experience",
+      "authors": "Laghi et al.",
+      "venue": "IJRR",
+      "year": 2020,
+      "url": null
+    },
+    {
+      "id": 84,
+      "key": "lee2025manipforce",
+      "title": "ManipForce: Force-Guided Policy Learning with Frequency-Aware Representation for Contact-Rich Manipulation",
+      "authors": "Lee et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2509.19047"
+    },
+    {
+      "id": 85,
+      "key": "lee_modular_2026",
+      "title": "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models",
+      "authors": "Lee et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2604.23272 [cs]"
+    },
+    {
+      "id": 86,
+      "key": "lei_learning_2026",
+      "title": "Learning When to See and When to Feel: Adaptive Vision-Torque Fusion for Contact-Aware Manipulation",
+      "authors": "Lei et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2604.01414 [cs]"
+    },
+    {
+      "id": 87,
+      "key": "11317793",
+      "title": "The Developments and Challenges Toward Dexterous and Embodied Robotic Manipulation: A Survey",
+      "authors": "Li et al.",
+      "venue": "RAM",
+      "year": 2026,
+      "url": "https://doi.org/10.1109/MRA.2025.3642671"
+    },
+    {
+      "id": 88,
+      "key": "li2018stable",
+      "title": "Stable and compliant motion of physical human–robot interaction coupled with a moving environment using variable admittance and adaptive control",
+      "authors": "Li et al.",
+      "venue": "RA-L",
+      "year": 2018,
+      "url": null
+    },
+    {
+      "id": 89,
+      "key": "li2024cogact",
+      "title": "Cogact: A foundational vision-language-action model for synergizing cognition and action in robotic manipulation",
+      "authors": "Li et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2411.19650"
+    },
+    {
+      "id": 90,
+      "key": "li_flow_2026",
+      "title": "Flow with the Force Field: Learning 3D Compliant Flow Matching Policies from Force and Demonstration-Guided Simulation Data",
+      "authors": "Li et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2510.02738 [cs]"
+    },
+    {
+      "id": 91,
+      "key": "li2026forcevla2",
+      "title": "ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation",
+      "authors": "Li et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.15169"
+    },
+    {
+      "id": 92,
+      "key": "li2025uni",
+      "title": "Uni-moe: Scaling unified multimodal llms with mixture of experts",
+      "authors": "Li et al.",
+      "venue": "T-PAMI",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 93,
+      "key": "li_visuo-tactile_2025",
+      "title": "Visuo-tactile feedback policies for terminal assembly facilitated by reinforcement learning",
+      "authors": "Li et al.",
+      "venue": "Frontiers in Robotics and AI",
+      "year": 2025,
+      "url": "https://doi.org/10.3389/frobt.2025.1660244"
+    },
+    {
+      "id": 94,
+      "key": "li_favla_2026",
+      "title": "FAVLA: A Force-Adaptive Fast-Slow VLA model for Contact-Rich Robotic Manipulation",
+      "authors": "Li et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2602.23648 [cs]"
+    },
+    {
+      "id": 95,
+      "key": "li_control_2026",
+      "title": "A Control Framework With Tactile Diffusion Policy and Variable Impedance for Unknown Surface Tracking",
+      "authors": "Li et al.",
+      "venue": "RA-L",
+      "year": 2026,
+      "url": "https://doi.org/10.1109/LRA.2025.3645656"
+    },
+    {
+      "id": 96,
+      "key": "lin_generalize_2024",
+      "title": "Generalize by Touching: Tactile Ensemble Skill Transfer for Robotic Furniture Assembly",
+      "authors": "Lin et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2404.17684 [cs]"
+    },
+    {
+      "id": 97,
+      "key": "lin2025learning",
+      "title": "Learning visuotactile skills with two multifingered hands",
+      "authors": "Lin et al.",
+      "venue": "ICRA",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 98,
+      "key": "liu2025factr",
+      "title": "Factr: Force-attending curriculum training for contact-rich policy learning",
+      "authors": "Liu et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2502.17432"
+    },
+    {
+      "id": 99,
+      "key": "liu_vtdexmanip_2024",
+      "title": "VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning",
+      "authors": "Liu et al.",
+      "venue": "",
+      "year": 2024,
+      "url": "https://openreview.net/forum?id=jf7C7EGw21"
+    },
+    {
+      "id": 100,
+      "key": "liu2025forcemimic",
+      "title": "Forcemimic: Force-centric imitation learning with force-motion capture system for contact-rich manipulation",
+      "authors": "Liu et al.",
+      "venue": "ICRA",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 101,
+      "key": "liu_mla_2026",
+      "title": "MLA: A Multisensory Language-Action Model for Multimodal Understanding and Forecasting in Robotic Manipulation",
+      "authors": "Liu et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2509.26642 [cs]"
+    },
+    {
+      "id": 102,
+      "key": "luo2025precise",
+      "title": "Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning",
+      "authors": "Luo et al.",
+      "venue": "Science Robotics",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 103,
+      "key": "luo2025tactile",
+      "title": "Tactile robotics: An outlook",
+      "authors": "Luo et al.",
+      "venue": "T-RO",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 104,
+      "key": "morissette_tactile_2026",
+      "title": "Tactile Modality Fusion for Vision-Language-Action Models",
+      "authors": "Morissette et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.14604 [cs]"
+    },
+    {
+      "id": 105,
+      "key": "murooka2025tact",
+      "title": "TACT: Humanoid whole-body contact manipulation through deep imitation learning with tactile modality",
+      "authors": "Murooka et al.",
+      "venue": "RA-L",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 106,
+      "key": "namvar2005adaptive",
+      "title": "Adaptive force-motion control of coordinated robots interacting with geometrically unknown environments",
+      "authors": "Namvar & Aghili",
+      "venue": "T-RO",
+      "year": 2005,
+      "url": null
+    },
+    {
+      "id": 107,
+      "key": "noseworthy2025forge",
+      "title": "Forge: Force-guided exploration for robust contact-rich manipulation under uncertainty",
+      "authors": "Noseworthy et al.",
+      "venue": "RA-L",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 108,
+      "key": "oord2018representation",
+      "title": "Representation learning with contrastive predictive coding",
+      "authors": "Oord et al.",
+      "venue": "arXiv",
+      "year": 2018,
+      "url": "https://arxiv.org/abs/1807.03748"
+    },
+    {
+      "id": 109,
+      "key": "ott2010unified",
+      "title": "Unified impedance and admittance control",
+      "authors": "Ott et al.",
+      "venue": "ICRA",
+      "year": 2010,
+      "url": null
+    },
+    {
+      "id": 110,
+      "key": "peng2022balanced",
+      "title": "Balanced multimodal learning via on-the-fly gradient modulation",
+      "authors": "Peng et al.",
+      "venue": "CVPR",
+      "year": 2022,
+      "url": null
+    },
+    {
+      "id": 111,
+      "key": "perez2018film",
+      "title": "Film: Visual reasoning with a general conditioning layer",
+      "authors": "Perez et al.",
+      "venue": "AAAI",
+      "year": 2018,
+      "url": null
+    },
+    {
+      "id": 112,
+      "key": "portela2024learning",
+      "title": "Learning force control for legged manipulation",
+      "authors": "Portela et al.",
+      "venue": "ICRA",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 113,
+      "key": "posner2020robots",
+      "title": "Robots thinking fast and slow: on dual process theory and metacognition in embodied AI",
+      "authors": "Posner",
+      "venue": "RSS",
+      "year": 2020,
+      "url": null
+    },
+    {
+      "id": 114,
+      "key": "prescott2023understanding",
+      "title": "Understanding brain functional architecture through robotics",
+      "authors": "Prescott & Wilson",
+      "venue": "Science Robotics",
+      "year": 2023,
+      "url": null
+    },
+    {
+      "id": 115,
+      "key": "qi2017pointnet++",
+      "title": "Pointnet++: Deep hierarchical feature learning on point sets in a metric space",
+      "authors": "Qi et al.",
+      "venue": "NeurIPS",
+      "year": 2017,
+      "url": null
+    },
+    {
+      "id": 116,
+      "key": "radford2021learning",
+      "title": "Learning transferable visual models from natural language supervision",
+      "authors": "Radford et al.",
+      "venue": "ICML",
+      "year": 2021,
+      "url": null
+    },
+    {
+      "id": 117,
+      "key": "raibert1981hybrid",
+      "title": "Hybrid position/force control of manipulators",
+      "authors": "Raibert & Craig",
+      "venue": "",
+      "year": 1981,
+      "url": null
+    },
+    {
+      "id": 118,
+      "key": "ravichandar2020recent",
+      "title": "Recent advances in robot learning from demonstration",
+      "authors": "Ravichandar et al.",
+      "venue": "Annu. Rev. Control Robot.",
+      "year": 2020,
+      "url": null
+    },
+    {
+      "id": 119,
+      "key": "razavi2019generating",
+      "title": "Generating diverse high-fidelity images with vq-vae-2",
+      "authors": "Razavi et al.",
+      "venue": "NeurIPS",
+      "year": 2019,
+      "url": null
+    },
+    {
+      "id": 120,
+      "key": "rezende2014stochastic",
+      "title": "Stochastic backpropagation and approximate inference in deep generative models",
+      "authors": "Rezende et al.",
+      "venue": "ICML",
+      "year": 2014,
+      "url": null
+    },
+    {
+      "id": 121,
+      "key": "ruan2026retac",
+      "title": "ReTac-ACT: A State-Gated Vision-Tactile Fusion Transformer for Precision Assembly",
+      "authors": "Ruan et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.09565"
+    },
+    {
+      "id": 122,
+      "key": "8206325",
+      "title": "Forward Dynamics Compliance Control (FDCC): A new approach to cartesian compliance for robotic manipulators",
+      "authors": "Scherzinger et al.",
+      "venue": "IROS",
+      "year": 2017,
+      "url": "https://doi.org/10.1109/IROS.2017.8206325"
+    },
+    {
+      "id": 123,
+      "key": "seo2025equicontact",
+      "title": "Equicontact: A hierarchical SE (3) vision-to-force equivariant policy for spatially generalizable contact-rich tasks",
+      "authors": "Seo et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2507.10961"
+    },
+    {
+      "id": 124,
+      "key": "350927",
+      "title": "Adaptive admittance control: an approach to explicit force control in compliant motion",
+      "authors": "Seraji",
+      "venue": "ICRA",
+      "year": 1994,
+      "url": "https://doi.org/10.1109/ROBOT.1994.350927"
+    },
+    {
+      "id": 125,
+      "key": "sferrazza2024power",
+      "title": "The power of the senses: Generalizable manipulation from vision and touch through masked multimodal learning",
+      "authors": "Sferrazza et al.",
+      "venue": "IROS",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 126,
+      "key": "shirai2025sim",
+      "title": "Sim-to-Real Contact-Rich Pivoting via Optimization-Guided RL with Vision and Touch",
+      "authors": "Shirai et al.",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 127,
+      "key": "shridhar2023perceiver",
+      "title": "Perceiver-actor: A multi-task transformer for robotic manipulation",
+      "authors": "Shridhar et al.",
+      "venue": "CoRL",
+      "year": 2023,
+      "url": null
+    },
+    {
+      "id": 128,
+      "key": "spong2020robot",
+      "title": "Robot modeling and control",
+      "authors": "Spong et al.",
+      "venue": "Wiley New York",
+      "year": 2020,
+      "url": null
+    },
+    {
+      "id": 129,
+      "key": "su_sim2real_2024",
+      "title": "Sim2Real Manipulation on Unknown Objects with Tactile-based Reinforcement Learning",
+      "authors": "Su et al.",
+      "venue": "ICRA",
+      "year": 2024,
+      "url": "https://doi.org/10.1109/ICRA57147.2024.10611113"
+    },
+    {
+      "id": 130,
+      "key": "sun2024arch",
+      "title": "ARCH: Hierarchical hybrid learning for long-horizon contact-rich robotic assembly",
+      "authors": "Sun et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2409.16451"
+    },
+    {
+      "id": 131,
+      "key": "sun2025vtao",
+      "title": "VTAO-BiManip: Masked Visual-Tactile-Action Pre-training with Object Understanding for Bimanual Dexterous Manipulation",
+      "authors": "Sun et al.",
+      "venue": "IROS",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 132,
+      "key": "suomalainen2022survey",
+      "title": "A survey of robot manipulation in contact",
+      "authors": "Suomalainen et al.",
+      "venue": "RAS",
+      "year": 2022,
+      "url": null
+    },
+    {
+      "id": 133,
+      "key": "tang2026towards",
+      "title": "Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA",
+      "authors": "Tang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.08122"
+    },
+    {
+      "id": 134,
+      "key": "tian2026vitas",
+      "title": "ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning",
+      "authors": "Tian et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2602.11643"
+    },
+    {
+      "id": 135,
+      "key": "tie2025manual2skill",
+      "title": "Manual2skill: Learning to read manuals and acquire robotic skills for furniture assembly using vision-language models",
+      "authors": "Tie et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2502.10090"
+    },
+    {
+      "id": 136,
+      "key": "tong2022videomae",
+      "title": "Videomae: Masked autoencoders are data-efficient learners for self-supervised video pre-training",
+      "authors": "Tong et al.",
+      "venue": "NeurIPS",
+      "year": 2022,
+      "url": null
+    },
+    {
+      "id": 137,
+      "key": "touvron2023llama",
+      "title": "Llama: Open and efficient foundation language models",
+      "authors": "Touvron et al.",
+      "venue": "arXiv",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2302.13971"
+    },
+    {
+      "id": 138,
+      "key": "tsuji2025survey",
+      "title": "A survey on imitation learning for contact-rich tasks in robotics",
+      "authors": "Tsuji et al.",
+      "venue": "IJRR",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 139,
+      "key": "urain2025survey",
+      "title": "A Survey on Deep Generative Models for Robot Learning From Multimodal Demonstrations",
+      "authors": "Urain et al.",
+      "venue": "T-RO",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 140,
+      "key": "uriguen_eljuri_haptic-informed_2025",
+      "title": "Haptic-Informed ACT with a Soft Gripper and Recovery-Informed Training for Pseudo Oocyte Manipulation",
+      "authors": "Uriguen Eljuri et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://doi.org/10.48550/arXiv.2506.18212"
+    },
+    {
+      "id": 141,
+      "key": "van2017neural",
+      "title": "Neural discrete representation learning",
+      "authors": "Van Den Oord et al.",
+      "venue": "NeurIPS",
+      "year": 2017,
+      "url": null
+    },
+    {
+      "id": 142,
+      "key": "vaswani2017attention",
+      "title": "Attention is all you need",
+      "authors": "Vaswani et al.",
+      "venue": "NeurIPS",
+      "year": 2017,
+      "url": null
+    },
+    {
+      "id": 143,
+      "key": "wang_phaforce_2026",
+      "title": "PhaForce: Phase-Scheduled Visual-Force Policy Learning with Slow Planning and Fast Correction for Contact-Rich Manipulation",
+      "authors": "Wang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.08342 [cs]"
+    },
+    {
+      "id": 144,
+      "key": "10994502",
+      "title": "A Two-Stage Dynamic Parameters Identification Approach Based on Kalman Filter for Haptic Rendering in Telerobotics",
+      "authors": "Wang et al.",
+      "venue": "RA-L",
+      "year": 2025,
+      "url": "https://doi.org/10.1109/LRA.2025.3568613"
+    },
+    {
+      "id": 145,
+      "key": "wang2026mistypilot",
+      "title": "Mistypilot: An agentic fast-slow thinking llm framework for misty social robots",
+      "authors": "Wang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.03640"
+    },
+    {
+      "id": 146,
+      "key": "watanabe_ftact_2025",
+      "title": "FTACT: Force Torque aware Action Chunking Transformer for Pick-and-Reorient Bottle Task",
+      "authors": "Watanabe et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2509.23112 [cs]"
+    },
+    {
+      "id": 147,
+      "key": "wei2024fly",
+      "title": "On-the-fly modulation for balanced multimodal learning",
+      "authors": "Wei et al.",
+      "venue": "T-PAMI",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 148,
+      "key": "welte2025interactive",
+      "title": "Interactive imitation learning for dexterous robotic manipulation: challenges and perspectives—a survey",
+      "authors": "Welte & Rayyes",
+      "venue": "Frontiers in Robotics and AI",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 149,
+      "key": "wen2025fast",
+      "title": "Fast-FoundationStereo: Real-Time Zero-Shot Stereo Matching",
+      "authors": "Wen et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2512.11130"
+    },
+    {
+      "id": 150,
+      "key": "wen2024foundationpose",
+      "title": "Foundationpose: Unified 6d pose estimation and tracking of novel objects",
+      "authors": "Wen et al.",
+      "venue": "CVPR",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 151,
+      "key": "wu_freetacman_2026",
+      "title": "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
+      "authors": "Wu et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2506.01941 [cs]"
+    },
+    {
+      "id": 152,
+      "key": "wu2018multimodal",
+      "title": "Multimodal generative models for scalable weakly-supervised learning",
+      "authors": "Wu & Goodman",
+      "venue": "NeurIPS",
+      "year": 2018,
+      "url": null
+    },
+    {
+      "id": 153,
+      "key": "wu2025canonical",
+      "title": "Canonical representation and force-based pretraining of 3d tactile for dexterous visuo-tactile policy learning",
+      "authors": "Wu et al.",
+      "venue": "ICRA",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 154,
+      "key": "wu2025tacdiffusion",
+      "title": "Tacdiffusion: Force-domain diffusion policy for precise tactile manipulation",
+      "authors": "Wu et al.",
+      "venue": "ICRA",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 155,
+      "key": "xie2025towards",
+      "title": "Towards forceful robotic foundation models: a literature survey",
+      "authors": "Xie & Correll",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2504.11827"
+    },
+    {
+      "id": 156,
+      "key": "xu2025unit",
+      "title": "UniT: Data efficient tactile representation with generalization to unseen objects",
+      "authors": "Xu et al.",
+      "venue": "RA-L",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 157,
+      "key": "xue2025reactive",
+      "title": "Reactive diffusion policy: Slow-fast visual-tactile policy learning for contact-rich manipulation",
+      "authors": "Xue et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2503.02881"
+    },
+    {
+      "id": 158,
+      "key": "xue_tube_2026",
+      "title": "Tube Diffusion Policy: Reactive Visual-Tactile Policy Learning for Contact-rich Manipulation",
+      "authors": "Xue et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2604.23609 [cs]"
+    },
+    {
+      "id": 159,
+      "key": "xue_arraybot_2025",
+      "title": "ArrayBot: Reinforcement Learning for Generalizable Distributed Manipulation through Touch",
+      "authors": "Xue et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2306.16857 [cs]"
+    },
+    {
+      "id": 160,
+      "key": "yang_direction_2026",
+      "title": "Direction Matters: Learning Force Direction Enables Sim-to-Real Contact-Rich Manipulation",
+      "authors": "Yang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2602.14174 [cs]"
+    },
+    {
+      "id": 161,
+      "key": "ye_learning_2026",
+      "title": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation",
+      "authors": "Ye et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2512.23864 [cs]"
+    },
+    {
+      "id": 162,
+      "key": "ye2026visual",
+      "title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity",
+      "authors": "Ye et al.",
+      "venue": "Science Robotics",
+      "year": 2026,
+      "url": null
+    },
+    {
+      "id": 163,
+      "key": "yoshikawa2003dynamic",
+      "title": "Dynamic hybrid position/force control of robot manipulators–description of hand constraints and calculation of joint driving force",
+      "authors": "Yoshikawa",
+      "venue": "IEEE J. Robot. Autom.",
+      "year": 2003,
+      "url": null
+    },
+    {
+      "id": 164,
+      "key": "yoshikawa2002dynamic",
+      "title": "Dynamic hybrid position/force control of robot manipulators-controller design and experiment",
+      "authors": "Yoshikawa et al.",
+      "venue": "IEEE J. Robot. Autom.",
+      "year": 2002,
+      "url": null
+    },
+    {
+      "id": 165,
+      "key": "yu2021vector",
+      "title": "Vector-quantized image modeling with improved vqgan",
+      "authors": "Yu et al.",
+      "venue": "arXiv",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2110.04627"
+    },
+    {
+      "id": 166,
+      "key": "yu2025forcevla",
+      "title": "Forcevla: Enhancing vla models with a force-aware moe for contact-rich manipulation",
+      "authors": "Yu et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2505.22159"
+    },
+    {
+      "id": 167,
+      "key": "yuan_vtam_2026",
+      "title": "VTAM: Video-Tactile-Action Models for Complex Physical Interaction Beyond VLAs",
+      "authors": "Yuan et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.23481v1"
+    },
+    {
+      "id": 168,
+      "key": "yue_pocodp3_2026",
+      "title": "PoCoDP3: Pose- and Contact-Aware Visual-Tactile Policy for Contact-Rich 3D Manipulation",
+      "authors": "Yue et al.",
+      "venue": "RA-L",
+      "year": 2026,
+      "url": "https://doi.org/10.1109/LRA.2026.3653314"
+    },
+    {
+      "id": 169,
+      "key": "zare2024survey",
+      "title": "A survey of imitation learning: Algorithms, recent developments, and challenges",
+      "authors": "Zare et al.",
+      "venue": "Transactions on Cybernetics",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 170,
+      "key": "zhang2025vtla",
+      "title": "VTLA: Vision-Tactile-Language-Action Model with Preference Learning for Insertion Manipulation",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2505.09577"
+    },
+    {
+      "id": 171,
+      "key": "zhang2024robot",
+      "title": "A robot humanoid control framework through human arm active endpoint stiffness and direction adaptive compensation",
+      "authors": "Zhang et al.",
+      "venue": "RA-L",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 172,
+      "key": "zhang2025kinedex",
+      "title": "Kinedex: Learning tactile-informed visuomotor policies via kinesthetic teaching for dexterous manipulation",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2505.01974"
+    },
+    {
+      "id": 173,
+      "key": "zhang_compliantvla-adaptor_2026",
+      "title": "CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2601.15541 [cs]"
+    },
+    {
+      "id": 174,
+      "key": "zhang2024hirt",
+      "title": "Hirt: Enhancing robotic control with hierarchical robot transformers",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2410.05273"
+    },
+    {
+      "id": 175,
+      "key": "zhang2026tacvla",
+      "title": "TacVLA: Contact-Aware Tactile Fusion for Robust Vision-Language-Action Manipulation",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.12665"
+    },
+    {
+      "id": 176,
+      "key": "zhang2026craft",
+      "title": "CRAFT: Adapting VLA Models to Contact-rich Manipulation via Force-aware Curriculum Fine-tuning",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2602.12532"
+    },
+    {
+      "id": 177,
+      "key": "zhang2026touchguide",
+      "title": "TouchGuide: Inference-Time Steering of Visuomotor Policies via Touch Guidance",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2601.20239"
+    },
+    {
+      "id": 178,
+      "key": "zhang2025ta",
+      "title": "Ta-vla: Elucidating the design space of torque-aware vision-language-action models",
+      "authors": "Zhang et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2509.07962"
+    },
+    {
+      "id": 179,
+      "key": "zhao2021point",
+      "title": "Point transformer",
+      "authors": "Zhao et al.",
+      "venue": "ICCV",
+      "year": 2021,
+      "url": null
+    },
+    {
+      "id": 180,
+      "key": "zhao_polytouch_2025",
+      "title": "PolyTouch: A Robust Multi-Modal Tactile Sensor for Contact-rich Manipulation Using Tactile-Diffusion Policies",
+      "authors": "Zhao et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2504.19341 [cs]"
+    },
+    {
+      "id": 181,
+      "key": "zhao_fd-vla_2026",
+      "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
+      "authors": "Zhao et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2602.02142 [cs]"
+    },
+    {
+      "id": 182,
+      "key": "zhao_visual-tactile_2026",
+      "title": "Visual-Tactile Peg-in-Hole Assembly Learning From Peg-Out-of-Hole Disassembly",
+      "authors": "Zhao et al.",
+      "venue": "RA-L",
+      "year": 2026,
+      "url": "https://doi.org/10.1109/LRA.2026.3679227"
+    },
+    {
+      "id": 183,
+      "key": "zhao2025touch",
+      "title": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation",
+      "authors": "Zhao et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2506.13762"
+    },
+    {
+      "id": 184,
+      "key": "zheng2026omnivta",
+      "title": "OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation",
+      "authors": "Zheng et al.",
+      "venue": "arXiv",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2603.19201"
+    },
+    {
+      "id": 185,
+      "key": "zhi2025learningunifiedpolicyposition",
+      "title": "Learning a Unified Policy for Position and Force Control in Legged Loco-Manipulation",
+      "authors": "Zhi et al.",
+      "venue": "arXiv",
+      "year": 2025,
+      "url": "https://arxiv.org/abs/2505.20829"
+    },
+    {
+      "id": 186,
+      "key": "zhou2025admittance",
+      "title": "Admittance visuomotor policy learning for general-purpose contact-rich manipulations",
+      "authors": "Zhou et al.",
+      "venue": "TIE",
+      "year": 2025,
+      "url": null
+    },
+    {
+      "id": 187,
+      "key": "zhou_gentle_2026",
+      "title": "Gentle Manipulation Policy Learning via Demonstrations from VLM Planned Atomic Skills",
+      "authors": "Zhou et al.",
+      "venue": "AAAI",
+      "year": 2026,
+      "url": "https://doi.org/10.1609/aaai.v40i22.38955"
+    },
+    {
+      "id": 188,
+      "key": "zhu2024language",
+      "title": "Language-conditioned robotic manipulation with fast and slow thinking",
+      "authors": "Zhu et al.",
+      "venue": "ICRA",
+      "year": 2024,
+      "url": null
+    },
+    {
+      "id": 189,
+      "key": "zong2024self",
+      "title": "Self-supervised multimodal learning: A survey",
+      "authors": "Zong et al.",
+      "venue": "T-PAMI",
+      "year": 2024,
+      "url": null
+    }
+  ]
+}
