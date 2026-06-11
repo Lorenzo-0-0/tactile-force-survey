@@ -9,6 +9,11 @@
   const W = 1600, H = 900;
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
 
+  // theme-driven: read palette from CSS variables so the topology follows tokens.css
+  const css = getComputedStyle(document.documentElement);
+  const EDGE = (css.getPropertyValue('--border-strong') || '#B9C2CD').trim();
+  const PULSE = (css.getPropertyValue('--accent') || '#0070C0').trim();
+
   const NS = 'http://www.w3.org/2000/svg';
   const mk = (tag, attrs) => {
     const el = document.createElementNS(NS, tag);
@@ -56,11 +61,11 @@
       const midY = (a.y + b.y) / 2;
       const d = `M ${a.x} ${a.y} C ${a.x} ${midY}, ${b.x} ${midY}, ${b.x} ${b.y}`;
       edgesGroup.appendChild(mk('path', {
-        d, fill: 'none', stroke: '#2B3648', 'stroke-width': 1,
+        d, fill: 'none', stroke: EDGE, 'stroke-width': 1,
       }));
       if (!reduced && rand() > 0.45) {
         const p = mk('path', {
-          d, fill: 'none', stroke: '#3FB6FF', 'stroke-width': 1.4,
+          d, fill: 'none', stroke: PULSE, 'stroke-width': 1.4,
           'stroke-linecap': 'round', opacity: 0.8,
         });
         pulseGroup.appendChild(p);
@@ -74,7 +79,7 @@
   nodes.forEach((n) => {
     nodesGroup.appendChild(mk('circle', {
       cx: n.x, cy: n.y, r: n.row === 2 ? 4 : 3,
-      fill: n.row === 2 ? '#3FB6FF' : '#2B3648',
+      fill: n.row === 2 ? PULSE : EDGE,
       opacity: n.row === 2 ? 0.9 : 1,
     }));
   });

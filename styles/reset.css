@@ -47,7 +47,7 @@ a:focus-visible, button:focus-visible {
 p, li { text-wrap: pretty; }
 h1, h2, h3, h4 { text-wrap: balance; }
 
-::selection { background: var(--accent); color: #0A0A0A; }
+::selection { background: var(--accent); color: #fff; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

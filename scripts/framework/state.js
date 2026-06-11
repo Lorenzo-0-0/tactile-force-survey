@@ -5,6 +5,7 @@
    measured trivial) and broadcasts 'explorer:change' for wires + strip. */
 
 import { domId } from './render.js';
+import { scrollDiagramTo, scrollPageToExplorer } from './scroll.js';
 
 export function initState(data, sidebar) {
   const root = document.getElementById('framework-root');
@@ -107,15 +108,6 @@ export function initState(data, sidebar) {
   }
 
   /* ---- scrolling helpers -------------------------------------------- */
-  function scrollPageTo(el) {
-    if (!el) return;
-    const r = el.getBoundingClientRect();
-    const navSafe = 120;
-    if (r.top > navSafe && r.bottom < window.innerHeight - 60) return; // already visible
-    if (window.__lenis) window.__lenis.scrollTo(el, { offset: -160, duration: 0.9 });
-    else el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-
   function firstHitBoxEl(boxes) {
     for (const box of data.boxesFlat) {
       if (boxes.has(box.id)) return boxEls.get(box.id);
@@ -156,7 +148,7 @@ export function initState(data, sidebar) {
     if (sel && scroll) {
       const { refs, boxes } = resolve(sel);
       if (sel.type === 'ref') {
-        scrollPageTo(firstHitBoxEl(boxes));
+        scrollDiagramTo(firstHitBoxEl(boxes));
         sidebar.scrollToRef(sel.id);
       } else if (refs.size) {
         sidebar.scrollToRef(Math.min(...refs));
@@ -234,15 +226,20 @@ export function initState(data, sidebar) {
       if (data.paperById.has(id)) {
         setPinned({ type: 'ref', id }, { scroll: false });
         setTimeout(() => {
-          document.getElementById('explorer')?.scrollIntoView();
+          scrollPageToExplorer({ immediate: true });
           sidebar.scrollToRef(id);
+          const { boxes } = resolve({ type: 'ref', id });
+          scrollDiagramTo(firstHitBoxEl(boxes));
         }, 60);
       }
     } else if ((m = h.match(/^#box-([\w-]+)$/))) {
       const box = data.boxesFlat.find((b) => domId(b.id) === m[1]);
       if (box) {
         setPinned({ type: 'box', id: box.id }, { scroll: false });
-        setTimeout(() => boxEls.get(box.id)?.scrollIntoView({ block: 'center' }), 60);
+        setTimeout(() => {
+          scrollPageToExplorer({ immediate: true });
+          scrollDiagramTo(boxEls.get(box.id));
+        }, 60);
       }
     }
   }

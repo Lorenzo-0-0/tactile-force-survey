@@ -3,6 +3,7 @@
    a chip scrolls the page to that box. */
 
 import { domId } from './render.js';
+import { scrollDiagramTo } from './scroll.js';
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => (
   { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]
@@ -48,11 +49,7 @@ export function initPipelineStrip(data, stateApi) {
   strip.addEventListener('click', (e) => {
     const goto = e.target.closest('[data-goto]');
     if (goto) {
-      const el = document.getElementById(goto.dataset.goto);
-      if (el) {
-        if (window.__lenis) window.__lenis.scrollTo(el, { offset: -180, duration: 0.9 });
-        else el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+      scrollDiagramTo(document.getElementById(goto.dataset.goto), { margin: 140 });
       return;
     }
     if (e.target.closest('[data-clear]')) stateApi.clear();
@@ -63,4 +60,8 @@ export function initPipelineStrip(data, stateApi) {
     if (pinned && pinned.type === 'ref') show(pinned.id);
     else hide();
   });
+
+  // hash deep-links pin before this module subscribes — sync once at init
+  const current = stateApi.get().pinned;
+  if (current && current.type === 'ref') show(current.id);
 }

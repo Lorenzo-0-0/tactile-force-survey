@@ -30,6 +30,8 @@
       lerp: 0.08,
       wheelMultiplier: 1.0,
       smoothWheel: true,
+      // belt-and-braces alongside the data-lenis-prevent attributes
+      prevent: (node) => !!(node.closest && node.closest('[data-lenis-prevent]')),
     });
     window.__lenis = lenis;
     function raf(time) {

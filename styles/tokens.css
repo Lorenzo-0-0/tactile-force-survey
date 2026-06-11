@@ -1,28 +1,46 @@
-/* TF-M3PF Survey — design tokens (v1)
-   Cold-steel dark palette + Space Grotesk display + Inter Tight body.
-   Precision-instrument aesthetic: one cyan accent family, no warm color.
+/* TF-M3PF Survey — design tokens (v2, light)
+   Porcelain-white robotics-lab palette anchored on the paper figure's own
+   design language: white boxes, #D6D6D6 hairlines, #0070C0 letter blue,
+   per-phase hue washes lifted verbatim from the Fig. 2 source file.
    Single source of truth for color, type, spacing, motion. */
 
 :root {
-  /* --- color (cold steel, 3-level text hierarchy) --- */
-  --bg:             #0A0C10;
-  --bg-elev:        #10141B;
-  --bg-elev-2:      #151B26;
-  --border:         #1E2633;
-  --border-strong:  #2B3648;
-  --text-display:   #E9EEF6;
-  --text:           #C3CCDA;
-  --text-soft:      #B7C1D1;
-  --text-muted:     #8794A8;
-  --accent:         #3FB6FF;
-  --accent-hot:     #7FE0FF;
-  --accent-soft:    rgba(63, 182, 255, 0.14);
-  --accent-line:    rgba(63, 182, 255, 0.5);
-  --accent-warm:    #9FB4CC; /* steel — used by mono labels / chapter numbers */
+  /* --- color (porcelain, 3-level text hierarchy) --- */
+  --bg:             #F7F8FA;
+  --bg-elev:        #FFFFFF;
+  --bg-elev-2:      #EFF2F6;
+  --border:         #D6D6D6;   /* the figure's hairline, verbatim */
+  --border-strong:  #B9C2CD;
+  --text-display:   #101820;
+  --text:           #2A323D;
+  --text-soft:      #46505E;
+  --text-muted:     #6B7686;
+  --accent:         #0070C0;   /* the figure's letter blue, verbatim */
+  --accent-hot:     #005A9E;   /* hover darkens on light ground */
+  --accent-soft:    rgba(0, 112, 192, 0.10);
+  --accent-line:    rgba(0, 112, 192, 0.45);
+  --accent-warm:    #5B6B7E;   /* steel — mono labels / chapter numbers */
+
+  /* --- figure hue washes (panel tints from the Fig. 2 source) --- */
+  --wash-fusion: rgba(67, 83, 255, 0.06);
+  --wash-phase1: rgba(112, 173, 71, 0.10);
+  --wash-phase2: rgba(172, 48, 214, 0.05);
+  --wash-phase3: rgba(56, 212, 214, 0.10);
+  --wash-side:   rgba(255, 192, 0, 0.08);
+  --wash-fusion-line: rgba(67, 83, 255, 0.22);
+  --wash-phase1-line: rgba(94, 146, 60, 0.30);
+  --wash-phase2-line: rgba(172, 48, 214, 0.20);
+  --wash-phase3-line: rgba(32, 158, 160, 0.30);
+  --wash-side-line:   rgba(214, 158, 0, 0.32);
+  --wash-fusion-ink: #3743C9;
+  --wash-phase1-ink: #4E7A32;
+  --wash-phase2-ink: #8E28B5;
+  --wash-phase3-ink: #0F8B8D;
+  --wash-side-ink:   #A37500;
 
   /* --- type (Space Grotesk display · Inter Tight body · JetBrains Mono data) ---
      Serif var names are kept from the skeleton but re-pointed to sans so the
-     whole forked component layer resolves to the cold theme. */
+     whole forked component layer resolves to this theme. */
   --display:        'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
   --display-serif:  'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
   --serif-display:  'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
@@ -86,15 +104,15 @@
   --d-base:     220ms;
   --d-slow:     360ms;
 
-  /* --- depth --- */
-  --shadow-card: 0 0 0 1px var(--border), 0 24px 60px -30px rgba(0, 0, 0, 0.85);
-  --shadow-elev: 0 0 0 1px var(--border-strong), 0 32px 80px -32px rgba(0, 0, 0, 0.95);
-  --glow-accent: 0 0 0 1px var(--accent-line), 0 0 24px rgba(63, 182, 255, 0.18);
+  /* --- depth (soft graphite, no black glows) --- */
+  --shadow-card: 0 0 0 1px var(--border), 0 14px 32px -20px rgba(16, 32, 48, 0.18);
+  --shadow-elev: 0 0 0 1px var(--border-strong), 0 22px 48px -24px rgba(16, 32, 48, 0.22);
+  --glow-accent: 0 0 0 1px var(--accent-line), 0 4px 14px -2px rgba(0, 112, 192, 0.22);
 
-  /* --- grain (SVG noise inline, cool-tinted) --- */
-  --grain-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.78  0 0 0 0 0.84  0 0 0 0 0.93  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  /* --- grain (dark noise multiplied over porcelain, very subtle) --- */
+  --grain-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.16  0 0 0 0 0.22  0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 
   /* --- blueprint grid (framework explorer backdrop) --- */
-  --blueprint-line: rgba(63, 182, 255, 0.045);
-  --blueprint-dot:  rgba(63, 182, 255, 0.07);
+  --blueprint-line: rgba(0, 112, 192, 0.045);
+  --blueprint-dot:  rgba(0, 112, 192, 0.08);
 }

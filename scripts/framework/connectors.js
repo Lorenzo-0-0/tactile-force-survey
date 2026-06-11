@@ -39,15 +39,21 @@ export function initConnectors(data, stateApi) {
   const svg = root?.querySelector('.fw-wires');
   if (!root || !svg) return;
 
+  // theme-driven colors from tokens.css
+  const css = getComputedStyle(document.documentElement);
+  const C_EDGE = (css.getPropertyValue('--border-strong') || '#B9C2CD').trim();
+  const C_HIT = (css.getPropertyValue('--accent') || '#0070C0').trim();
+  const C_LABEL = (css.getPropertyValue('--text-muted') || '#6B7686').trim();
+
   svg.innerHTML = `
     <defs>
       <marker id="fw-arrow" viewBox="0 0 8 8" refX="7" refY="4"
               markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="#2B3648"/>
+        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="${C_EDGE}"/>
       </marker>
       <marker id="fw-arrow-hit" viewBox="0 0 8 8" refX="7" refY="4"
               markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="#3FB6FF"/>
+        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="${C_HIT}"/>
       </marker>
     </defs>`;
 
@@ -139,7 +145,7 @@ export function initConnectors(data, stateApi) {
         labelEl.setAttribute('transform', `rotate(90 ${geo.labelAt.x} ${geo.labelAt.y})`);
         labelEl.setAttribute('text-anchor', 'middle');
         labelEl.setAttribute('dy', '-6');
-        labelEl.setAttribute('fill', '#8794A8');
+        labelEl.setAttribute('fill', C_LABEL);
         labelEl.setAttribute('font-size', '9');
         labelEl.setAttribute('letter-spacing', '2');
         labelEl.setAttribute('font-family', "'JetBrains Mono', monospace");

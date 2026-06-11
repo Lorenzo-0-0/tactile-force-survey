@@ -8,8 +8,8 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background-image: var(--grain-url);
-  opacity: 0.55;
-  mix-blend-mode: overlay;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
 }
 body > * { position: relative; z-index: 1; }
 
@@ -43,7 +43,7 @@ body > * { position: relative; z-index: 1; }
 }
 
 .nav.is-scrolled {
-  background: rgba(15, 15, 17, 0.78);
+  background: rgba(250, 251, 252, 0.82);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   border-bottom-color: var(--border);
@@ -204,7 +204,6 @@ body > * { position: relative; z-index: 1; }
   letter-spacing: 0.005em;
   margin-bottom: var(--s-4);
   color: var(--text-display);
-  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.55);
 }
 
 .hero__sub {
@@ -214,7 +213,6 @@ body > * { position: relative; z-index: 1; }
   color: var(--text-display);
   line-height: 1.2;
   margin-bottom: var(--s-4);
-  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.7), 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero__pitch {
@@ -224,7 +222,6 @@ body > * { position: relative; z-index: 1; }
   max-width: 52ch;
   margin: 0 auto var(--s-7);
   letter-spacing: 0.005em;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7), 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 /* === A2A-style author block ============================================= */
@@ -235,12 +232,11 @@ body > * { position: relative; z-index: 1; }
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--text-display);
-  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.65);
 }
 
 .hero__authors a {
   color: var(--text);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(16, 32, 48, 0.22);
   transition: color var(--d-fast) var(--ease), border-color var(--d-fast) var(--ease);
 }
 
@@ -260,13 +256,12 @@ body > * { position: relative; z-index: 1; }
   font-family: var(--serif-body);
   font-style: italic;
   font-size: var(--text-base);
-  color: rgba(244, 240, 232, 0.92);
+  color: var(--text-soft);
   margin: 0 auto var(--s-2);
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.65);
 }
 .hero__affil a {
   color: inherit;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(16, 32, 48, 0.25);
   transition: color var(--d-fast) var(--ease), border-color var(--d-fast) var(--ease);
 }
 .hero__affil a:hover { color: var(--accent); border-bottom-color: var(--accent); }
@@ -275,9 +270,8 @@ body > * { position: relative; z-index: 1; }
   font-family: var(--mono);
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wide);
-  color: rgba(237, 234, 227, 0.6);
+  color: var(--text-muted);
   margin: 0 auto var(--s-6);
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.65);
 }
 
 .hero__marks span { margin: 0 var(--s-3); white-space: nowrap; }
@@ -381,7 +375,7 @@ body > * { position: relative; z-index: 1; }
   letter-spacing: 0.01em;
   border-radius: var(--r-full);
   border: 1px solid var(--border-strong);
-  background: rgba(255,255,255,0.02);
+  background: rgba(16, 32, 48, 0.02);
   color: var(--text);
   transition: transform var(--d-fast) var(--ease),
               background var(--d-fast) var(--ease),
@@ -391,7 +385,7 @@ body > * { position: relative; z-index: 1; }
 
 .btn:hover {
   transform: translateY(-1px);
-  background: rgba(255,255,255,0.06);
+  background: rgba(16, 32, 48, 0.05);
   border-color: var(--accent-line);
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
@@ -403,7 +397,7 @@ body > * { position: relative; z-index: 1; }
 }
 
 .btn--primary:hover {
-  background: #fff;
+  background: var(--accent-hot);
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
@@ -465,7 +459,7 @@ body > * { position: relative; z-index: 1; }
   display: block;
   width: 56px;
   height: 1px;
-  background: rgba(217, 210, 192, 0.35);
+  background: rgba(91, 107, 126, 0.30);
 }
 
 /* ============================================================
@@ -797,10 +791,11 @@ body > * { position: relative; z-index: 1; }
    The figures already carry a pure-black background, so a transparent
    chrome makes them merge seamlessly with the page bg. */
 .media-block__chrome {
-  background: transparent;
-  border: 0;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
   border-radius: var(--r-md);
   overflow: hidden;
+  padding: var(--s-4);
 }
 
 /* Videos still need a defined black frame to avoid a flash of page bg */
@@ -893,7 +888,7 @@ body > * { position: relative; z-index: 1; }
 .media-block__rule {
   display: block;
   height: 1px;
-  background: rgba(217, 210, 192, 0.25);
+  background: rgba(91, 107, 126, 0.22);
 }
 
 .media-block__title {
@@ -934,7 +929,7 @@ body > * { position: relative; z-index: 1; }
   gap: var(--s-2);
   margin-bottom: var(--s-5);
   padding: 4px;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(16, 32, 48, 0.03);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   flex-wrap: wrap;
@@ -974,7 +969,7 @@ body > * { position: relative; z-index: 1; }
 }
 
 .mode-tab:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(16, 32, 48, 0.04);
 }
 
 .mode-tab:hover .mode-tab__title { color: var(--text-display); }
@@ -1244,7 +1239,7 @@ body > * { position: relative; z-index: 1; }
   padding: 3px;
   border: 1px solid var(--border);
   border-radius: var(--r-full);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(16, 32, 48, 0.03);
 }
 .mode-pick__btn {
   font-family: var(--mono);
@@ -1493,7 +1488,7 @@ body > * { position: relative; z-index: 1; }
   text-transform: uppercase;
   color: var(--text-muted);
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.02);
+  background: rgba(16, 32, 48, 0.02);
   border-radius: var(--r-sm);
   transition: all var(--d-fast) var(--ease);
 }

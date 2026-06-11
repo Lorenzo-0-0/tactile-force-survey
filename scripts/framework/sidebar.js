@@ -94,6 +94,16 @@ export function renderSidebar(data) {
     });
   }
 
+  // wheel over the search/scope header has no scrollable ancestor inside the
+  // aside — forward it to the list so the sidebar feels like one surface
+  const head = document.querySelector('.sidebar__head');
+  if (head) {
+    head.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      list.scrollTop += e.deltaY;
+    }, { passive: false });
+  }
+
   if (scopeEl) {
     scopeEl.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-scope]');
