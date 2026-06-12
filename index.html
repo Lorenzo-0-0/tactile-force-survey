@@ -19,11 +19,11 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
-  <link rel="stylesheet" href="styles/tokens.css?v=2" />
-  <link rel="stylesheet" href="styles/reset.css?v=2" />
-  <link rel="stylesheet" href="styles/layout.css?v=2" />
-  <link rel="stylesheet" href="styles/components.css?v=2" />
-  <link rel="stylesheet" href="styles/framework.css?v=2" />
+  <link rel="stylesheet" href="styles/tokens.css?v=3" />
+  <link rel="stylesheet" href="styles/reset.css?v=3" />
+  <link rel="stylesheet" href="styles/layout.css?v=3" />
+  <link rel="stylesheet" href="styles/components.css?v=3" />
+  <link rel="stylesheet" href="styles/framework.css?v=3" />
 </head>
 <body>
 
@@ -197,8 +197,8 @@
     <figure class="media-block" data-reveal style="margin-top: var(--s-9)">
       <div class="media-block__chrome">
         <picture>
-          <source srcset="assets/images/teaser.webp" type="image/webp" />
-          <img src="assets/images/teaser.png" alt="Overview of the unified multi-modal multi-phase framework: multimodal perception, encoding and fusion, primary action generation, action refinement, and low-level robot-end control." loading="lazy" />
+          <source srcset="assets/images/teaser.webp?v=3" type="image/webp" />
+          <img src="assets/images/teaser.png?v=3" alt="Overview of the unified multi-modal multi-phase framework: multimodal perception, encoding and fusion, primary action generation, action refinement, and low-level robot-end control." loading="lazy" />
         </picture>
       </div>
       <div class="media-block__meta">
@@ -269,8 +269,8 @@
     <figure class="media-block" data-reveal>
       <div class="media-block__chrome">
         <picture>
-          <source srcset="assets/images/framework_fusion.webp" type="image/webp" />
-          <img src="assets/images/framework_fusion.png" alt="Multimodal fusion and encoding framework: physical interpretation of modalities and model structures of representation-learning and fusion methods." loading="lazy" />
+          <source srcset="assets/images/framework_fusion.webp?v=3" type="image/webp" />
+          <img src="assets/images/framework_fusion.png?v=3" alt="Multimodal fusion and encoding framework: physical interpretation of modalities and model structures of representation-learning and fusion methods." loading="lazy" />
         </picture>
       </div>
       <div class="media-block__meta">
@@ -287,8 +287,8 @@
     <figure class="media-block" data-reveal>
       <div class="media-block__chrome">
         <picture>
-          <source srcset="assets/images/framework_phase1.webp" type="image/webp" />
-          <img src="assets/images/framework_phase1.png" alt="Phase 1 primary action policies: VLA, diffusion and flow matching, action chunking transformers, reinforcement learning, and regression." loading="lazy" />
+          <source srcset="assets/images/framework_phase1.webp?v=3" type="image/webp" />
+          <img src="assets/images/framework_phase1.png?v=3" alt="Phase 1 primary action policies: VLA, diffusion and flow matching, action chunking transformers, reinforcement learning, and regression." loading="lazy" />
         </picture>
       </div>
       <div class="media-block__meta">
@@ -305,8 +305,8 @@
     <figure class="media-block" data-reveal>
       <div class="media-block__chrome">
         <picture>
-          <source srcset="assets/images/framework_phase2.webp" type="image/webp" />
-          <img src="assets/images/framework_phase2.png" alt="Phase 2 refinement policies refining primary actions with forwarded and predicted modalities." loading="lazy" />
+          <source srcset="assets/images/framework_phase2.webp?v=3" type="image/webp" />
+          <img src="assets/images/framework_phase2.png?v=3" alt="Phase 2 refinement policies refining primary actions with forwarded and predicted modalities." loading="lazy" />
         </picture>
       </div>
       <div class="media-block__meta">
@@ -323,8 +323,8 @@
     <figure class="media-block" data-reveal>
       <div class="media-block__chrome">
         <picture>
-          <source srcset="assets/images/framework_control.webp" type="image/webp" />
-          <img src="assets/images/framework_control.png" alt="Phase 3 robot-end control: impedance, admittance, hybrid force-position, and PID control closing the loop at the robot end." loading="lazy" />
+          <source srcset="assets/images/framework_control.webp?v=3" type="image/webp" />
+          <img src="assets/images/framework_control.png?v=3" alt="Phase 3 robot-end control: impedance, admittance, hybrid force-position, and PID control closing the loop at the robot end." loading="lazy" />
         </picture>
       </div>
       <div class="media-block__meta">
@@ -338,12 +338,100 @@
       </div>
     </figure>
 
-    <figure class="media-block media-block--xs" data-reveal>
-      <div class="media-block__chrome">
-        <picture>
-          <source srcset="assets/images/task_histogram.webp" type="image/webp" />
-          <img src="assets/images/task_histogram.png" alt="Histogram of surveyed papers by contact-rich manipulation task category." loading="lazy" />
-        </picture>
+    <figure class="media-block" data-reveal>
+      <div class="media-block__chrome media-block__chrome--chart">
+        <!-- TASK_CHART:START (generated by tools/build_task_chart.py — do not edit by hand) -->
+<svg viewBox="0 0 1240 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Number of surveyed papers per contact-rich task family" style="width:100%;height:auto;display:block">
+<line x1="64" y1="352.0" x2="1222" y2="352.0" stroke="#E2E7EE" stroke-width="1"/>
+<text x="54" y="355.5" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" fill="#6B7686">0</text>
+<line x1="64" y1="297.4" x2="1222" y2="297.4" stroke="#E2E7EE" stroke-width="1"/>
+<text x="54" y="300.9" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" fill="#6B7686">5</text>
+<line x1="64" y1="242.7" x2="1222" y2="242.7" stroke="#E2E7EE" stroke-width="1"/>
+<text x="54" y="246.2" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" fill="#6B7686">10</text>
+<line x1="64" y1="188.1" x2="1222" y2="188.1" stroke="#E2E7EE" stroke-width="1"/>
+<text x="54" y="191.6" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" fill="#6B7686">15</text>
+<line x1="64" y1="133.4" x2="1222" y2="133.4" stroke="#E2E7EE" stroke-width="1"/>
+<text x="54" y="136.9" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" fill="#6B7686">20</text>
+<line x1="64" y1="78.8" x2="1222" y2="78.8" stroke="#E2E7EE" stroke-width="1"/>
+<text x="54" y="82.3" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" fill="#6B7686">25</text>
+<text x="16" y="199" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="10.5" fill="#6B7686" letter-spacing="1.5" text-anchor="middle" transform="rotate(-90 16 199)">PAPERS · OF 53 SURVEYED</text>
+<rect x="64.0" y="67.9" width="42.8" height="284.1" rx="3" fill="#5B84B1" stroke="#41658C" stroke-width="1"><title>A1 Insertion — 26 papers</title></rect>
+<text x="85.4" y="61.9" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">26</text>
+<text x="85.4" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 85.4 366.0)">A1 Insertion</text>
+<rect x="116.8" y="275.5" width="42.8" height="76.5" rx="3" fill="#5B84B1" stroke="#41658C" stroke-width="1"><title>A2 Cap/Nut Screwing — 7 papers</title></rect>
+<text x="138.1" y="269.5" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">7</text>
+<text x="138.1" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 138.1 366.0)">A2 Cap/Nut Screwing</text>
+<rect x="169.5" y="231.8" width="42.8" height="120.2" rx="3" fill="#5B84B1" stroke="#41658C" stroke-width="1"><title>A3 Assembly Plug — 11 papers</title></rect>
+<text x="190.9" y="225.8" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">11</text>
+<text x="190.9" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 190.9 366.0)">A3 Assembly Plug</text>
+<rect x="222.3" y="341.1" width="42.8" height="10.9" rx="3" fill="#5B84B1" stroke="#41658C" stroke-width="1"><title>A4 Bi. Insertion — 1 paper</title></rect>
+<text x="243.7" y="335.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">1</text>
+<text x="243.7" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 243.7 366.0)">A4 Bi. Insertion</text>
+<rect x="275.0" y="330.1" width="42.8" height="21.9" rx="3" fill="#5B84B1" stroke="#41658C" stroke-width="1"><title>A5 Rotate Handle/Box — 2 papers</title></rect>
+<text x="296.4" y="324.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">2</text>
+<text x="296.4" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 296.4 366.0)">A5 Rotate Handle/Box</text>
+<line x1="64.0" y1="352.0" x2="317.8" y2="352.0" stroke="#41658C" stroke-width="2.5"/>
+<rect x="347.8" y="264.6" width="42.8" height="87.4" rx="3" fill="#C7A050" stroke="#9A7930" stroke-width="1"><title>B1 Peeling — 8 papers</title></rect>
+<text x="369.2" y="258.6" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">8</text>
+<text x="369.2" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 369.2 366.0)">B1 Peeling</text>
+<rect x="400.6" y="155.3" width="42.8" height="196.7" rx="3" fill="#C7A050" stroke="#9A7930" stroke-width="1"><title>B2 Wiping — 18 papers</title></rect>
+<text x="422.0" y="149.3" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">18</text>
+<text x="422.0" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 422.0 366.0)">B2 Wiping</text>
+<rect x="453.3" y="341.1" width="42.8" height="10.9" rx="3" fill="#C7A050" stroke="#9A7930" stroke-width="1"><title>B3 Cutting — 1 paper</title></rect>
+<text x="474.7" y="335.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">1</text>
+<text x="474.7" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 474.7 366.0)">B3 Cutting</text>
+<rect x="506.1" y="341.1" width="42.8" height="10.9" rx="3" fill="#C7A050" stroke="#9A7930" stroke-width="1"><title>B4 Slide Object — 1 paper</title></rect>
+<text x="527.5" y="335.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">1</text>
+<text x="527.5" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 527.5 366.0)">B4 Slide Object</text>
+<rect x="558.9" y="253.6" width="42.8" height="98.4" rx="3" fill="#C7A050" stroke="#9A7930" stroke-width="1"><title>B5 Soft/Fragile Grasp — 9 papers</title></rect>
+<text x="580.2" y="247.6" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">9</text>
+<text x="580.2" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 580.2 366.0)">B5 Soft/Fragile Grasp</text>
+<line x1="347.8" y1="352.0" x2="601.6" y2="352.0" stroke="#9A7930" stroke-width="2.5"/>
+<rect x="631.6" y="341.1" width="42.8" height="10.9" rx="3" fill="#7FA383" stroke="#5E7F63" stroke-width="1"><title>C1 Mobile Catch — 1 paper</title></rect>
+<text x="653.0" y="335.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">1</text>
+<text x="653.0" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 653.0 366.0)">C1 Mobile Catch</text>
+<rect x="684.4" y="330.1" width="42.8" height="21.9" rx="3" fill="#7FA383" stroke="#5E7F63" stroke-width="1"><title>C2 Sliding — 2 papers</title></rect>
+<text x="705.8" y="324.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">2</text>
+<text x="705.8" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 705.8 366.0)">C2 Sliding</text>
+<rect x="737.1" y="286.4" width="42.8" height="65.6" rx="3" fill="#7FA383" stroke="#5E7F63" stroke-width="1"><title>C3 Reorientation — 6 papers</title></rect>
+<text x="758.5" y="280.4" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">6</text>
+<text x="758.5" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 758.5 366.0)">C3 Reorientation</text>
+<rect x="789.9" y="319.2" width="42.8" height="32.8" rx="3" fill="#7FA383" stroke="#5E7F63" stroke-width="1"><title>C4 In-hand Manip. — 3 papers</title></rect>
+<text x="811.3" y="313.2" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">3</text>
+<text x="811.3" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 811.3 366.0)">C4 In-hand Manip.</text>
+<rect x="842.7" y="319.2" width="42.8" height="32.8" rx="3" fill="#7FA383" stroke="#5E7F63" stroke-width="1"><title>C5 Bi. Lifting — 3 papers</title></rect>
+<text x="864.0" y="313.2" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">3</text>
+<text x="864.0" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 864.0 366.0)">C5 Bi. Lifting</text>
+<rect x="895.4" y="341.1" width="42.8" height="10.9" rx="3" fill="#7FA383" stroke="#5E7F63" stroke-width="1"><title>C6 Bi. Wiping — 1 paper</title></rect>
+<text x="916.8" y="335.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">1</text>
+<text x="916.8" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 916.8 366.0)">C6 Bi. Wiping</text>
+<line x1="631.6" y1="352.0" x2="938.2" y2="352.0" stroke="#5E7F63" stroke-width="2.5"/>
+<rect x="968.2" y="253.6" width="42.8" height="98.4" rx="3" fill="#BB8593" stroke="#94606E" stroke-width="1"><title>D1 Open/Close Door — 9 papers</title></rect>
+<text x="989.6" y="247.6" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">9</text>
+<text x="989.6" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 989.6 366.0)">D1 Open/Close Door</text>
+<rect x="1021.0" y="209.9" width="42.8" height="142.1" rx="3" fill="#BB8593" stroke="#94606E" stroke-width="1"><title>D2 Pick-and-place — 13 papers</title></rect>
+<text x="1042.3" y="203.9" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">13</text>
+<text x="1042.3" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 1042.3 366.0)">D2 Pick-and-place</text>
+<rect x="1073.7" y="319.2" width="42.8" height="32.8" rx="3" fill="#BB8593" stroke="#94606E" stroke-width="1"><title>D3 Pouring — 3 papers</title></rect>
+<text x="1095.1" y="313.2" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">3</text>
+<text x="1095.1" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 1095.1 366.0)">D3 Pouring</text>
+<rect x="1126.5" y="341.1" width="42.8" height="10.9" rx="3" fill="#BB8593" stroke="#94606E" stroke-width="1"><title>D4 Weight Pulling — 1 paper</title></rect>
+<text x="1147.9" y="335.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">1</text>
+<text x="1147.9" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 1147.9 366.0)">D4 Weight Pulling</text>
+<rect x="1179.2" y="341.1" width="42.8" height="10.9" rx="3" fill="#BB8593" stroke="#94606E" stroke-width="1"><title>D5 Push Object — 1 paper</title></rect>
+<text x="1200.6" y="335.1" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="11" font-weight="600" fill="#2A323D">1</text>
+<text x="1200.6" y="366.0" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11" fill="#6B7686" text-anchor="end" transform="rotate(-38 1200.6 366.0)">D5 Push Object</text>
+<line x1="968.2" y1="352.0" x2="1222.0" y2="352.0" stroke="#94606E" stroke-width="2.5"/>
+<text x="1145" y="22" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11.5" fill="#2A323D">D&#8194;Household</text>
+<rect x="1125" y="12" width="13" height="13" rx="3" fill="#BB8593" stroke="#94606E"/>
+<text x="934" y="22" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11.5" fill="#2A323D">C&#8194;Dynamic & Multi-contact</text>
+<rect x="914" y="12" width="13" height="13" rx="3" fill="#7FA383" stroke="#5E7F63"/>
+<text x="743" y="22" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11.5" fill="#2A323D">B&#8194;Deformable & Surface</text>
+<rect x="723" y="12" width="13" height="13" rx="3" fill="#C7A050" stroke="#9A7930"/>
+<text x="572" y="22" font-family="'Inter Tight', 'Inter', system-ui, sans-serif" font-size="11.5" fill="#2A323D">A&#8194;Precision Contact</text>
+<rect x="552" y="12" width="13" height="13" rx="3" fill="#5B84B1" stroke="#41658C"/>
+</svg>
+<!-- TASK_CHART:END -->
       </div>
       <div class="media-block__meta">
         <span class="media-block__label">FIG. 07 · Task Landscape</span>

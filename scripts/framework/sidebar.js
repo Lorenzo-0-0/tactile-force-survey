@@ -10,7 +10,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => (
 function paperHTML(p, mapped) {
   const link = p.url
     ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" data-paper-link
-         aria-label="Open paper [${p.id}]">${p.url.includes('arxiv') ? 'arXiv' : 'DOI'} ↗</a>`
+         aria-label="Open paper [${p.id}] (${p.url.includes('arxiv') ? 'arXiv' : 'DOI'})">↗</a>`
     : '';
   return `
     <li class="paper ${mapped ? 'paper--mapped' : ''}" data-ref="${p.id}" id="paper-${p.id}" tabindex="0"

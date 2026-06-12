@@ -1,0 +1,142 @@
+#!/usr/bin/env python3
+"""Generate the task-landscape bar chart as inline SVG and inject it into
+index.html between the TASK_CHART markers. Replaces the rasterized
+task_histogram figure with a native, theme-consistent chart.
+
+Idempotent: re-run after data changes. Data transcribed from the paper's
+task histogram (Fig. task_histogram.pdf, 53 surveyed framework papers).
+"""
+
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+# (code, label, count) per category
+CATEGORIES = [
+    ("A", "Precision Contact", "#5B84B1", "#41658C", [
+        ("A1", "Insertion", 26),
+        ("A2", "Cap/Nut Screwing", 7),
+        ("A3", "Assembly Plug", 11),
+        ("A4", "Bi. Insertion", 1),
+        ("A5", "Rotate Handle/Box", 2),
+    ]),
+    ("B", "Deformable & Surface", "#C7A050", "#9A7930", [
+        ("B1", "Peeling", 8),
+        ("B2", "Wiping", 18),
+        ("B3", "Cutting", 1),
+        ("B4", "Slide Object", 1),
+        ("B5", "Soft/Fragile Grasp", 9),
+    ]),
+    ("C", "Dynamic & Multi-contact", "#7FA383", "#5E7F63", [
+        ("C1", "Mobile Catch", 1),
+        ("C2", "Sliding", 2),
+        ("C3", "Reorientation", 6),
+        ("C4", "In-hand Manip.", 3),
+        ("C5", "Bi. Lifting", 3),
+        ("C6", "Bi. Wiping", 1),
+    ]),
+    ("D", "Household", "#BB8593", "#94606E", [
+        ("D1", "Open/Close Door", 9),
+        ("D2", "Pick-and-place", 13),
+        ("D3", "Pouring", 3),
+        ("D4", "Weight Pulling", 1),
+        ("D5", "Push Object", 1),
+    ]),
+]
+
+MONO = "'JetBrains Mono', ui-monospace, Menlo, monospace"
+SANS = "'Inter Tight', 'Inter', system-ui, sans-serif"
+
+W, H = 1240, 470
+ML, MR, MT, MB = 64, 18, 46, 118  # margins
+PW, PH = W - ML - MR, H - MT - MB
+YMAX = 28.0
+BAR_GAP, GROUP_GAP = 10, 30
+
+INK = "#2A323D"
+MUTED = "#6B7686"
+GRID = "#E2E7EE"
+
+
+def y(v):
+    return MT + PH * (1 - v / YMAX)
+
+
+def build():
+    n = sum(len(c[4]) for c in CATEGORIES)
+    bar_w = (PW - BAR_GAP * (n - len(CATEGORIES)) - GROUP_GAP * (len(CATEGORIES) - 1)) / n
+
+    parts = [
+        f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" '
+        f'aria-label="Number of surveyed papers per contact-rich task family" '
+        f'style="width:100%;height:auto;display:block">'
+    ]
+
+    # gridlines + y labels
+    for v in range(0, 26, 5):
+        gy = y(v)
+        parts.append(f'<line x1="{ML}" y1="{gy:.1f}" x2="{W - MR}" y2="{gy:.1f}" '
+                     f'stroke="{GRID}" stroke-width="1"/>')
+        parts.append(f'<text x="{ML - 10}" y="{gy + 3.5:.1f}" text-anchor="end" '
+                     f'font-family="{MONO}" font-size="11" fill="{MUTED}">{v}</text>')
+
+    # y axis title
+    parts.append(f'<text x="16" y="{MT + PH / 2:.0f}" font-family="{MONO}" font-size="10.5" '
+                 f'fill="{MUTED}" letter-spacing="1.5" text-anchor="middle" '
+                 f'transform="rotate(-90 16 {MT + PH / 2:.0f})">PAPERS · OF 53 SURVEYED</text>')
+
+    x = float(ML)
+    for ci, (code, cat, fill, stroke, tasks) in enumerate(CATEGORIES):
+        gx0 = x
+        for code_t, label, v in tasks:
+            bh = PH * v / YMAX
+            by = y(v)
+            parts.append(
+                f'<rect x="{x:.1f}" y="{by:.1f}" width="{bar_w:.1f}" height="{bh:.1f}" '
+                f'rx="3" fill="{fill}" stroke="{stroke}" stroke-width="1">'
+                f'<title>{code_t} {label} — {v} paper{"s" if v != 1 else ""}</title></rect>'
+            )
+            parts.append(f'<text x="{x + bar_w / 2:.1f}" y="{by - 6:.1f}" text-anchor="middle" '
+                         f'font-family="{MONO}" font-size="11" font-weight="600" fill="{INK}">{v}</text>')
+            lx, ly = x + bar_w / 2, MT + PH + 14
+            parts.append(f'<text x="{lx:.1f}" y="{ly:.1f}" font-family="{SANS}" font-size="11" '
+                         f'fill="{MUTED}" text-anchor="end" '
+                         f'transform="rotate(-38 {lx:.1f} {ly:.1f})">{code_t} {label}</text>')
+            x += bar_w + BAR_GAP
+        x -= BAR_GAP
+        # category bracket under the rotated labels
+        parts.append(f'<line x1="{gx0:.1f}" y1="{MT + PH:.1f}" x2="{x:.1f}" y2="{MT + PH:.1f}" '
+                     f'stroke="{stroke}" stroke-width="2.5"/>')
+        x += GROUP_GAP
+
+    # legend, top-right, single row
+    lx = W - MR - 4
+    for code, cat, fill, stroke, tasks in reversed(CATEGORIES):
+        text_w = len(f"{code} {cat}") * 6.6
+        lx -= text_w
+        parts.append(f'<text x="{lx:.0f}" y="{MT - 24}" font-family="{SANS}" font-size="11.5" '
+                     f'fill="{INK}">{code}&#8194;{cat}</text>')
+        lx -= 20
+        parts.append(f'<rect x="{lx:.0f}" y="{MT - 34}" width="13" height="13" rx="3" '
+                     f'fill="{fill}" stroke="{stroke}"/>')
+        lx -= 26
+
+    parts.append('</svg>')
+    return '\n'.join(parts)
+
+
+def inject(svg):
+    idx = ROOT / 'index.html'
+    html = idx.read_text()
+    block = f'<!-- TASK_CHART:START (generated by tools/build_task_chart.py — do not edit by hand) -->\n{svg}\n<!-- TASK_CHART:END -->'
+    if 'TASK_CHART:START' in html:
+        html = re.sub(r'<!-- TASK_CHART:START.*?TASK_CHART:END -->', block, html, flags=re.S)
+    else:
+        raise SystemExit('TASK_CHART markers not found in index.html — add them first')
+    idx.write_text(html)
+    print(f'injected {len(svg)} bytes of SVG into index.html')
+
+
+if __name__ == '__main__':
+    inject(build())

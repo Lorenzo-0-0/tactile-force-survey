@@ -21,22 +21,18 @@
   --accent-line:    rgba(0, 112, 192, 0.45);
   --accent-warm:    #5B6B7E;   /* steel — mono labels / chapter numbers */
 
-  /* --- figure hue washes (panel tints from the Fig. 2 source) --- */
-  --wash-fusion: rgba(67, 83, 255, 0.06);
-  --wash-phase1: rgba(112, 173, 71, 0.10);
-  --wash-phase2: rgba(172, 48, 214, 0.05);
-  --wash-phase3: rgba(56, 212, 214, 0.10);
-  --wash-side:   rgba(255, 192, 0, 0.08);
-  --wash-fusion-line: rgba(67, 83, 255, 0.22);
-  --wash-phase1-line: rgba(94, 146, 60, 0.30);
-  --wash-phase2-line: rgba(172, 48, 214, 0.20);
-  --wash-phase3-line: rgba(32, 158, 160, 0.30);
-  --wash-side-line:   rgba(214, 158, 0, 0.32);
-  --wash-fusion-ink: #3743C9;
-  --wash-phase1-ink: #4E7A32;
-  --wash-phase2-ink: #8E28B5;
-  --wash-phase3-ink: #0F8B8D;
-  --wash-side-ink:   #A37500;
+  /* --- figure palette: sampled from the rendered Fig. 2 (verbatim) --- */
+  --fig-fusion-head: #DDE5EE;  --fig-fusion-panel: #F0F4F8;
+  --fig-p1-head:     #DCE8E3;  --fig-p1-panel:     #F7F9F1;
+  --fig-p2-head:     #E6ECDB;  --fig-p2-panel:     #F6F8EF;
+  --fig-p3-head:     #ECE3D4;  --fig-p3-panel:     #F9F6EF;
+  --fig-side-head:   #E8E4DA;  --fig-side-panel:   #FFFAEC;
+  --fig-band-p3:     #EFE7DB;
+  --fig-fusion-line: #C6D3E2;
+  --fig-p1-line:     #C3D6CC;
+  --fig-p2-line:     #CFD8BE;
+  --fig-p3-line:     #DCCFB8;
+  --fig-side-line:   #D8D0BE;
 
   /* --- type (Space Grotesk display · Inter Tight body · JetBrains Mono data) ---
      Serif var names are kept from the skeleton but re-pointed to sans so the

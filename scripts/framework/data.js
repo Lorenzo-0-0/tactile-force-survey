@@ -23,7 +23,7 @@ const COMP_ORDER = [
 const DISPLAY_ABBREV = {
   vla: 'VLA', dp: 'DP', act: 'ACT', rl: 'RL', reg: 'REG', model: 'MBA',
   impedance: 'IMP', admittance: 'ADM', hybrid: 'HFP', pid: 'PID',
-  robotdep: 'R-DEP', others: 'OTHERS', Other: 'OTHER',
+  robotdep: 'R-DEP', others: 'OTH', Other: 'OTH',
 };
 const displayOf = (abbrev) => DISPLAY_ABBREV[abbrev] || abbrev;
 

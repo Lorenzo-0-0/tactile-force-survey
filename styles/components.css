@@ -790,12 +790,15 @@ body > * { position: relative; z-index: 1; }
 /* v9 — black figures bleed into the page (no card, no border).
    The figures already carry a pure-black background, so a transparent
    chrome makes them merge seamlessly with the page bg. */
+/* Figures blend straight into the page: their white canvas is recolored to
+   the page bg (tools/crop_figs.py), so no card / border / padding is added.
+   See .media-block__chrome:has(.vp) below for the video exception. */
 .media-block__chrome {
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
+  background: transparent;
+  border: 0;
   border-radius: var(--r-md);
   overflow: hidden;
-  padding: var(--s-4);
+  padding: 0;
 }
 
 /* Videos still need a defined black frame to avoid a flash of page bg */

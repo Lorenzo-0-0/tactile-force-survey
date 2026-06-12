@@ -6,32 +6,26 @@
 
 const NS = 'http://www.w3.org/2000/svg';
 
-/* from/to: element ids (without '#'); comps: data-comp ids each endpoint covers */
+/* from/to: element ids (without '#'); comps: data-comp ids each endpoint covers.
+   Compact layout: only cross-panel edges are drawn — in-panel adjacency
+   (a→b, d→f, band→g, band→h) reads from the stacking itself, as in Fig. 2. */
 const EDGES = [
-  { from: 'comp-perception', to: 'comp-fusion', kind: 'main',
-    a: ['perception'], b: ['fusion'] },
-  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'aux', side: 'left',
+  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv',
     a: ['fusion'], b: ['reconstruction'] },
   { from: 'comp-fusion', to: 'comp-policy1', kind: 'main',
     a: ['fusion'], b: ['policy1'] },
-  { from: 'comp-policy1', to: 'comp-intermediate', kind: 'main',
-    a: ['policy1'], b: ['intermediate'] },
   { from: 'comp-intermediate', to: 'band-band-p2in', kind: 'main',
     a: ['intermediate'], b: ['band.p2in.fwd', 'band.p2in.pred'] },
-  { from: 'band-band-p2in', to: 'comp-policy2', kind: 'main',
-    a: ['band.p2in.fwd', 'band.p2in.pred'], b: ['policy2'] },
   { from: 'comp-policy2', to: 'comp-obsprediction', kind: 'aux', side: 'right',
     a: ['policy2'], b: ['obsprediction'] },
   { from: 'comp-policy2', to: 'band-band-p3in', kind: 'main',
     a: ['policy2'], b: ['band.p3in.pred'] },
   { from: 'comp-intermediate', to: 'band-band-p3in', kind: 'skip', side: 'right',
-    label: 'Phase 1 forwarded', rail: 26,
+    label: 'Phase 1 forwarded', rail: 14,
     a: ['intermediate'], b: ['band.p3in.p1fwd', 'band.p3in.fwd'] },
   { from: 'comp-policy1', to: 'comp-control', kind: 'skip', side: 'right',
-    label: 'Skipping phase 2', rail: 54,
+    label: 'Skipping phase 2', rail: 34,
     a: ['policy1'], b: ['control'] },
-  { from: 'band-band-p3in', to: 'comp-control', kind: 'main',
-    a: ['band.p3in.fwd', 'band.p3in.pred', 'band.p3in.p1fwd'], b: ['control'] },
 ];
 
 export function initConnectors(data, stateApi) {
@@ -110,11 +104,20 @@ export function initConnectors(data, stateApi) {
       return { d: `M ${x0} ${a.cy} L ${x1} ${b.cy}` };
     }
 
-    // main: bottom-center → top-center through the gap
-    const x0 = a.cx, y0 = a.y + a.h;
-    const x1 = b.cx, y1 = b.y - 4;
+    if (edge.kind === 'auxv') {
+      // short vertical dashed hop, dropped at the target's x-center
+      const x = Math.min(Math.max(b.cx, a.x + 20), a.x + a.w - 20);
+      return { d: `M ${x} ${a.y + a.h} L ${x} ${b.y - 4}` };
+    }
+
+    // main: vertical drop at the target's x-center (clamped into the source span)
+    const x = Math.min(Math.max(b.cx, a.x + 24), a.x + a.w - 24);
+    const y0 = a.y + a.h, y1 = b.y - 4;
+    if (Math.abs(x - b.cx) < 2) {
+      return { d: `M ${x} ${y0} L ${x} ${y1}` };
+    }
     const my = (y0 + y1) / 2;
-    return { d: `M ${x0} ${y0} C ${x0} ${my}, ${x1} ${my}, ${x1} ${y1}` };
+    return { d: `M ${x} ${y0} C ${x} ${my}, ${b.cx} ${my}, ${b.cx} ${y1}` };
   }
 
   function build() {
@@ -132,7 +135,7 @@ export function initConnectors(data, stateApi) {
       const p = document.createElementNS(NS, 'path');
       p.setAttribute('d', geo.d);
       p.classList.add('is-ambient');
-      if (edge.kind === 'aux') p.setAttribute('stroke-dasharray', '3 5');
+      if (edge.kind === 'aux' || edge.kind === 'auxv') p.setAttribute('stroke-dasharray', '3 5');
       p.setAttribute('marker-end', 'url(#fw-arrow)');
       layer.appendChild(p);
 
@@ -146,7 +149,7 @@ export function initConnectors(data, stateApi) {
         labelEl.setAttribute('text-anchor', 'middle');
         labelEl.setAttribute('dy', '-6');
         labelEl.setAttribute('fill', C_LABEL);
-        labelEl.setAttribute('font-size', '9');
+        labelEl.setAttribute('font-size', '8');
         labelEl.setAttribute('letter-spacing', '2');
         labelEl.setAttribute('font-family', "'JetBrains Mono', monospace");
         layer.appendChild(labelEl);
