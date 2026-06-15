@@ -358,7 +358,8 @@
   gap: 12px;
   min-height: 600px; /* CLS guard before JS render */
   height: 100%;
-  padding-right: 46px; /* corridor for the skip-phase rails */
+  padding-left: 34px;  /* corridor for the fusion-forward (left) rails */
+  padding-right: 46px; /* corridor for the skip-phase (right) rails */
 }
 
 /* connector overlay */

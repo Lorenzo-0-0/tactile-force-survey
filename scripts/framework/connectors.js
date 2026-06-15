@@ -18,20 +18,26 @@ const EDGES = [
     a: ['fusion'], b: ['policy1'] },
   { from: 'comp-policy1', to: 'comp-intermediate', kind: 'main',       // (d)→(f)
     a: ['policy1'], b: ['intermediate'] },
-  { from: 'comp-intermediate', to: 'band-band-p2in', kind: 'main',     // (f)→phase2 bands
-    a: ['intermediate'], b: ['band.p2in.fwd', 'band.p2in.pred'] },
+  { from: 'comp-intermediate', to: 'comp-band-p2in-pred', kind: 'main', // (f)→Phase 1 Predicted Modalities
+    a: ['intermediate'], b: ['band.p2in.pred'] },
   { from: 'band-band-p2in', to: 'comp-policy2', kind: 'main',          // bands→(g)
     a: ['band.p2in.fwd', 'band.p2in.pred'], b: ['policy2'] },
-  { from: 'comp-policy2', to: 'band-band-p3in', kind: 'main',          // (g)→phase3 bands
+  { from: 'comp-policy2', to: 'comp-band-p3in-pred', kind: 'main',     // (g)→Phase 2 Predicted Modalities
     a: ['policy2'], b: ['band.p3in.pred'] },
   { from: 'band-band-p3in', to: 'comp-control', kind: 'main',          // bands→(h)
     a: ['band.p3in.fwd', 'band.p3in.pred', 'band.p3in.p1fwd'], b: ['control'] },
 
-  /* auxiliary branches (dashed) */
+  /* fused modalities forwarded down the LEFT rail (solid) — (b) → fusion-phase
+     forwarded bands of Phase 2 and Phase 3 */
+  { from: 'comp-fusion', to: 'comp-band-p2in-fwd', kind: 'lrail', rail: 12,
+    a: ['fusion'], b: ['band.p2in.fwd'] },
+  { from: 'comp-fusion', to: 'comp-band-p3in-fwd', kind: 'lrail', rail: 26,
+    label: 'Forward data',
+    a: ['fusion'], b: ['band.p3in.fwd'] },
+
+  /* auxiliary reconstruction branch (dashed) */
   { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv',      // (b)⤳(c)
     a: ['fusion'], b: ['reconstruction'] },
-  { from: 'comp-intermediate', to: 'comp-obsprediction', kind: 'aux', side: 'right', // (f)⤳(e)
-    a: ['intermediate'], b: ['obsprediction'] },
 
   /* right-rail skip / forward paths (curved, labeled) */
   { from: 'comp-intermediate', to: 'band-band-p3in', kind: 'skip', side: 'right',
@@ -99,6 +105,20 @@ export function initConnectors(data, stateApi) {
             C ${a.x + a.w + 36} ${y0}, ${railX} ${y0 + 24}, ${railX} ${y0 + 60}
             L ${railX} ${y1 - 60}
             C ${railX} ${y1 - 24}, ${b.x + b.w + 36} ${y1}, ${b.x + b.w + 4} ${y1}`,
+        labelAt: { x: railX, y: (y0 + y1) / 2 },
+      };
+    }
+
+    if (edge.kind === 'lrail') {
+      // mirror of skip, routed down the left rail into the target's left edge
+      const railX = edge.rail || 16;
+      const y0 = a.cy;
+      const y1 = b.cy;
+      return {
+        d: `M ${a.x} ${y0}
+            C ${a.x - 28} ${y0}, ${railX} ${y0 + 24}, ${railX} ${y0 + 56}
+            L ${railX} ${y1 - 56}
+            C ${railX} ${y1 - 24}, ${b.x - 28} ${y1}, ${b.x - 4} ${y1}`,
         labelAt: { x: railX, y: (y0 + y1) / 2 },
       };
     }
