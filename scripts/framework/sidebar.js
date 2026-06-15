@@ -47,7 +47,7 @@ export function renderSidebar(data) {
     hay.set(p.id, `[${p.id}] ${p.title} ${p.authors} ${p.venue} ${p.year} ${p.key}`.toLowerCase());
   }
 
-  let scope = 'all';
+  let scope = 'mapped';  // default to the 53 framework papers; All is opt-in
   let query = '';
 
   const api = {
@@ -119,6 +119,6 @@ export function renderSidebar(data) {
     });
   }
 
-  api.defaultStatus();
+  api.refilter();   // apply the default 'mapped' scope so only the 53 show on load
   return api;
 }

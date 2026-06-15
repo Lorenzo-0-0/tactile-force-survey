@@ -377,8 +377,10 @@
   stroke-width: 1.25;
 }
 .fw-wires path.is-ambient {
-  stroke-dasharray: 5 7;
-  animation: wire-drift 26s linear infinite;
+  /* no stroke-dasharray here: main edges default to solid; aux edges keep their
+     inline dash (a CSS dasharray would beat the presentation attribute) */
+  animation: none;
+  stroke-linecap: round;
 }
 .fw-wires path.is-hit {
   stroke: var(--accent);
@@ -389,7 +391,6 @@
 }
 .fw-wires .fw-wires__head { fill: var(--border-strong); stroke: none; }
 .fw-wires .fw-wires__head.is-hit { fill: var(--accent); }
-@keyframes wire-drift { to { stroke-dashoffset: -120; } }
 @keyframes wire-pulse { to { stroke-dashoffset: -64; } }
 
 /* --- phase panels: backgrounds sampled from the rendered figure --- */
@@ -441,7 +442,7 @@
 .fw-stack {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;   /* hosts the within-panel sequential arrows */
   min-width: 0;
 }
 
@@ -459,7 +460,7 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding: 3px 8px;
+  padding: 2px 8px;
   font-family: var(--display);
   font-size: 11.5px;
   font-weight: 600;
@@ -490,7 +491,7 @@
   display: grid;
   grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
   gap: 6px;
-  padding: 8px;
+  padding: 6px;
 }
 
 /* --- side panels (c)/(e): cream, dashed, docked --- */
@@ -563,7 +564,7 @@
   display: grid;
   grid-template-columns: repeat(var(--gcols, 3), minmax(0, 1fr));
   gap: 5px;
-  padding: 6px;
+  padding: 5px;
 }
 
 /* --- box (the interactive atom): white, hairline, code + count --- */
@@ -573,14 +574,14 @@
   flex-direction: column;
   gap: 1px;
   width: 100%;
-  min-height: 28px;
+  min-height: 26px;
   text-align: left;
   font: inherit;
   color: inherit;
   background: var(--bg-elev);
   border: 1px solid var(--border);
   border-radius: 5px;
-  padding: 5px 6px;
+  padding: 3px 6px;
   cursor: pointer;
   transition: border-color var(--d-fast) var(--ease),
               box-shadow var(--d-fast) var(--ease),
@@ -631,7 +632,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.fw-box--labeled { min-height: 38px; }
+.fw-box--labeled { min-height: 34px; }
 
 /* box states */
 .fw-box:hover,

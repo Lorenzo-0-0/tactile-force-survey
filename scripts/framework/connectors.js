@@ -6,20 +6,34 @@
 
 const NS = 'http://www.w3.org/2000/svg';
 
-/* from/to: element ids (without '#'); comps: data-comp ids each endpoint covers.
-   Compact layout: only cross-panel edges are drawn — in-panel adjacency
-   (a→b, d→f, band→g, band→h) reads from the stacking itself, as in Fig. 2. */
+/* from/to: element ids (without '#'); a/b: data-comp ids each endpoint covers.
+   Full Fig.2 arrow set: a sequential main arrow between every consecutive stage
+   (incl. within-panel), two dashed auxiliary branches (reconstruction, obs.
+   prediction), and two curved right-rail skip/forward paths. */
 const EDGES = [
-  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv',
-    a: ['fusion'], b: ['reconstruction'] },
-  { from: 'comp-fusion', to: 'comp-policy1', kind: 'main',
+  /* sequential main flow (solid, top→bottom) */
+  { from: 'comp-perception', to: 'comp-fusion', kind: 'main',          // (a)→(b)
+    a: ['perception'], b: ['fusion'] },
+  { from: 'comp-fusion', to: 'comp-policy1', kind: 'main',             // (b)→(d)
     a: ['fusion'], b: ['policy1'] },
-  { from: 'comp-intermediate', to: 'band-band-p2in', kind: 'main',
+  { from: 'comp-policy1', to: 'comp-intermediate', kind: 'main',       // (d)→(f)
+    a: ['policy1'], b: ['intermediate'] },
+  { from: 'comp-intermediate', to: 'band-band-p2in', kind: 'main',     // (f)→phase2 bands
     a: ['intermediate'], b: ['band.p2in.fwd', 'band.p2in.pred'] },
-  { from: 'comp-policy2', to: 'comp-obsprediction', kind: 'aux', side: 'right',
-    a: ['policy2'], b: ['obsprediction'] },
-  { from: 'comp-policy2', to: 'band-band-p3in', kind: 'main',
+  { from: 'band-band-p2in', to: 'comp-policy2', kind: 'main',          // bands→(g)
+    a: ['band.p2in.fwd', 'band.p2in.pred'], b: ['policy2'] },
+  { from: 'comp-policy2', to: 'band-band-p3in', kind: 'main',          // (g)→phase3 bands
     a: ['policy2'], b: ['band.p3in.pred'] },
+  { from: 'band-band-p3in', to: 'comp-control', kind: 'main',          // bands→(h)
+    a: ['band.p3in.fwd', 'band.p3in.pred', 'band.p3in.p1fwd'], b: ['control'] },
+
+  /* auxiliary branches (dashed) */
+  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv',      // (b)⤳(c)
+    a: ['fusion'], b: ['reconstruction'] },
+  { from: 'comp-intermediate', to: 'comp-obsprediction', kind: 'aux', side: 'right', // (f)⤳(e)
+    a: ['intermediate'], b: ['obsprediction'] },
+
+  /* right-rail skip / forward paths (curved, labeled) */
   { from: 'comp-intermediate', to: 'band-band-p3in', kind: 'skip', side: 'right',
     label: 'Phase 1 forwarded', rail: 14,
     a: ['intermediate'], b: ['band.p3in.p1fwd', 'band.p3in.fwd'] },
@@ -41,13 +55,13 @@ export function initConnectors(data, stateApi) {
 
   svg.innerHTML = `
     <defs>
-      <marker id="fw-arrow" viewBox="0 0 8 8" refX="7" refY="4"
-              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="${C_EDGE}"/>
+      <marker id="fw-arrow" viewBox="0 0 6 6" refX="6" refY="3"
+              markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0 0.5 L6 3 L0 5.5 Z" fill="${C_EDGE}"/>
       </marker>
-      <marker id="fw-arrow-hit" viewBox="0 0 8 8" refX="7" refY="4"
-              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-        <path d="M0 0.6 L7.6 4 L0 7.4 Z" fill="${C_HIT}"/>
+      <marker id="fw-arrow-hit" viewBox="0 0 6 6" refX="6" refY="3"
+              markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0 0.5 L6 3 L0 5.5 Z" fill="${C_HIT}"/>
       </marker>
     </defs>`;
 
@@ -107,12 +121,13 @@ export function initConnectors(data, stateApi) {
     if (edge.kind === 'auxv') {
       // short vertical dashed hop, dropped at the target's x-center
       const x = Math.min(Math.max(b.cx, a.x + 20), a.x + a.w - 20);
-      return { d: `M ${x} ${a.y + a.h} L ${x} ${b.y - 4}` };
+      return { d: `M ${x} ${a.y + a.h + 1} L ${x} ${b.y - 6}` };
     }
 
-    // main: vertical drop at the target's x-center (clamped into the source span)
+    // main: vertical drop at the target's x-center (clamped into the source span).
+    // Leave headroom (>= marker height) so the arrowhead reads cleanly in the gap.
     const x = Math.min(Math.max(b.cx, a.x + 24), a.x + a.w - 24);
-    const y0 = a.y + a.h, y1 = b.y - 4;
+    const y0 = a.y + a.h + 1, y1 = b.y - 6;
     if (Math.abs(x - b.cx) < 2) {
       return { d: `M ${x} ${y0} L ${x} ${y1}` };
     }

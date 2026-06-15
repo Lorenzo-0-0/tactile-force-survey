@@ -19,11 +19,11 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
-  <link rel="stylesheet" href="styles/tokens.css?v=3" />
-  <link rel="stylesheet" href="styles/reset.css?v=3" />
-  <link rel="stylesheet" href="styles/layout.css?v=3" />
-  <link rel="stylesheet" href="styles/components.css?v=3" />
-  <link rel="stylesheet" href="styles/framework.css?v=3" />
+  <link rel="stylesheet" href="styles/tokens.css?v=4" />
+  <link rel="stylesheet" href="styles/reset.css?v=4" />
+  <link rel="stylesheet" href="styles/layout.css?v=4" />
+  <link rel="stylesheet" href="styles/components.css?v=4" />
+  <link rel="stylesheet" href="styles/framework.css?v=4" />
 </head>
 <body>
 
@@ -126,9 +126,9 @@
       </li>
       <li class="stat">
         <div class="stat__value">
-          <span class="stat__num" data-count-to="3" data-count-decimals="0">0</span><span class="unit">phases</span>
+          <span class="stat__num" data-count-to="4" data-count-decimals="0">0</span><span class="unit">phases</span>
         </div>
-        <p class="stat__label">policy → refinement → robot-end control</p>
+        <p class="stat__label">fusion → policy → refinement → control</p>
       </li>
     </ul>
   </div>
@@ -235,10 +235,10 @@
                placeholder="Filter 189 papers — title, author, venue…" autocomplete="off" spellcheck="false" />
         <div class="sidebar__row">
           <div class="sidebar__scope" id="sidebar-scope" role="tablist" aria-label="Paper scope">
-            <button type="button" class="is-active" data-scope="all" role="tab" aria-selected="true">All</button>
-            <button type="button" data-scope="mapped" role="tab" aria-selected="false">In framework</button>
+            <button type="button" class="is-active" data-scope="mapped" role="tab" aria-selected="true">In framework</button>
+            <button type="button" data-scope="all" role="tab" aria-selected="false">All</button>
           </div>
-          <p class="sidebar__status" id="sidebar-status" role="status" aria-live="polite">189 papers</p>
+          <p class="sidebar__status" id="sidebar-status" role="status" aria-live="polite">53 in framework</p>
         </div>
       </div>
       <ol class="sidebar__list" id="paper-list">
