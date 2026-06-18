@@ -95,8 +95,45 @@
 
 .stats--hero {
   margin-top: var(--s-8);
-  padding-top: var(--s-6);
+  padding-top: var(--s-7);
   border-top: 1px solid var(--border);
+  gap: 0;
+}
+/* refined numerals + unit + label for the hero metrics */
+.stats--hero .stat__value {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.stats--hero .stat__value .unit {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 0.4em;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0;
+}
+.stats--hero .stat__label {
+  margin-top: var(--s-2);
+  font-family: var(--serif-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+/* elegant gradient dividers between the three metrics (desktop) */
+@media (min-width: 720px) {
+  .stats--hero .stat { border-top: none; padding: 2px var(--s-7); position: relative; }
+  .stats--hero .stat:first-child { padding-left: 0; }
+  .stats--hero .stat:last-child { padding-right: 0; }
+  .stats--hero .stat + .stat::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    height: 66%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--border-strong) 28%, var(--border-strong) 72%, transparent);
+  }
 }
 
 /* ============================================================
