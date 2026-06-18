@@ -1,71 +1,102 @@
-/* SVG connector overlay. Edges are authored here (they are presentation,
-   not survey data): endpoints reference rendered component/band elements,
-   geometry is recomputed from live rects on resize. Highlighting follows
-   'explorer:change' — an edge lights up when the active selection has hit
-   boxes at BOTH endpoints (ref trace) or touches an endpoint (box/comp). */
+/* SVG connector overlay. Edges are authored here (presentation, not survey
+   data): endpoints reference rendered component/band elements, geometry is
+   recomputed from live rects on resize and routed as orthogonal (90°) elbows
+   to mirror the paper's Fig.2. Highlighting follows 'explorer:change' — an edge
+   lights up when the active selection hits boxes at BOTH endpoints (ref trace)
+   or touches an endpoint (box/comp). */
 
 const NS = 'http://www.w3.org/2000/svg';
 
 /* from/to: element ids (without '#'); a/b: data-comp ids each endpoint covers.
-   Full Fig.2 arrow set: a sequential main arrow between every consecutive stage
-   (incl. within-panel), two dashed auxiliary branches (reconstruction, obs.
-   prediction), and two curved right-rail skip/forward paths. */
+   Fig.2 arrow set: a sequential main arrow between consecutive stages, two
+   dashed auxiliary branches (reconstruction (c), observation prediction (e)),
+   a left "forward-data" corridor (b → fwd bands of P2 & P3) and a right
+   "skip phase 2" corridor (Phase 1 → P3 Phase-1-Forwarded box). */
 const EDGES = [
   /* sequential main flow (solid, top→bottom) */
-  { from: 'comp-perception', to: 'comp-fusion', kind: 'main',          // (a)→(b)
+  { from: 'comp-perception', to: 'comp-fusion', kind: 'main',            // (a)→(b)
     a: ['perception'], b: ['fusion'] },
-  { from: 'comp-fusion', to: 'comp-policy1', kind: 'main',             // (b)→(d)
+  { from: 'comp-fusion', to: 'comp-policy1', kind: 'main',               // (b)→(d)
     a: ['fusion'], b: ['policy1'] },
-  { from: 'comp-policy1', to: 'comp-intermediate', kind: 'main',       // (d)→(f)
+  { from: 'comp-policy1', to: 'comp-intermediate', kind: 'main',         // (d)→(f)
     a: ['policy1'], b: ['intermediate'] },
-  { from: 'comp-intermediate', to: 'comp-band-p2in-pred', kind: 'main', // (f)→Phase 1 Predicted Modalities
+  { from: 'comp-intermediate', to: 'comp-band-p2in-pred', kind: 'main',  // (f)→Phase 1 Predicted Modalities
     a: ['intermediate'], b: ['band.p2in.pred'] },
-  { from: 'band-band-p2in', to: 'comp-policy2', kind: 'main',          // bands→(g)
+  { from: 'band-band-p2in', to: 'comp-policy2', kind: 'main',            // bands→(g)
     a: ['band.p2in.fwd', 'band.p2in.pred'], b: ['policy2'] },
-  { from: 'comp-policy2', to: 'comp-band-p3in-pred', kind: 'main',     // (g)→Phase 2 Predicted Modalities
+  { from: 'comp-policy2', to: 'comp-band-p3in-pred', kind: 'main',       // (g)→Phase 2 Predicted Modalities
     a: ['policy2'], b: ['band.p3in.pred'] },
-  { from: 'band-band-p3in', to: 'comp-control', kind: 'main',          // bands→(h)
+  { from: 'band-band-p3in', to: 'comp-control', kind: 'main',            // bands→(h)
     a: ['band.p3in.fwd', 'band.p3in.pred', 'band.p3in.p1fwd'], b: ['control'] },
 
-  /* fused modalities forwarded down the LEFT rail (solid) — (b) → fusion-phase
-     forwarded bands of Phase 2 and Phase 3 */
-  { from: 'comp-fusion', to: 'comp-band-p2in-fwd', kind: 'lrail', rail: 12,
+  /* left "forward-data" corridor (solid): (b) → fusion-phase forwarded bands */
+  { from: 'comp-fusion', to: 'comp-band-p2in-fwd', kind: 'lrail',        // (b)→P2 Fusion-phase Forwarded
     a: ['fusion'], b: ['band.p2in.fwd'] },
-  { from: 'comp-fusion', to: 'comp-band-p3in-fwd', kind: 'lrail', rail: 26,
-    label: 'Forward data',
+  { from: 'comp-fusion', to: 'comp-band-p3in-fwd', kind: 'lrail',        // (b)→P3 Fusion-phase Forwarded
     a: ['fusion'], b: ['band.p3in.fwd'] },
 
-  /* auxiliary reconstruction branch (dashed) */
-  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv',      // (b)⤳(c)
+  /* right "skip phase 2" corridor (solid): Primary Policy REG box → P3 Phase-1-Forwarded */
+  { from: 'box-policy1-reg', to: 'comp-band-p3in-p1fwd', kind: 'rrail', // (d) REG → P3 Phase 1 Forwarded
+    a: ['intermediate', 'policy1'], b: ['band.p3in.p1fwd'] },
+
+  /* auxiliary reconstruction branch (double dashed, OPPOSITE directions): (b)⇅(c) */
+  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv', dx: -4,            // encode ↓
+    a: ['fusion'], b: ['reconstruction'] },
+  { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv', dx: 4, up: true,   // reconstruct ↑
     a: ['fusion'], b: ['reconstruction'] },
 
-  /* right-rail skip / forward paths (curved, labeled) */
-  { from: 'comp-intermediate', to: 'band-band-p3in', kind: 'skip', side: 'right',
-    label: 'Phase 1 forwarded', rail: 14,
-    a: ['intermediate'], b: ['band.p3in.p1fwd', 'band.p3in.fwd'] },
-  { from: 'comp-policy1', to: 'comp-control', kind: 'skip', side: 'right',
-    label: 'Skipping phase 2', rail: 34,
-    a: ['policy1'], b: ['control'] },
+  /* auxiliary observation-prediction branch (dashed): Refinement (MBA) loops up into (e) */
+  { from: 'box-policy2-model', to: 'comp-obsprediction', kind: 'auxin',
+    a: ['policy2', 'band.p2in.pred'], b: ['obsprediction'] },
 ];
+
+const sign = (n) => (n > 0 ? 1 : n < 0 ? -1 : 0);
+const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), hi);
+
+/* Build an orthogonal path through waypoints with rounded 90° corners. */
+function orth(pts, r = 7) {
+  const p = [];
+  for (const q of pts) {
+    const last = p[p.length - 1];
+    if (!last || Math.abs(last.x - q.x) > 0.5 || Math.abs(last.y - q.y) > 0.5) p.push(q);
+  }
+  if (p.length < 2) return '';
+  const f = (n) => n.toFixed(1);
+  let d = `M ${f(p[0].x)} ${f(p[0].y)}`;
+  for (let i = 1; i < p.length - 1; i++) {
+    const prev = p[i - 1], cur = p[i], nxt = p[i + 1];
+    const d1 = { x: sign(cur.x - prev.x), y: sign(cur.y - prev.y) };
+    const d2 = { x: sign(nxt.x - cur.x), y: sign(nxt.y - cur.y) };
+    const r1 = Math.min(r, Math.hypot(cur.x - prev.x, cur.y - prev.y) / 2);
+    const r2 = Math.min(r, Math.hypot(nxt.x - cur.x, nxt.y - cur.y) / 2);
+    const bx = cur.x - d1.x * r1, by = cur.y - d1.y * r1;
+    const ax = cur.x + d2.x * r2, ay = cur.y + d2.y * r2;
+    d += ` L ${f(bx)} ${f(by)} Q ${f(cur.x)} ${f(cur.y)} ${f(ax)} ${f(ay)}`;
+  }
+  const last = p[p.length - 1];
+  d += ` L ${f(last.x)} ${f(last.y)}`;
+  return d;
+}
 
 export function initConnectors(data, stateApi) {
   const root = document.getElementById('framework-root');
   const svg = root?.querySelector('.fw-wires');
   if (!root || !svg) return;
 
-  // theme-driven colors from tokens.css
-  const css = getComputedStyle(document.documentElement);
+  // theme-driven colors from tokens.css (figure keeps the paper's blue)
+  const css = getComputedStyle(root);
   const C_EDGE = (css.getPropertyValue('--border-strong') || '#B9C2CD').trim();
   const C_HIT = (css.getPropertyValue('--accent') || '#0070C0').trim();
   const C_LABEL = (css.getPropertyValue('--text-muted') || '#6B7686').trim();
+  const C_PILL = (css.getPropertyValue('--bg-elev') || '#FFFFFF').trim();
 
   svg.innerHTML = `
     <defs>
-      <marker id="fw-arrow" viewBox="0 0 6 6" refX="6" refY="3"
+      <marker id="fw-arrow" viewBox="0 0 6 6" refX="5.4" refY="3"
               markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M0 0.5 L6 3 L0 5.5 Z" fill="${C_EDGE}"/>
       </marker>
-      <marker id="fw-arrow-hit" viewBox="0 0 6 6" refX="6" refY="3"
+      <marker id="fw-arrow-hit" viewBox="0 0 6 6" refX="5.4" refY="3"
               markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M0 0.5 L6 3 L0 5.5 Z" fill="${C_HIT}"/>
       </marker>
@@ -89,108 +120,144 @@ export function initConnectors(data, stateApi) {
     };
   }
 
-  function pathFor(edge) {
+  function pathFor(edge, base) {
     const a = rectOf(edge.from);
     const b = rectOf(edge.to);
     if (!a || !b) return null;
 
-    if (edge.kind === 'skip') {
-      // route along the right rail
-      const base = root.getBoundingClientRect();
-      const railX = base.width - (edge.rail || 30);
-      const y0 = a.cy;
-      const y1 = b.cy;
-      return {
-        d: `M ${a.x + a.w} ${y0}
-            C ${a.x + a.w + 36} ${y0}, ${railX} ${y0 + 24}, ${railX} ${y0 + 60}
-            L ${railX} ${y1 - 60}
-            C ${railX} ${y1 - 24}, ${b.x + b.w + 36} ${y1}, ${b.x + b.w + 4} ${y1}`,
-        labelAt: { x: railX, y: (y0 + y1) / 2 },
-      };
-    }
-
     if (edge.kind === 'lrail') {
-      // mirror of skip, routed down the left rail into the target's left edge
-      const railX = edge.rail || 16;
-      const y0 = a.cy;
-      const y1 = b.cy;
-      return {
-        d: `M ${a.x} ${y0}
-            C ${a.x - 28} ${y0}, ${railX} ${y0 + 24}, ${railX} ${y0 + 56}
-            L ${railX} ${y1 - 56}
-            C ${railX} ${y1 - 24}, ${b.x - 28} ${y1}, ${b.x - 4} ${y1}`,
-        labelAt: { x: railX, y: (y0 + y1) / 2 },
-      };
+      // left corridor: out the source's left edge, down the rail, into target's left edge
+      const railX = 17;
+      return { d: orth([
+        { x: a.x, y: a.cy }, { x: railX, y: a.cy },
+        { x: railX, y: b.cy }, { x: b.x - 6, y: b.cy },
+      ]) };
     }
 
-    if (edge.kind === 'aux') {
-      // horizontal side hop between neighbouring columns
-      const leftFirst = a.cx < b.cx;
-      const x0 = leftFirst ? a.x + a.w : a.x;
-      const x1 = leftFirst ? b.x - 4 : b.x + b.w + 4;
-      const dir = leftFirst ? 1 : -1;
-      // if vertically distant, drop a curve
-      if (Math.abs(a.cy - b.cy) > 60) {
-        const y0 = a.cy, y1 = b.cy;
-        const mx = (x0 + x1) / 2;
-        return { d: `M ${x0} ${y0} C ${mx + 30 * dir} ${y0}, ${mx - 30 * dir} ${y1}, ${x1} ${y1}` };
-      }
-      return { d: `M ${x0} ${a.cy} L ${x1} ${b.cy}` };
+    if (edge.kind === 'rrail') {
+      // right corridor: out the source's right edge, down the rail, into target's right edge
+      const railX = base.width - 30;
+      return { d: orth([
+        { x: a.x + a.w, y: a.cy }, { x: railX, y: a.cy },
+        { x: railX, y: b.cy }, { x: b.x + b.w + 6, y: b.cy },
+      ]) };
     }
 
     if (edge.kind === 'auxv') {
-      // short vertical dashed hop, dropped at the target's x-center
-      const x = Math.min(Math.max(b.cx, a.x + 20), a.x + a.w - 20);
-      return { d: `M ${x} ${a.y + a.h + 1} L ${x} ${b.y - 6}` };
+      // short vertical dashed hop (reconstruction (c)); dx offsets the parallel
+      // pair, up reverses the arrow so the two read as opposite directions
+      const x = (clamp(b.cx, a.x + 20, a.x + a.w - 20) + (edge.dx || 0)).toFixed(1);
+      const top = (a.y + a.h + 1).toFixed(1);
+      const bot = (b.y - 6).toFixed(1);
+      return edge.up
+        ? { d: `M ${x} ${bot} L ${x} ${top}` }   // arrow at the top → points up into (b)
+        : { d: `M ${x} ${top} L ${x} ${bot}` };  // arrow at the bottom → points down into (c)
     }
 
-    // main: vertical drop at the target's x-center (clamped into the source span).
-    // Leave headroom (>= marker height) so the arrowhead reads cleanly in the gap.
-    const x = Math.min(Math.max(b.cx, a.x + 24), a.x + a.w - 24);
-    const y0 = a.y + a.h + 1, y1 = b.y - 6;
-    if (Math.abs(x - b.cx) < 2) {
-      return { d: `M ${x} ${y0} L ${x} ${y1}` };
+    if (edge.kind === 'auxin') {
+      // dashed branch that loops up into a docked side panel from below ((e))
+      const yr = Math.max(a.y + a.h, b.y + b.h) + 14;
+      const xt = clamp(b.cx, b.x + 14, b.x + b.w - 14);
+      return { d: orth([
+        { x: a.cx, y: a.y + a.h }, { x: a.cx, y: yr },
+        { x: xt, y: yr }, { x: xt, y: b.y + b.h },
+      ]) };
+    }
+
+    // main: vertical drop; if the centers are offset, an orthogonal Z-elbow.
+    const x0 = clamp(b.cx, a.x + 24, a.x + a.w - 24);
+    const y0 = a.y + a.h + 1, y1 = b.y - 7;
+    if (Math.abs(x0 - b.cx) < 2) {
+      return { d: `M ${x0.toFixed(1)} ${y0.toFixed(1)} L ${x0.toFixed(1)} ${y1.toFixed(1)}` };
     }
     const my = (y0 + y1) / 2;
-    return { d: `M ${x} ${y0} C ${x} ${my}, ${b.cx} ${my}, ${b.cx} ${y1}` };
+    return { d: orth([
+      { x: x0, y: y0 }, { x: x0, y: my }, { x: b.cx, y: my }, { x: b.cx, y: y1 },
+    ]) };
+  }
+
+  function staticPath(d) {
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', d);
+    p.classList.add('is-ambient');
+    p.setAttribute('marker-end', 'url(#fw-arrow)');
+    layer.appendChild(p);
+    return p;
+  }
+
+  function pill(cx, cy, text) {
+    const fs = 9.5, h = 21, padX = 10;
+    const w = text.length * fs * 0.6 + padX * 2;
+    const g = document.createElementNS(NS, 'g');
+    const rect = document.createElementNS(NS, 'rect');
+    rect.setAttribute('x', (cx - w / 2).toFixed(1));
+    rect.setAttribute('y', (cy - h / 2).toFixed(1));
+    rect.setAttribute('width', w.toFixed(1));
+    rect.setAttribute('height', h);
+    rect.setAttribute('rx', (h / 2).toFixed(1));
+    rect.setAttribute('fill', C_PILL);
+    rect.setAttribute('stroke', C_EDGE);
+    rect.setAttribute('stroke-width', '1');
+    const t = document.createElementNS(NS, 'text');
+    t.textContent = text;
+    t.setAttribute('x', cx.toFixed(1));
+    t.setAttribute('y', (cy + 0.5).toFixed(1));
+    t.setAttribute('text-anchor', 'middle');
+    t.setAttribute('dominant-baseline', 'middle');
+    t.setAttribute('fill', C_LABEL);
+    t.setAttribute('font-size', fs);
+    t.setAttribute('font-family', "'JetBrains Mono', monospace");
+    g.append(rect, t);
+    layer.appendChild(g);
+    return { x: cx - w / 2, w, h, cx, cy };
+  }
+
+  /* Fig.2 framing: external inputs into (a) and the control→estimation feedback. */
+  function drawFraming(base) {
+    const a = rectOf('comp-perception');
+    const obs = rectOf('comp-obsprediction');
+    if (!a) return;
+    const topY = 17;
+    const measCx = a.x + a.w * 0.40;
+    const estCx = a.x + a.w * 0.61;
+    pill(measCx, topY, 'Measurements');
+    const est = pill(estCx, topY, 'Estimation');
+    for (const cx of [measCx, estCx]) {
+      staticPath(`M ${cx.toFixed(1)} ${(topY + 11).toFixed(1)} L ${cx.toFixed(1)} ${(a.y - 6).toFixed(1)}`);
+    }
+    // feedback: observation-prediction (e) output up the outer-right rail to Estimation
+    if (obs) {
+      const railX = base.width - 13;
+      staticPath(orth([
+        { x: obs.x + obs.w, y: obs.cy },
+        { x: railX, y: obs.cy },
+        { x: railX, y: topY },
+        { x: est.x + est.w + 6, y: topY },
+      ]));
+    }
   }
 
   function build() {
-    // clear previous paths/labels
     edgeEls.length = 0;
     layer.innerHTML = '';
 
     const base = root.getBoundingClientRect();
     svg.setAttribute('viewBox', `0 0 ${base.width} ${base.height}`);
 
+    drawFraming(base);
+
     for (const edge of EDGES) {
-      const geo = pathFor(edge);
+      const geo = pathFor(edge, base);
       if (!geo) continue;
 
       const p = document.createElementNS(NS, 'path');
       p.setAttribute('d', geo.d);
       p.classList.add('is-ambient');
-      if (edge.kind === 'aux' || edge.kind === 'auxv') p.setAttribute('stroke-dasharray', '3 5');
+      if (edge.kind === 'auxv' || edge.kind === 'auxin') p.setAttribute('stroke-dasharray', '3 5');
       p.setAttribute('marker-end', 'url(#fw-arrow)');
       layer.appendChild(p);
 
-      let labelEl = null;
-      if (edge.label && geo.labelAt) {
-        labelEl = document.createElementNS(NS, 'text');
-        labelEl.textContent = edge.label.toUpperCase();
-        labelEl.setAttribute('x', geo.labelAt.x);
-        labelEl.setAttribute('y', geo.labelAt.y);
-        labelEl.setAttribute('transform', `rotate(90 ${geo.labelAt.x} ${geo.labelAt.y})`);
-        labelEl.setAttribute('text-anchor', 'middle');
-        labelEl.setAttribute('dy', '-6');
-        labelEl.setAttribute('fill', C_LABEL);
-        labelEl.setAttribute('font-size', '8');
-        labelEl.setAttribute('letter-spacing', '2');
-        labelEl.setAttribute('font-family', "'JetBrains Mono', monospace");
-        layer.appendChild(labelEl);
-      }
-
-      edgeEls.push({ edge, p, labelEl });
+      edgeEls.push({ edge, p });
     }
   }
 

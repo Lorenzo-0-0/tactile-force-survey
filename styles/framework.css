@@ -379,8 +379,9 @@
   gap: 12px;
   min-height: 600px; /* CLS guard before JS render */
   height: 100%;
+  padding-top: 38px;   /* headroom for the input pills (measurements/estimation) */
   padding-left: 34px;  /* corridor for the fusion-forward (left) rails */
-  padding-right: 46px; /* corridor for the skip-phase (right) rails */
+  padding-right: 46px; /* corridor for the skip-phase (right) rails + feedback */
 }
 
 /* connector overlay */
