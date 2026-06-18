@@ -71,8 +71,18 @@
 }
 
 .hero--survey .hero__affil {
-  font-style: normal;
+  font-style: italic;
   color: var(--text-soft);
+}
+.hero--survey .hero__affil a {
+  color: var(--text-soft);
+  border-bottom: 1px solid var(--accent-line);
+  padding-bottom: 1px;
+  transition: color var(--d-fast) var(--ease), border-color var(--d-fast) var(--ease);
+}
+.hero--survey .hero__affil a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 .hero--survey .hero__marks { color: var(--text-muted); }
 
@@ -116,13 +126,17 @@
 .stats--hero .stat__label {
   margin-top: var(--s-2);
   font-family: var(--serif-body);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--text-muted);
   letter-spacing: 0.01em;
 }
+/* keep each metric's caption on a single line once columns are wide enough */
+@media (min-width: 960px) {
+  .stats--hero .stat__label { white-space: nowrap; }
+}
 /* elegant gradient dividers between the three metrics (desktop) */
 @media (min-width: 720px) {
-  .stats--hero .stat { border-top: none; padding: 2px var(--s-7); position: relative; }
+  .stats--hero .stat { border-top: none; padding: 2px var(--s-5); position: relative; }
   .stats--hero .stat:first-child { padding-left: 0; }
   .stats--hero .stat:last-child { padding-right: 0; }
   .stats--hero .stat + .stat::before {
