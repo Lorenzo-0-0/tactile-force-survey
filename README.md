@@ -1,7 +1,9 @@
-# TF-M3PF Survey — Project Page
+# TF-ART Survey — Project Page
 
-Project page for **"Tactile/Force-grounded Robot Intelligence: A Survey of Multi-modal
-Learning and Multi-phase Policy Architectures"** (NTU Singapore, submitted to ACM).
+Project page for **"A Survey of Tactile/Force-aware Robot Learning: From Multimodal
+Fusion to Multi-phase Policy Learning"** (NTU MARS Lab, submitted to ACM). The framework
+is **TF-ART** — a Tactile/Force-Aware Robot learning Taxonomy for multimodal and
+multi-phase frameworks.
 
 Pure static HTML/CSS/JS — no build step. The centerpiece is the **Framework Explorer**:
 the paper's Fig. 2 rebuilt as an interactive component. Hover any module to surface its

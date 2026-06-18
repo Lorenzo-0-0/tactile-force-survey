@@ -7,11 +7,11 @@
   <meta name="theme-color" content="#F7F8FA" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <title>TF-M3PF — Tactile/Force-enabled Robot Intelligence</title>
-  <meta name="description" content="A survey of multi-modal learning and multi-phase policy architectures for tactile/force-enabled robot intelligence. 189 papers reviewed; explore the unified framework interactively." />
+  <title>TF-ART — A Survey of Tactile/Force-aware Robot Learning</title>
+  <meta name="description" content="A survey of tactile/force-aware robot learning, from multimodal fusion to multi-phase policy learning. 189 papers reviewed; explore the unified TF-ART taxonomy interactively." />
 
-  <meta property="og:title" content="Tactile/Force-enabled Robot Intelligence — A Survey" />
-  <meta property="og:description" content="TF-M3PF: a unified multi-modal multi-phase framework for force- and tactile-aware robot learning, reviewing 189 papers. Explore the framework interactively." />
+  <meta property="og:title" content="A Survey of Tactile/Force-aware Robot Learning" />
+  <meta property="og:description" content="TF-ART: a Tactile/Force-Aware Robot learning Taxonomy for multimodal and multi-phase frameworks, reviewing 189 papers. Explore it interactively." />
   <meta property="og:type" content="article" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,11 +19,11 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 
-  <link rel="stylesheet" href="styles/tokens.css?v=13" />
-  <link rel="stylesheet" href="styles/reset.css?v=13" />
-  <link rel="stylesheet" href="styles/layout.css?v=13" />
-  <link rel="stylesheet" href="styles/components.css?v=13" />
-  <link rel="stylesheet" href="styles/framework.css?v=13" />
+  <link rel="stylesheet" href="styles/tokens.css?v=14" />
+  <link rel="stylesheet" href="styles/reset.css?v=14" />
+  <link rel="stylesheet" href="styles/layout.css?v=14" />
+  <link rel="stylesheet" href="styles/components.css?v=14" />
+  <link rel="stylesheet" href="styles/framework.css?v=14" />
 </head>
 <body>
 
@@ -32,7 +32,7 @@
      ========================================================= -->
 <nav class="nav" aria-label="Primary">
   <div class="nav__inner">
-    <a href="#top" class="nav__brand"><span class="nav__brand-icon" aria-hidden="true"></span>TF-M3PF</a>
+    <a href="#top" class="nav__brand"><span class="nav__brand-icon" aria-hidden="true"></span>TF-ART</a>
     <div class="nav__links">
       <a class="nav__link" href="#abstract">Abstract</a>
       <a class="nav__link" href="#explorer">Explorer</a>
@@ -53,16 +53,16 @@
 
   <div class="container hero__inner">
     <p class="hero__eyebrow" data-reveal>
-      A Survey&ensp;·&ensp;TF-M3PF Framework&ensp;·&ensp;NTU
+      A Survey&ensp;·&ensp;TF-ART&ensp;·&ensp;NTU
     </p>
 
     <h1 class="hero__title hero__title--survey" data-reveal style="--reveal-delay: 80ms">
-      <span class="hero__title-line">Tactile/Force-enabled</span>
-      <span class="hero__title-line">Robot Intelligence</span>
+      <span class="hero__title-line">Tactile/Force-aware</span>
+      <span class="hero__title-line">Robot Learning</span>
     </h1>
 
     <p class="hero__sub hero__sub--survey" data-reveal style="--reveal-delay: 200ms">
-      A Survey of Multi-modal Learning and Multi-phase Policy Architectures
+      From Multimodal Fusion to Multi-phase Policy Learning
     </p>
 
     <!-- AUTHOR LIST — temporarily hidden until the list is finalized.
@@ -169,7 +169,7 @@
     </div>
 
     <p class="tldr__line" data-reveal style="margin-block: var(--s-8) var(--s-7)">
-      <span style="color: var(--accent)">TF-M3PF:</span> one architecture mapping how modern systems combine <em>both.</em>
+      <span style="color: var(--accent)">TF-ART:</span> one taxonomy mapping how modern systems combine <em>both.</em>
     </p>
 
     <div class="abstract-body" data-reveal>
@@ -187,9 +187,10 @@
       <p>
         Existing surveys have not explicitly reviewed force- and tactile-aware robot learning
         from a unified perspective that jointly captures multimodal sensing and multi-phase
-        system design. This survey addresses this gap by proposing the
-        <strong>Tactile/Force-aware Multi-Modal Multi-Phase Framework (TF-M3PF)</strong>,
-        which maps individual methods into a unified hierarchical architecture. The framework
+        system design. This survey addresses this gap by proposing
+        <strong>TF-ART, a Tactile/Force-Aware Robot learning Taxonomy for multimodal
+        and multi-phase frameworks</strong>, which maps individual methods into a
+        unified hierarchical architecture. The framework
         characterizes how recent works organize observation modalities, encode and fuse
         heterogeneous sensory inputs, generate and refine actions across multiple phases, and
         connect learned policies to reactive robot-end control. Building on this methodological
@@ -255,7 +256,7 @@
       <div class="pipeline-strip" id="pipeline-strip" hidden>
         <!-- rendered by scripts/framework/pipeline-strip.js -->
       </div>
-      <div class="framework" id="framework-root" aria-label="TF-M3PF framework diagram">
+      <div class="framework" id="framework-root" aria-label="TF-ART framework diagram">
         <noscript><p style="padding: 2rem">The interactive framework requires JavaScript. See Fig. 2 of the paper for the static version.</p></noscript>
         <!-- rendered by scripts/framework/render.js -->
       </div>
@@ -460,9 +461,9 @@
 
     <div class="bib" data-reveal>
       <button class="bib__copy" type="button" aria-label="Copy BibTeX to clipboard">Copy</button>
-<pre id="bibtex-source">@article{shan2026tactileforce,
-  title   = {Tactile/Force-enabled Robot Intelligence: A Survey of
-             Multi-modal Learning and Multi-phase Policy Architectures},
+<pre id="bibtex-source">@article{shan2026tfart,
+  title   = {A Survey of Tactile/Force-aware Robot Learning: From
+             Multimodal Fusion to Multi-phase Policy Learning},
   author  = {Shilin Shan and Chuhao Zhou and Ruize Wang and Xinyan Chen and
              Xiangyu Chen and Xinyu Zhou and Boyu Ma and Yuxuan Hu and
              Jingliang Li and Yuxuan Hu and Geng Li and Guohao Chen and
@@ -480,7 +481,7 @@
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer__row">
-      <div class="footer__brand">TF-M3PF · Tactile/Force-enabled Robot Intelligence</div>
+      <div class="footer__brand">TF-ART · Tactile/Force-aware Robot Learning</div>
       <ul class="footer__links" role="list">
         <li><a href="#" data-placeholder="paper-pdf" title="Preprint link coming soon">Paper</a></li>
         <li><a href="mailto:shilin.shan@ntu.edu.sg">Contact</a></li>
@@ -495,12 +496,12 @@
      ========================================================= -->
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 
-<script src="scripts/reveal.js?v=13"          defer></script>
-<script src="scripts/scroll-progress.js?v=13" defer></script>
-<script src="scripts/copy-bibtex.js?v=13"     defer></script>
-<script src="scripts/main.js?v=13"            defer></script>
-<script src="scripts/hero-topo.js?v=13"       defer></script>
-<script type="module" src="scripts/framework/index.js?v=13"></script>
+<script src="scripts/reveal.js?v=14"          defer></script>
+<script src="scripts/scroll-progress.js?v=14" defer></script>
+<script src="scripts/copy-bibtex.js?v=14"     defer></script>
+<script src="scripts/main.js?v=14"            defer></script>
+<script src="scripts/hero-topo.js?v=14"       defer></script>
+<script type="module" src="scripts/framework/index.js?v=14"></script>
 
 </body>
 </html>
