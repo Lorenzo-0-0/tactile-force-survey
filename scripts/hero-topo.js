@@ -12,7 +12,8 @@
   // theme-driven: read palette from CSS variables so the topology follows tokens.css
   const css = getComputedStyle(document.documentElement);
   const EDGE = (css.getPropertyValue('--border-strong') || '#B9C2CD').trim();
-  const PULSE = (css.getPropertyValue('--accent') || '#0070C0').trim();
+  const PULSE = (css.getPropertyValue('--accent') || '#4F46E5').trim();
+  const SPARK = (css.getPropertyValue('--accent-spark') || '#22D3EE').trim();
 
   const NS = 'http://www.w3.org/2000/svg';
   const mk = (tag, attrs) => {
@@ -45,8 +46,23 @@
     }
   });
 
+  // gradient + soft glow so the signal pulses read as luminous wires
+  const defs = mk('defs', {});
+  const grad = mk('linearGradient', { id: 'topo-pulse', x1: '0', y1: '0', x2: '1', y2: '1' });
+  grad.appendChild(mk('stop', { offset: '0', 'stop-color': PULSE }));
+  grad.appendChild(mk('stop', { offset: '1', 'stop-color': SPARK }));
+  defs.appendChild(grad);
+  const glow = mk('filter', { id: 'topo-glow', x: '-40%', y: '-40%', width: '180%', height: '180%' });
+  glow.appendChild(mk('feGaussianBlur', { stdDeviation: '3.2', result: 'b' }));
+  const merge = mk('feMerge', {});
+  merge.appendChild(mk('feMergeNode', { in: 'b' }));
+  merge.appendChild(mk('feMergeNode', { in: 'SourceGraphic' }));
+  glow.appendChild(merge);
+  defs.appendChild(glow);
+  svg.appendChild(defs);
+
   const edgesGroup = mk('g', {});
-  const pulseGroup = mk('g', {});
+  const pulseGroup = mk('g', { filter: 'url(#topo-glow)' });
   const nodesGroup = mk('g', {});
   svg.append(edgesGroup, pulseGroup, nodesGroup);
 
@@ -63,10 +79,10 @@
       edgesGroup.appendChild(mk('path', {
         d, fill: 'none', stroke: EDGE, 'stroke-width': 1,
       }));
-      if (!reduced && rand() > 0.45) {
+      if (!reduced && rand() > 0.38) {
         const p = mk('path', {
-          d, fill: 'none', stroke: PULSE, 'stroke-width': 1.4,
-          'stroke-linecap': 'round', opacity: 0.8,
+          d, fill: 'none', stroke: 'url(#topo-pulse)', 'stroke-width': 1.8,
+          'stroke-linecap': 'round', opacity: 0.88,
         });
         pulseGroup.appendChild(p);
         const len = p.getTotalLength();
@@ -77,10 +93,16 @@
   });
 
   nodes.forEach((n) => {
+    const accent = n.row === 2;
+    if (accent) {
+      nodesGroup.appendChild(mk('circle', {
+        cx: n.x, cy: n.y, r: 9, fill: PULSE, opacity: 0.14,
+      }));
+    }
     nodesGroup.appendChild(mk('circle', {
-      cx: n.x, cy: n.y, r: n.row === 2 ? 4 : 3,
-      fill: n.row === 2 ? PULSE : EDGE,
-      opacity: n.row === 2 ? 0.9 : 1,
+      cx: n.x, cy: n.y, r: accent ? 4 : 3,
+      fill: accent ? PULSE : EDGE,
+      opacity: accent ? 0.95 : 1,
     }));
   });
 

@@ -13,15 +13,24 @@
   position: relative;
   overflow: hidden;
 }
+/* aurora wash — soft indigo→violet→cyan field behind the topology */
+.hero--survey::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--aurora);
+}
 
 .hero__topo {
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.55;
+  opacity: 0.78;
   pointer-events: none;
-  mask-image: radial-gradient(120% 90% at 50% 40%, #000 30%, transparent 78%);
-  -webkit-mask-image: radial-gradient(120% 90% at 50% 40%, #000 30%, transparent 78%);
+  mask-image: radial-gradient(125% 96% at 50% 38%, #000 36%, transparent 82%);
+  -webkit-mask-image: radial-gradient(125% 96% at 50% 38%, #000 36%, transparent 82%);
 }
 .hero__topo svg { width: 100%; height: 100%; display: block; }
 
@@ -68,13 +77,19 @@
 .hero--survey .hero__marks { color: var(--text-muted); }
 
 .hero--survey .btn--primary {
-  background: var(--accent);
+  background: linear-gradient(125deg, var(--accent) 0%, #5C7DF5 52%, var(--accent-2) 100%);
   color: #fff;
   font-weight: 600;
+  border-color: transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24),
+              0 10px 26px -12px rgba(46, 107, 242, 0.5);
 }
 .hero--survey .btn--primary:hover {
-  background: var(--accent-hot);
-  box-shadow: 0 0 0 4px var(--accent-soft), 0 8px 24px -8px rgba(0, 112, 192, 0.35);
+  background: linear-gradient(125deg, var(--accent-hot) 0%, #4E6FF0 52%, var(--accent-2) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px var(--accent-soft),
+              inset 0 1px 0 rgba(255, 255, 255, 0.28),
+              0 16px 38px -12px rgba(46, 107, 242, 0.55);
 }
 .hero--survey .btn--primary .btn__icon { stroke: currentColor; }
 
@@ -104,6 +119,12 @@
    ============================================================ */
 .explorer-section {
   position: relative;
+  /* Fig.2 fidelity: the interactive figure keeps the paper's letter-blue,
+     while the rest of the page uses the new indigo accent. */
+  --accent:      var(--accent-fig);
+  --accent-hot:  #005A9E;
+  --accent-soft: var(--accent-fig-soft);
+  --accent-line: var(--accent-fig-line);
   /* blueprint grid backdrop */
   background-image:
     radial-gradient(var(--blueprint-dot) 1px, transparent 1px),
