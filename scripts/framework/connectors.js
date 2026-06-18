@@ -39,6 +39,10 @@ const EDGES = [
   { from: 'box-policy1-reg', to: 'comp-obsprediction', kind: 'rrail', enterBottom: true, // (d) REG → (e)
     a: ['intermediate', 'policy1'], b: ['obsprediction'] },
 
+  /* refinement (g, MBA) → (e) Observation Prediction (solid, loops up from below) */
+  { from: 'box-policy2-model', to: 'comp-obsprediction', kind: 'auxin',
+    a: ['policy2'], b: ['obsprediction'] },
+
   /* auxiliary reconstruction branch (double dashed, OPPOSITE directions): (b)⇅(c) */
   { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv', dx: -4,            // encode ↓
     a: ['fusion'], b: ['reconstruction'] },
@@ -134,9 +138,10 @@ export function initConnectors(data, stateApi) {
       // right corridor: out the source's right edge, down the rail, into the target.
       const railX = base.width - 30;
       if (edge.enterBottom) {
-        // loop down the rail and back up into the target's bottom edge
+        // loop down the rail and back up into the target's bottom edge (right third,
+        // leaving room for the refinement→(e) line entering the left third)
         const yr = b.y + b.h + 14;
-        const xt = clamp(b.cx, b.x + 16, b.x + b.w - 16);
+        const xt = clamp(b.x + b.w * 0.72, b.x + 16, b.x + b.w - 16);
         return { d: orth([
           { x: a.x + a.w, y: a.cy }, { x: railX, y: a.cy },
           { x: railX, y: yr }, { x: xt, y: yr }, { x: xt, y: b.y + b.h },
@@ -160,9 +165,10 @@ export function initConnectors(data, stateApi) {
     }
 
     if (edge.kind === 'auxin') {
-      // dashed branch that loops up into a docked side panel from below ((e))
+      // solid branch that loops up into a docked side panel from below ((e)),
+      // entering the target's bottom-left third (paired with the skip rail's right)
       const yr = Math.max(a.y + a.h, b.y + b.h) + 14;
-      const xt = clamp(b.cx, b.x + 14, b.x + b.w - 14);
+      const xt = clamp(b.x + b.w * 0.3, b.x + 14, b.x + b.w - 14);
       return { d: orth([
         { x: a.cx, y: a.y + a.h }, { x: a.cx, y: yr },
         { x: xt, y: yr }, { x: xt, y: b.y + b.h },
@@ -258,7 +264,7 @@ export function initConnectors(data, stateApi) {
       const p = document.createElementNS(NS, 'path');
       p.setAttribute('d', geo.d);
       p.classList.add('is-ambient');
-      if (edge.kind === 'auxv' || edge.kind === 'auxin') p.setAttribute('stroke-dasharray', '3 5');
+      if (edge.kind === 'auxv') p.setAttribute('stroke-dasharray', '3 5');
       p.setAttribute('marker-end', 'url(#fw-arrow)');
       layer.appendChild(p);
 
