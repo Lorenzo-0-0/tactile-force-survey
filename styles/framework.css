@@ -38,8 +38,8 @@
 
 .hero__eyebrow {
   font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: clamp(14px, 1.15vw, 16.5px);
+  font-weight: 600;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   color: var(--accent);
