@@ -35,19 +35,15 @@ const EDGES = [
   { from: 'comp-fusion', to: 'comp-band-p3in-fwd', kind: 'lrail',        // (b)→P3 Fusion-phase Forwarded
     a: ['fusion'], b: ['band.p3in.fwd'] },
 
-  /* right "skip phase 2" corridor (solid): Primary Policy REG box → P3 Phase-1-Forwarded */
-  { from: 'box-policy1-reg', to: 'comp-band-p3in-p1fwd', kind: 'rrail', // (d) REG → P3 Phase 1 Forwarded
-    a: ['intermediate', 'policy1'], b: ['band.p3in.p1fwd'] },
+  /* right "skip phase 2" corridor (solid): Primary Policy REG box → (e) Observation Prediction */
+  { from: 'box-policy1-reg', to: 'comp-obsprediction', kind: 'rrail', enterBottom: true, // (d) REG → (e)
+    a: ['intermediate', 'policy1'], b: ['obsprediction'] },
 
   /* auxiliary reconstruction branch (double dashed, OPPOSITE directions): (b)⇅(c) */
   { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv', dx: -4,            // encode ↓
     a: ['fusion'], b: ['reconstruction'] },
   { from: 'comp-fusion', to: 'comp-reconstruction', kind: 'auxv', dx: 4, up: true,   // reconstruct ↑
     a: ['fusion'], b: ['reconstruction'] },
-
-  /* auxiliary observation-prediction branch (dashed): Refinement (MBA) loops up into (e) */
-  { from: 'box-policy2-model', to: 'comp-obsprediction', kind: 'auxin',
-    a: ['policy2', 'band.p2in.pred'], b: ['obsprediction'] },
 ];
 
 const sign = (n) => (n > 0 ? 1 : n < 0 ? -1 : 0);
@@ -135,8 +131,17 @@ export function initConnectors(data, stateApi) {
     }
 
     if (edge.kind === 'rrail') {
-      // right corridor: out the source's right edge, down the rail, into target's right edge
+      // right corridor: out the source's right edge, down the rail, into the target.
       const railX = base.width - 30;
+      if (edge.enterBottom) {
+        // loop down the rail and back up into the target's bottom edge
+        const yr = b.y + b.h + 14;
+        const xt = clamp(b.cx, b.x + 16, b.x + b.w - 16);
+        return { d: orth([
+          { x: a.x + a.w, y: a.cy }, { x: railX, y: a.cy },
+          { x: railX, y: yr }, { x: xt, y: yr }, { x: xt, y: b.y + b.h },
+        ]) };
+      }
       return { d: orth([
         { x: a.x + a.w, y: a.cy }, { x: railX, y: a.cy },
         { x: railX, y: b.cy }, { x: b.x + b.w + 6, y: b.cy },

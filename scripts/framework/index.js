@@ -2,12 +2,12 @@
    connectors, pipeline strip. Fails soft: on any error the section shows a
    fallback message instead of a broken half-render. */
 
-import { loadData } from './data.js?v=10';
-import { renderFramework } from './render.js?v=10';
-import { renderSidebar } from './sidebar.js?v=10';
-import { initState } from './state.js?v=10';
-import { initConnectors } from './connectors.js?v=10';
-import { initPipelineStrip } from './pipeline-strip.js?v=10';
+import { loadData } from './data.js?v=11';
+import { renderFramework } from './render.js?v=11';
+import { renderSidebar } from './sidebar.js?v=11';
+import { initState } from './state.js?v=11';
+import { initConnectors } from './connectors.js?v=11';
+import { initPipelineStrip } from './pipeline-strip.js?v=11';
 
 (async () => {
   const root = document.getElementById('framework-root');
