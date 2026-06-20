@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 189,
-    "generated": "2026-06-11",
+    "generated": "2026-06-20",
     "bibSource": "reference.bib"
   },
   "papers": [
@@ -12,7 +12,7 @@
       "authors": "Ablett et al.",
       "venue": "T-RO",
       "year": 2024,
-      "url": null
+      "url": "https://arxiv.org/abs/2311.01248"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "authors": "Aburub et al.",
       "venue": "SII",
       "year": 2026,
-      "url": null
+      "url": "https://arxiv.org/abs/2410.19235"
     },
     {
       "id": 3,
@@ -138,7 +138,7 @@
       "authors": "Buamanee et al.",
       "venue": "AIM",
       "year": 2024,
-      "url": null
+      "url": "https://arxiv.org/abs/2401.17698"
     },
     {
       "id": 16,
@@ -156,7 +156,7 @@
       "authors": "Chen et al.",
       "venue": "RA-L",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2501.10356"
     },
     {
       "id": 18,
@@ -246,7 +246,7 @@
       "authors": "Collins et al.",
       "venue": "ICRA",
       "year": 2024,
-      "url": null
+      "url": "https://arxiv.org/abs/2309.12312"
     },
     {
       "id": 28,
@@ -480,7 +480,7 @@
       "authors": "He et al.",
       "venue": "RA-L",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2411.15753"
     },
     {
       "id": 54,
@@ -534,7 +534,7 @@
       "authors": "Hou et al.",
       "venue": "ICRA",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2410.09309"
     },
     {
       "id": 60,
@@ -633,7 +633,7 @@
       "authors": "Jones et al.",
       "venue": "ICRA",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2501.04693"
     },
     {
       "id": 71,
@@ -642,7 +642,7 @@
       "authors": "Kamijo et al.",
       "venue": "IROS",
       "year": 2024,
-      "url": null
+      "url": "https://arxiv.org/abs/2406.14990"
     },
     {
       "id": 72,
@@ -669,7 +669,7 @@
       "authors": "Kang et al.",
       "venue": "RA-L",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2503.03998"
     },
     {
       "id": 75,
@@ -876,7 +876,7 @@
       "authors": "Lin et al.",
       "venue": "ICRA",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2404.16823"
     },
     {
       "id": 98,
@@ -903,7 +903,7 @@
       "authors": "Liu et al.",
       "venue": "ICRA",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2410.07554"
     },
     {
       "id": 101,
@@ -921,7 +921,7 @@
       "authors": "Luo et al.",
       "venue": "Science Robotics",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2410.21845"
     },
     {
       "id": 103,
@@ -948,7 +948,7 @@
       "authors": "Murooka et al.",
       "venue": "RA-L",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2506.15146"
     },
     {
       "id": 106,
@@ -966,7 +966,7 @@
       "authors": "Noseworthy et al.",
       "venue": "RA-L",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2408.04587"
     },
     {
       "id": 108,
@@ -1011,7 +1011,7 @@
       "authors": "Portela et al.",
       "venue": "ICRA",
       "year": 2024,
-      "url": null
+      "url": "https://arxiv.org/abs/2405.01402"
     },
     {
       "id": 113,
@@ -1128,7 +1128,7 @@
       "authors": "Sferrazza et al.",
       "venue": "IROS",
       "year": 2024,
-      "url": null
+      "url": "https://arxiv.org/abs/2311.00924"
     },
     {
       "id": 126,
@@ -1137,7 +1137,7 @@
       "authors": "Shirai et al.",
       "venue": "NeurIPS",
       "year": 2025,
-      "url": null
+      "url": "https://openreview.net/forum?id=tdjHpiQudR"
     },
     {
       "id": 127,
@@ -1182,7 +1182,7 @@
       "authors": "Sun et al.",
       "venue": "IROS",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2501.03606"
     },
     {
       "id": 132,
@@ -1380,7 +1380,7 @@
       "authors": "Wu et al.",
       "venue": "ICRA",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2409.17549"
     },
     {
       "id": 154,
@@ -1389,7 +1389,7 @@
       "authors": "Wu et al.",
       "venue": "ICRA",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2409.11047"
     },
     {
       "id": 155,
@@ -1407,7 +1407,7 @@
       "authors": "Xu et al.",
       "venue": "RA-L",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2408.06481"
     },
     {
       "id": 157,
@@ -1461,7 +1461,7 @@
       "authors": "Ye et al.",
       "venue": "Science Robotics",
       "year": 2026,
-      "url": null
+      "url": "https://doi.org/10.1126/scirobotics.ady2869"
     },
     {
       "id": 163,
@@ -1677,7 +1677,7 @@
       "authors": "Zhou et al.",
       "venue": "TIE",
       "year": 2025,
-      "url": null
+      "url": "https://arxiv.org/abs/2409.14440"
     },
     {
       "id": 187,

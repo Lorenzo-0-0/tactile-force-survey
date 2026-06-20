@@ -376,6 +376,19 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+/* title is a real link → opens the paper in a new tab */
+a.paper__title {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--d-fast) var(--ease);
+}
+a.paper__title:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-line);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
 
 .paper__meta {
   margin-top: 3px;
@@ -394,6 +407,16 @@
   transition: color var(--d-fast) var(--ease);
 }
 .paper__meta a:hover { color: var(--accent); border-bottom-color: var(--accent-line); }
+/* explicit "arXiv ↗ / DOI ↗" affordance, pinned to the right of the meta row */
+.paper__ext {
+  margin-left: auto;
+  flex: none;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: var(--accent);
+  border-bottom-color: var(--accent-line);
+}
 
 /* paper states */
 .paper.is-dim { opacity: 0.3; }

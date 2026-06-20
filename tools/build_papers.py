@@ -37,6 +37,38 @@ AUDIT_JSON = SITE_ROOT / "tools" / "papers.match_audit.json"
 # high confidence. Keep empty unless the run reports low-ratio matches.
 OVERRIDES = {}
 
+# bib key -> canonical paper URL, for entries whose reference.bib record carries
+# no eprint/doi/url field (so make_url() would return None). Each link below was
+# resolved by matching the paper title on the destination page (arXiv /abs/
+# preferred; OpenReview/DOI where no arXiv preprint exists). These take priority
+# over make_url() so the sidebar can link every figure paper. Verified 2026-06-20.
+URL_OVERRIDES = {
+    "ablett2024multimodal": "https://arxiv.org/abs/2311.01248",
+    "aburub2026learning": "https://arxiv.org/abs/2410.19235",
+    "buamanee2024bi": "https://arxiv.org/abs/2401.17698",
+    "chen2025dexforce": "https://arxiv.org/abs/2501.10356",
+    "collins2024forcesight": "https://arxiv.org/abs/2309.12312",
+    "he2025foar": "https://arxiv.org/abs/2411.15753",
+    "hou2025adaptive": "https://arxiv.org/abs/2410.09309",
+    "jones2025beyond": "https://arxiv.org/abs/2501.04693",
+    "kamijo2024learning": "https://arxiv.org/abs/2406.14990",
+    "kang2025robotic": "https://arxiv.org/abs/2503.03998",
+    "lin2025learning": "https://arxiv.org/abs/2404.16823",
+    "liu2025forcemimic": "https://arxiv.org/abs/2410.07554",
+    "luo2025precise": "https://arxiv.org/abs/2410.21845",
+    "murooka2025tact": "https://arxiv.org/abs/2506.15146",
+    "noseworthy2025forge": "https://arxiv.org/abs/2408.04587",
+    "portela2024learning": "https://arxiv.org/abs/2405.01402",
+    "sferrazza2024power": "https://arxiv.org/abs/2311.00924",
+    "shirai2025sim": "https://openreview.net/forum?id=tdjHpiQudR",
+    "sun2025vtao": "https://arxiv.org/abs/2501.03606",
+    "wu2025canonical": "https://arxiv.org/abs/2409.17549",
+    "wu2025tacdiffusion": "https://arxiv.org/abs/2409.11047",
+    "xu2025unit": "https://arxiv.org/abs/2408.06481",
+    "ye2026visual": "https://doi.org/10.1126/scirobotics.ady2869",
+    "zhou2025admittance": "https://arxiv.org/abs/2409.14440",
+}
+
 HEADER_LINES = {
     "Shan et al.",
     "Manuscript submitted to ACM",
@@ -238,6 +270,9 @@ def short_venue(entry):
 
 
 def make_url(entry):
+    override = URL_OVERRIDES.get(entry.get("ID"))
+    if override:
+        return override
     if (entry.get("eprint") and
             "arxiv" in entry.get("archiveprefix", "arxiv").lower()):
         return f"https://arxiv.org/abs/{entry['eprint'].strip()}"

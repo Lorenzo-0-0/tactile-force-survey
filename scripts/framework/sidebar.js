@@ -7,19 +7,37 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => (
   { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]
 ));
 
+/* destination label for a paper link, shown in the meta affordance + a11y */
+function linkKind(url) {
+  if (!url) return '';
+  if (url.includes('arxiv.org')) return 'arXiv';
+  if (url.includes('openreview')) return 'OpenReview';
+  if (url.includes('doi.org') || url.includes('science.org')) return 'DOI';
+  return 'link';
+}
+
 function paperHTML(p, mapped) {
-  const link = p.url
-    ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" data-paper-link
-         aria-label="Open paper [${p.id}] (${p.url.includes('arxiv') ? 'arXiv' : 'DOI'})">↗</a>`
+  const t = esc(p.title);
+  const kind = linkKind(p.url);
+  // The title itself is the primary click target → opens the paper in a new tab.
+  // [data-paper-link] tells state.js to let the navigation through (no pin).
+  const title = p.url
+    ? `<a class="paper__title" href="${esc(p.url)}" target="_blank" rel="noopener" data-paper-link
+         aria-label="Open paper [${p.id}] on ${kind}: ${t}">${t}</a>`
+    : `<span class="paper__title">${t}</span>`;
+  // secondary explicit affordance in the meta row, also naming the destination
+  const ext = p.url
+    ? `<a class="paper__ext" href="${esc(p.url)}" target="_blank" rel="noopener" data-paper-link
+         aria-label="Open paper [${p.id}] on ${kind}">${kind} ↗</a>`
     : '';
   return `
     <li class="paper ${mapped ? 'paper--mapped' : ''}" data-ref="${p.id}" id="paper-${p.id}" tabindex="0"
-        aria-label="[${p.id}] ${esc(p.title)}">
+        aria-label="[${p.id}] ${t}">
       <span class="paper__num">[${p.id}]${mapped ? '<span class="paper__node" title="Appears in the framework diagram"></span>' : ''}</span>
       <span class="paper__body">
-        <span class="paper__title">${esc(p.title)}</span>
+        ${title}
         <span class="paper__meta">
-          <span>${esc(p.authors)}</span>·<span>${esc(p.venue)} ${p.year}</span>${link}
+          <span>${esc(p.authors)}</span>·<span>${esc(p.venue)} ${p.year ?? ''}</span>${ext}
         </span>
       </span>
     </li>`;

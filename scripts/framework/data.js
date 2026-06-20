@@ -59,7 +59,7 @@ function derivePerceptionRefs(framework) {
 export async function loadData() {
   const [framework, papersDoc] = await Promise.all([
     fetchJSON('data/framework.json?v=11'),
-    fetchJSON('data/papers.json?v=11'),
+    fetchJSON('data/papers.json?v=12'),
   ]);
 
   derivePerceptionRefs(framework);
